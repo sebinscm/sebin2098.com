@@ -77,6 +77,7 @@ int iRet4 = 0;
 int iRet5 = 0;
 int iRet6 = 0;
 int iRet7 = 0;
+
 String strSep = "|!^";
 String outS = "";
 String sql = "";
@@ -122,11 +123,14 @@ cntSql =  " select count(*) from VG_SAMPLE_IN_OUT a, VG_COMMON_CODE b  "
 mainSql = " select  a.sequence_no, a.sample_no, a.item_class, date_format(a.input_date, '%Y/%m/%d'), "
         + "         a.item_group, a.qty, a.season, upper(a.buyer), a.supplier,  "
         + "          date_format(a.sending_date, '%Y/%m/%d'),  date_format(a.return_date, '%Y/%m/%d'),"
-        + "         ifnull(a.remarks,' '), a.style_no, a.status, b.code_name, ifnull(a.comments,' '), c.name "
+        + "         ifnull(a.remarks,' '), a.style_no, a.status, b.code_name, ifnull(a.comments,' '), c.name, a.designer "
         + " from    VG_SAMPLE_IN_OUT a LEFT OUTER JOIN VG_COMMON_CODE b  ON (a.status=b.code and b.type='ORDER_STATUS')  " 
         + "                                              LEFT OUTER JOIN login_01t c ON ( a.buyer = c.id )  "
-        + "         where a.sequence_no > 0  ";      
-
+        + "         where a.sequence_no > 0 ";
+// 2000 see every sample.
+if(!_adminid.equals("2000")){
+    mainSql += "and a.designer = '"+_adminid+"'";
+}
 if (searchStyleNo.equals("")) {
 	if (searchSampleNo.equals("")) {
 			  conditionSql = " and a.input_date between str_to_date('" + searchFromDate + "', '%Y/%m/%d')  "
@@ -294,9 +298,10 @@ for (int i = 0; i < iRet; i++) {
   String status_name        = matrix.getRowData(i).getData(j++);
   String remarks2        = matrix.getRowData(i).getData(j++);
   String buyer_name        = matrix.getRowData(i).getData(j++);
+  String designer        = matrix.getRowData(i).getData(j++);
 
   String bgColor = "#fffff0";
-  if (i%2 > 0) bgColor = "#eeeee0";
+//  if (i%2 > 0) bgColor = "#eeeee0";
 
   if (returnDate.equals("0000/00/00") ) returnDate ="";
   // if the sending date is more than 28 day compare to Today and
@@ -304,9 +309,9 @@ for (int i = 0; i < iRet; i++) {
   if (!sendingDate.equals("") && returnDate.equals("")) {
     String FourWeeksAgo = DateUtil.getRelativeDateString(new java.util.Date(), 0, 0, -28, "yyyyMMdd");
     
-    if ((sendingDate.substring(6)+sendingDate.substring(3, 5)+sendingDate.substring(0, 2)).compareTo(FourWeeksAgo) <= 0) {
-      bgColor = "#FF0000";
-    }
+//    if ((sendingDate.substring(6)+sendingDate.substring(3, 5)+sendingDate.substring(0, 2)).compareTo(FourWeeksAgo) <= 0) {
+//      bgColor = "#FF0000";
+//    }
   }
     File imgFile = new File(application.getRealPath(_sampleImageUrl) + File.separator + sampleNo.toLowerCase()  + ".jpg");
 	if (imgFile.exists()) {
@@ -331,7 +336,8 @@ for (int i = 0; i < iRet; i++) {
                  + styleNo + strSep
                  + order_status + strSep
                  + StringUtil.replace(StringUtil.replaceScriptString(remarks), "\n", "\\n") + strSep
-                 + StringUtil.replace(StringUtil.replaceScriptString(remarks2), "\n", "\\n")
+                 + StringUtil.replace(StringUtil.replaceScriptString(remarks2), "\n", "\\n") + strSep
+                 + designer
                  + "')\">"                  
                  + sampleNo + " </a>";
 
@@ -617,6 +623,7 @@ function fnSetData(strParams) {
     jf_fnSetSelectOption(order_status, params[j++]);
     remarks.value = params[j++];
     remarks2.value = params[j++];
+    designer.value = params[j++];
 
     actionFlag.value = 'U';
     //item_class.disabled = true;
@@ -800,9 +807,9 @@ function displayLeng( sz, id )
   <tr>
     <td width='10%' class='table_header_center'>PGR(*)</td>
     <td width='32%' class='table_bg_bright' colspan='3'><select name='item_class'><%= itemClassOptions %></select></td>
-    <td class='table_header_center' ></td>
-  	 <td class='table_bg_bright' ></td>
-  	<td width='10%' class='table_header_center'>Status</td>
+    <td class='table_header_center' >Designer</td>
+    <td class='table_bg_bright' ><input name='designer' type="text" /></td>
+    <td width='10%' class='table_header_center'>Status</td>
     <td width='32%' class='table_bg_bright' colspan='3'><select name='order_status'><%= statusOptions %></select></td>  
   </tr>
   <tr>

@@ -167,6 +167,15 @@ for (int i = 0; i < iRet; i++) {
   } else {
     colour_code = "#EEEEE0";
   }
+  if(po_status_nm.equals("Requested PO-Confirm")){
+    colour_code = "#D8F0F8";
+  }
+  else if(po_status_nm.equals("Shipping Out")){
+      colour_code = "#5EAE9E";
+  }
+  else if(po_status_nm.equals("CANCEL ORDER")){
+      colour_code = "#FF7373";
+  }
   // set item imagae
     File imgFile = new File(application.getRealPath(_styleImgURL) + File.separator + style_no.toLowerCase() + ".jpg");
 	if (imgFile.exists()) {

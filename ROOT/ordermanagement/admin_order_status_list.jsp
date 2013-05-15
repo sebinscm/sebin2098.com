@@ -7,7 +7,7 @@
 <%@page import="common.util.*" %>
 <%@page import="dbconn.*" %>
 <%@ include file="/admin/login_check.jsp" %>
-<!--%@ page errorPage="/error.jsp" %--> 
+<!--%@ page errorPage="/error.jsp" %-->
 <%@ include file="/bottom_line.jsp" %>
 <%@ include file="/common/CommonVars.jsp" %>
 <%@ include file="/common/calendar/calendar.htm" %>
@@ -216,6 +216,16 @@ for (int i = 0; i < iRet; i++) {
   String  buyer_code = matrix.getRowData(i).getData(j++);
   String  status_name = matrix.getRowData(i).getData(j++);
   String colour_code = "#FFFFF0";
+  
+  if(status_name.equals("Requested PO-Confirm")){
+    colour_code = "#D8F0F8";
+  }
+  else if(status_name.equals("Shipping Out")){
+      colour_code = "#5EAE9E";
+  }
+  else if(status_name.equals("CANCEL ORDER")){
+      colour_code = "#FF7373";
+  }
    // PO Status list
   // set item imagae
     File imgFile = new File(application.getRealPath(_styleImgURL) + File.separator + style_no.toLowerCase() + ".jpg");
