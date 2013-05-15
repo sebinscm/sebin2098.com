@@ -1,0 +1,28 @@
+SMAP
+_insert_0check__jsp.java
+JSP
+*S JSP
+*F
++ 1 db_conn.jsp
+notice/include/db_conn.jsp
++ 2 include_com.jsp
+notice/include/include_com.jsp
++ 3 include_bbs.jsp
+notice/include/include_bbs.jsp
++ 4 insert_check.jsp
+notice/insert_check.jsp
++ 5 login_check.jsp
+admin/login_check.jsp
+*L
+1#1,27:18
+27#1:45,2
+1#2,214:46
+214#2:260,2
+1#3,228:261
+228#3:489,18
+1#4:506
+1#5,33:507
+2#4:540
+6#4,78:541
+83#4,2:619
+*E

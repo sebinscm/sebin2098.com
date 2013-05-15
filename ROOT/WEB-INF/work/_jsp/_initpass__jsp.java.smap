@@ -1,0 +1,17 @@
+SMAP
+_initpass__jsp.java
+JSP
+*S JSP
+*F
++ 1 login_check.jsp
+login_check.jsp
++ 2 initpass.jsp
+initpass.jsp
+*L
+1#1,47:31
+1#2,4:78
+4#2:82
+65#2:83,2
+79#2:85,2
+107#2:87
+*E

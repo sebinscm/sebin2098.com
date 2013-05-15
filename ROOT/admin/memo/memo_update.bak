@@ -1,0 +1,148 @@
+<%@page import="java.net.*" %>
+<%@page import="java.sql.*" %>
+<%@page import="java.util.*" %>
+<%@page import="dbconn.*" %>
+<%@page import="NewtakeUploadPro" %>
+<%@ page errorPage="../../error.jsp" %>
+<%@ include file="../../login_check.jsp" %>
+
+<%
+
+String path = "/home/scm/public_html/memo/upload/";
+NewtakeUploadPro nload = new NewtakeUploadPro(request.getInputStream());
+nload.setPath(path);
+nload.setOverlap(false);
+nload.start();
+
+
+String seqno = nload.getParameter("seqno");
+String title = nload.getParameter("title");
+String content = nload.getParameter("content");
+String file_name = nload.getParameter("file_name");
+String file_nm   = nload.getFilename("new_filenm");
+
+String[] ls_content = new String[15];
+int i;
+int li_length=0;
+int li_cnt   =0;
+int li_max   =4000;
+int iRet = 0;
+
+
+if (file_nm != null)  {
+    file_name = file_nm;
+}
+
+DBConnManager dbPool = null;
+boolean connState = false;
+
+
+dbPool = DBConnManager.getInstance();
+Connection conn = dbPool.getConnection("intranet");
+
+if( conn == null ) {
+    connState = false;
+} else {
+    connState = true;
+}
+
+li_length = content.length(); 
+        
+li_cnt = li_length / li_max ;
+                
+for (i=0; i < li_cnt ; i++ ) {
+    if ( li_max * (i + 1)  > li_length )
+        ls_content[i] = content.substring(li_max * i , li_length);
+    else
+        ls_content[i] = content.substring(li_max * i , li_max * (i + 1) );
+}       
+        
+if ( li_length > li_cnt * li_max ) { 
+   ls_content[i] = content.substring(li_max * i , li_length);
+}
+
+String sql = "UPDATE t_memo_01t  " +
+             "SET content  =?,   " +
+             "    content2 =?,   " +
+             "    content3 =?,   " +
+             "    content4 =?,   " +
+             "    content5 =?,   " +
+             "    content6 =?,   " +
+             "    content7 =?,   " +
+             "    content8 =?,   " +
+             "    content9 =?,   " +
+             "    content10 =?,   " +
+             "    content11 =?,   " +
+             "    content12 =?,   " +
+             "    content13 =?,   " +
+             "    content14 =?,   " +
+             "    content15 =?,   " +
+             "    afname    =?    " +
+             " WHERE seqno = '" + seqno + "'";
+
+String outS ="";
+
+if( connState ) {
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString( 1, ls_content[ 0] );
+        pstmt.setString( 2, ls_content[ 1] );
+        pstmt.setString( 3, ls_content[ 2] );
+        pstmt.setString( 4, ls_content[ 3] );
+        pstmt.setString( 5, ls_content[ 4] );
+        pstmt.setString( 6, ls_content[ 5] );
+        pstmt.setString( 7, ls_content[ 6] );
+        pstmt.setString( 8, ls_content[ 7] );
+        pstmt.setString( 9, ls_content[ 8] );
+        pstmt.setString(10, ls_content[ 9] );
+        pstmt.setString(11, ls_content[10] );
+        pstmt.setString(12, ls_content[11] );
+        pstmt.setString(13, ls_content[12] );
+        pstmt.setString(14, ls_content[13] );
+        pstmt.setString(15, ls_content[14] );
+        pstmt.setString(16, file_name );
+
+        iRet = pstmt.executeUpdate();
+        if( iRet > 0 ) {
+                outS = "Updating seqno( " + seqno + " ) is successful.";
+        } else {
+                outS = "Updating seqno( " + seqno + " ) is not successful. Ask to I.T. staff.";
+        }
+
+        outS += "<br>\n<center><a href=\"index.jsp\">View List</a>";
+        pstmt.close();
+}
+out.println(file_name);
+out.println(file_nm);
+dbPool.freeConnection("intranet", conn);
+connState = false;
+%>
+<HTML>
+<HEAD>
+<script src="fieldval.js"></script>
+<script src="mail.js"></script>
+</HEAD>
+<BODY>
+<CENTER>
+<B>Updating memo</B>
+<table border="1" WIDTH=680 >
+  <tr>
+    <td><font size=2>seqno</font></td>
+    <td><font size=2><%=seqno%></font></td>
+  </tr>
+  <tr>
+    <td><font size=2>Title</font></td>
+    <td><font size=2><%=title%></font></td>
+  </tr>
+  <tr>
+    <td><font size=2></td>
+    <td><font size=2><%=content%></font></td>
+  </tr>
+  <tr>
+    <td><font size=2>Attached file</font></td>
+    <td><font size=2><%=file_name%></font></td>
+  </tr>  
+</table>
+
+<%=outS%>
+</BODY>
+</HTML>

@@ -1,0 +1,6 @@
+2012. 8. 4 오후 5:07:11 org.apache.jk.common.MsgAjp processHeader
+심각: BAD packet signature 32926
+2012. 8. 4 오후 5:07:22 org.apache.jk.common.ChannelSocket receive
+경고: can't read body, waited #259
+2012. 8. 4 오후 5:07:22 org.apache.jk.common.ChannelSocket processConnection
+경고: Closing ajp connection -1

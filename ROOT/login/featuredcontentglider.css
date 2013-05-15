@@ -1,0 +1,33 @@
+.glidecontentwrapper {
+	BORDER-BOTTOM: #687c98 1px solid; POSITION: relative; BORDER-LEFT: #687c98 1px solid; WIDTH: 520px; HEIGHT: 230px; OVERFLOW: hidden; BORDER-TOP: #687c98 1px solid; BORDER-RIGHT: #687c98 1px solid
+}
+.glidecontent {
+	POSITION: absolute; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; WIDTH: 520px; PADDING-RIGHT: 10px; BACKGROUND: white; VISIBILITY: hidden; PADDING-TOP: 10px
+}
+.glidecontenttoggler {
+	TEXT-ALIGN: center; MARGIN-TOP: 6px; WIDTH: 360px
+}
+.glidecontenttoggler A {
+	BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; DISPLAY: inline-block; COLOR: #2e6ab1; BORDER-TOP: black 1px solid; FONT-WEIGHT: bold; MARGIN-RIGHT: 3px; BORDER-RIGHT: black 1px solid; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+.glidecontenttoggler A.selected {
+	BACKGROUND: #e4effa; COLOR: black
+}
+.glidecontenttoggler A:hover {
+	BACKGROUND: #e4effa; COLOR: black
+}
+.glidecontenttoggler A.toc {
+	
+}
+.glidecontenttoggler A.prev {
+	
+}
+.glidecontenttoggler A.next {
+	
+}
+.glidecontenttoggler A.prev:hover {
+	BACKGROUND: #1a48a4; COLOR: white
+}
+.glidecontenttoggler A.next:hover {
+	BACKGROUND: #1a48a4; COLOR: white
+}

@@ -1,0 +1,25 @@
+/* CSS Document */
+body, td, p, br
+{font-family: "Verdana", "Arial", "Helvetica"; font-size: 11px; color: #000000; line-height:16px;}
+img {border:none;}
+hr {color: #000000;}
+
+.font_title {font-size: 22px; font-weight: bold;}
+.font_title1 {font-size: 22px; font-weight: bold; text-decoration: underline; line-height:24px;}
+.font_title2 {font-size: 16px; font-weight: bold; text-decoration: underline;}
+.font_subtitle {font-size: 16px; font-weight: bold;}
+.font_subtitle2 {font-size: 14px; font-weight: bold;}
+.font_normal_bold {font-weight: bold;}
+.font_small_1 {font-size: 10px; line-height:12px; background-color: #FFFFFF;}
+.font_small_1_bold {font-size: 10px; font-weight: bold; line-height:12px; background-color: #FFFFFF;}
+.font_small_2 {font-size: 10px; line-height:12px; color: #FF0000; background-color: #FFFFFF; padding: 5px 10px;}
+
+.border {border:2px solid #000000;}
+.table_bg { background-color: #000000;}
+.table_header { height: 16px; background-color: silver; font-weight: bold; text-align: center;}
+.table_header_no_height { background-color: silver; font-weight: bold; text-align: center;}
+.table_list { height: 16px; background-color: #FFFFFF;}
+.table_list_no_height { background-color: #FFFFFF;}
+.table_list_center { height: 16px; background-color: #FFFFFF; text-align: center;}
+.table_tail { height: 16px; background-color: #FFFFFF; font-weight: bold;}
+.table_header_right { height: 22px; background-color: #E6E6FA; text-align: right;}

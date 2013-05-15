@@ -1,0 +1,17 @@
+<Div id='popCal' style='POSITION:absolute;visibility:hidden;border:1px ridge;width:10'> 
+			<iframe name="popFrame" src="./popcjs.htm" frameborder="0" style="border:1 solid #EBF6FD"  frameborder="0" scrolling="no" width=176 height=215>
+			</iframe> 
+</DIV> 
+<SCRIPT event=onclick() for=document>popCal.style.visibility = "hidden";</SCRIPT>
+<html>
+<head></head>
+<body>
+<br>
+<br>
+<br>
+<form>
+<input type="text" name="manualVo.originDate">
+<input type=button value="ดÞทย" onclick="javascript:popFrame.fPopCalendar(this, document.all['manualVo.originDate'],document.all['popCal'], 'RIGHT');">
+</form>
+</body>
+</html>

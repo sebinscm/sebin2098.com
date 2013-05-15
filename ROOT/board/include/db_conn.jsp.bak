@@ -1,0 +1,27 @@
+<%!
+//-------------------------------------------
+// DB_Connection()
+//       - Make DB Connection
+//   conn : Output Connection
+//
+//-------------------------------------------
+Connection DB_Connection() throws ClassNotFoundException, SQLException,Exception
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	String url="jdbc:oracle:thin:@127.0.0.1:1521:HWANG";
+   	Connection conn = DriverManager.getConnection(url, "hwang", "hwang");
+   	
+   	return conn;
+}
+
+//-------------------------------------------
+// DB_Disconnection()
+//       - Make DB Disconnection
+//   conn : Output Disconnection
+//
+//-------------------------------------------
+void DB_Disconnection(Connection conn) throws ClassNotFoundException, SQLException,Exception
+{
+	conn.close();
+}
+%>

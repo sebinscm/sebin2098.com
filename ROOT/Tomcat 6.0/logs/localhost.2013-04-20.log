@@ -1,0 +1,204 @@
+2013. 4. 20 오전 10:07:51 org.apache.catalina.core.StandardWrapperValve invoke
+심각: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 136 in the jsp file: /admin/buyer/original_sample_in_out_excel.jsp
+_sampleIamgeUrl cannot be resolved
+133:   String imgUrl = "";
+134:   if (returnDate.equals("0000/00/00") ) returnDate ="";
+135:   if (withImage.equals("Y")) {
+136:     File imgFile = new File(application.getRealPath(_sampleIamgeUrl) + File.separator + sampleNo + ".jpg");
+137: 
+138:     if (imgFile.exists()) {
+139:       imgUrl = "<img src='http://" + request.getServerName() + _sampleIamgeUrl + "/" + sampleNo + ".jpg' width='33' height='51'>";
+
+
+An error occurred at line: 139 in the jsp file: /admin/buyer/original_sample_in_out_excel.jsp
+_sampleIamgeUrl cannot be resolved
+136:     File imgFile = new File(application.getRealPath(_sampleIamgeUrl) + File.separator + sampleNo + ".jpg");
+137: 
+138:     if (imgFile.exists()) {
+139:       imgUrl = "<img src='http://" + request.getServerName() + _sampleIamgeUrl + "/" + sampleNo + ".jpg' width='33' height='51'>";
+140:     }
+141:   }
+142: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:291)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Unknown Source)
+2013. 4. 20 오전 10:08:03 org.apache.catalina.core.StandardWrapperValve invoke
+심각: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 136 in the jsp file: /admin/buyer/original_sample_in_out_excel.jsp
+_sampleIamgeUrl cannot be resolved
+133:   String imgUrl = "";
+134:   if (returnDate.equals("0000/00/00") ) returnDate ="";
+135:   if (withImage.equals("Y")) {
+136:     File imgFile = new File(application.getRealPath(_sampleIamgeUrl) + File.separator + sampleNo + ".jpg");
+137: 
+138:     if (imgFile.exists()) {
+139:       imgUrl = "<img src='http://" + request.getServerName() + _sampleIamgeUrl + "/" + sampleNo + ".jpg' width='33' height='51'>";
+
+
+An error occurred at line: 139 in the jsp file: /admin/buyer/original_sample_in_out_excel.jsp
+_sampleIamgeUrl cannot be resolved
+136:     File imgFile = new File(application.getRealPath(_sampleIamgeUrl) + File.separator + sampleNo + ".jpg");
+137: 
+138:     if (imgFile.exists()) {
+139:       imgUrl = "<img src='http://" + request.getServerName() + _sampleIamgeUrl + "/" + sampleNo + ".jpg' width='33' height='51'>";
+140:     }
+141:   }
+142: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:291)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Unknown Source)
+2013. 4. 20 오후 6:04:07 org.apache.catalina.core.ApplicationDispatcher invoke
+심각: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: The absolute uri: http://java.sun.com/jsp/jstl/core cannot be resolved in either web.xml or the jar files deployed with this application
+	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:51)
+	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:409)
+	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:116)
+	at org.apache.jasper.compiler.TagLibraryInfoImpl.generateTLDLocation(TagLibraryInfoImpl.java:316)
+	at org.apache.jasper.compiler.TagLibraryInfoImpl.<init>(TagLibraryInfoImpl.java:149)
+	at org.apache.jasper.compiler.Parser.parseTaglibDirective(Parser.java:386)
+	at org.apache.jasper.compiler.Parser.parseDirective(Parser.java:450)
+	at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1397)
+	at org.apache.jasper.compiler.Parser.parse(Parser.java:130)
+	at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:255)
+	at org.apache.jasper.compiler.ParserController.parse(ParserController.java:103)
+	at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:185)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:354)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at org.apache.jasper.runtime.PageContextImpl.doForward(PageContextImpl.java:709)
+	at org.apache.jasper.runtime.PageContextImpl.forward(PageContextImpl.java:680)
+	at org.apache.jasper.runtime.PageContextImpl.doHandlePageException(PageContextImpl.java:821)
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:794)
+	at org.apache.jsp.ordermanagement.po_005flist_005fexcel_jsp._jspService(po_005flist_005fexcel_jsp.java:385)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:291)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Unknown Source)
+2013. 4. 20 오후 6:04:07 org.apache.catalina.core.StandardWrapperValve invoke
+심각: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: The absolute uri: http://java.sun.com/jsp/jstl/core cannot be resolved in either web.xml or the jar files deployed with this application
+	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:51)
+	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:409)
+	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:116)
+	at org.apache.jasper.compiler.TagLibraryInfoImpl.generateTLDLocation(TagLibraryInfoImpl.java:316)
+	at org.apache.jasper.compiler.TagLibraryInfoImpl.<init>(TagLibraryInfoImpl.java:149)
+	at org.apache.jasper.compiler.Parser.parseTaglibDirective(Parser.java:386)
+	at org.apache.jasper.compiler.Parser.parseDirective(Parser.java:450)
+	at org.apache.jasper.compiler.Parser.parseElements(Parser.java:1397)
+	at org.apache.jasper.compiler.Parser.parse(Parser.java:130)
+	at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:255)
+	at org.apache.jasper.compiler.ParserController.parse(ParserController.java:103)
+	at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:185)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:354)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at org.apache.jasper.runtime.PageContextImpl.doForward(PageContextImpl.java:709)
+	at org.apache.jasper.runtime.PageContextImpl.forward(PageContextImpl.java:680)
+	at org.apache.jasper.runtime.PageContextImpl.doHandlePageException(PageContextImpl.java:821)
+	at org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:794)
+	at org.apache.jsp.ordermanagement.po_005flist_005fexcel_jsp._jspService(po_005flist_005fexcel_jsp.java:385)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:291)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Unknown Source)

@@ -1,0 +1,263 @@
+2011. 9. 28 오후 1:30:15 org.apache.coyote.http11.Http11Protocol pause
+정보: Pausing Coyote HTTP/1.1 on http-80
+2011. 9. 28 오후 1:30:16 org.apache.catalina.core.StandardService stop
+정보: Stopping service Catalina
+2011. 9. 28 오후 1:30:18 org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+심각: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+2011. 9. 28 오후 1:30:18 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+심각: The web application [] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation.
+2011. 9. 28 오후 1:30:18 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+심각: The web application [] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation.
+2011. 9. 28 오후 1:30:18 org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+심각: The web application [] appears to have started a thread named [File Reaper] but has failed to stop it. This is very likely to create a memory leak.
+2011. 9. 28 오후 1:30:18 org.apache.coyote.http11.Http11Protocol destroy
+정보: Stopping Coyote HTTP/1.1 on http-80
+2011. 9. 28 오후 1:31:58 org.apache.catalina.core.AprLifecycleListener init
+정보: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Apache Software Foundation\Tomcat 6.0\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Intel\DMIX;C:\Program Files\MySQL\MySQL Server 5.0\bin;.
+2011. 9. 28 오후 1:31:58 org.apache.coyote.http11.Http11Protocol init
+심각: Error initializing endpoint
+java.net.BindException: Address already in use: JVM_Bind <null>:80
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:549)
+	at org.apache.coyote.http11.Http11Protocol.init(Http11Protocol.java:176)
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1022)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:703)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:838)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:538)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:50)
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:538)
+	... 12 more
+2011. 9. 28 오후 1:31:58 org.apache.catalina.core.StandardService initialize
+심각: Failed to initialize connector [Connector[HTTP/1.1-80]]
+LifecycleException:  Protocol handler initialization failed: java.net.BindException: Address already in use: JVM_Bind <null>:80
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1024)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:703)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:838)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:538)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+2011. 9. 28 오후 1:31:58 org.apache.catalina.startup.Catalina load
+정보: Initialization processed in 461 ms
+2011. 9. 28 오후 1:31:58 org.apache.catalina.core.StandardService start
+정보: Starting service Catalina
+2011. 9. 28 오후 1:31:58 org.apache.catalina.core.StandardEngine start
+정보: Starting Servlet Engine: Apache Tomcat/6.0.33
+2011. 9. 28 오후 1:31:58 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deploying web application directory ROOT
+2011. 9. 28 오후 1:31:59 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: Deploying configuration descriptor host-manager.xml
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext resourcesStart
+심각: Error starting static Resources
+java.lang.IllegalArgumentException: Document base C:\SCM_MYSQL\host-manager does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Error in resourceStart()
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Error getConfigured
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Context [/host-manager] startup failed due to previous errors
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext stop
+정보: Container org.apache.catalina.core.ContainerBase.[Catalina].[110.45.138.180].[/host-manager] has not been started
+2011. 9. 28 오후 1:31:59 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: Deploying configuration descriptor manager.xml
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext resourcesStart
+심각: Error starting static Resources
+java.lang.IllegalArgumentException: Document base C:\SCM_MYSQL\manager does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Error in resourceStart()
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Error getConfigured
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Context [/manager] startup failed due to previous errors
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext stop
+정보: Container org.apache.catalina.core.ContainerBase.[Catalina].[110.45.138.180].[/manager] has not been started
+2011. 9. 28 오후 1:31:59 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deploying web application directory ROOT
+2011. 9. 28 오후 1:31:59 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: Deploying configuration descriptor host-manager.xml
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext resourcesStart
+심각: Error starting static Resources
+java.lang.IllegalArgumentException: Document base C:\SCM_MYSQL\host-manager does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Error in resourceStart()
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Error getConfigured
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Context [/host-manager] startup failed due to previous errors
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext stop
+정보: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/host-manager] has not been started
+2011. 9. 28 오후 1:31:59 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: Deploying configuration descriptor manager.xml
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext resourcesStart
+심각: Error starting static Resources
+java.lang.IllegalArgumentException: Document base C:\SCM_MYSQL\manager does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Error in resourceStart()
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Error getConfigured
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext start
+심각: Context [/manager] startup failed due to previous errors
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardContext stop
+정보: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/manager] has not been started
+2011. 9. 28 오후 1:31:59 org.apache.catalina.startup.HostConfig deployDirectory
+정보: Deploying web application directory ROOT
+2011. 9. 28 오후 1:31:59 org.apache.coyote.http11.Http11Protocol start
+심각: Error starting endpoint
+java.net.BindException: Address already in use: JVM_Bind <null>:80
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:549)
+	at org.apache.tomcat.util.net.JIoEndpoint.start(JIoEndpoint.java:565)
+	at org.apache.coyote.http11.Http11Protocol.start(Http11Protocol.java:203)
+	at org.apache.catalina.connector.Connector.start(Connector.java:1095)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:540)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(Unknown Source)
+	at java.net.ServerSocket.bind(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at java.net.ServerSocket.<init>(Unknown Source)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:50)
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:538)
+	... 12 more
+2011. 9. 28 오후 1:31:59 org.apache.catalina.core.StandardService start
+심각: Failed to start connector [Connector[HTTP/1.1-80]]
+LifecycleException:  service.getName(): "Catalina";  Protocol handler start failed: java.net.BindException: Address already in use: JVM_Bind <null>:80
+	at org.apache.catalina.connector.Connector.start(Connector.java:1102)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:540)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+2011. 9. 28 오후 1:31:59 org.apache.jk.common.ChannelSocket init
+정보: JK: ajp13 listening on /0.0.0.0:8009
+2011. 9. 28 오후 1:31:59 org.apache.jk.server.JkMain start
+정보: Jk running ID=0 time=0/15  config=null
+2011. 9. 28 오후 1:31:59 org.apache.catalina.startup.Catalina start
+정보: Server startup in 1009 ms

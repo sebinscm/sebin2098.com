@@ -1,0 +1,109 @@
+
+2011-08-19 15:55:29 Commons Daemon procrun stdout initialized
+
+2011-08-19 16:04:43 Commons Daemon procrun stdout initialized
+
+2011-08-19 16:08:01 Commons Daemon procrun stdout initialized
+
+2011-08-19 16:12:40 Commons Daemon procrun stdout initialized
+
+2011-08-19 16:40:17 Commons Daemon procrun stdout initialized
+
+2011-08-19 16:45:51 Commons Daemon procrun stdout initialized
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+Exception /admin/account/supplier : empty String
+Exception /admin/account/supplier : empty String
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9998'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9998'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+Exception PO_input : Incorrect decimal value: '' for column 'LOCAL_PRICE' at row 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'upper(dvasv)  order by a.order_no' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'upper(dvasv)  order by a.order_no' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9998'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9998'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9997'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_number does not existFUNCTION scm.to_number does not exist
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_char does not existFUNCTION scm.to_char does not exist
+Exception in po_list_excel : Can't call commit when autocommit=true
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION scm.to_char does not existFUNCTION scm.to_char does not exist
+Exception in po_list_excel : Can't call commit when autocommit=true
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1
+[Ljava.lang.String;@16eeb41
+[Ljava.lang.String;@ec8597
+[Ljava.lang.String;@36917e
+[Ljava.lang.String;@1bce9a
+[Ljava.lang.String;@1990da7
+[Ljava.lang.String;@9a4cfc
+[Ljava.lang.String;@344e58
+[Ljava.lang.String;@38c21
+[Ljava.lang.String;@e4e848
+[Ljava.lang.String;@4def3a
+[Ljava.lang.String;@94dc7b
+[Ljava.lang.String;@1173370
+[Ljava.lang.String;@322abb
+java.io.IOException: Cannot run program "cmd" (in directory "C:\Documents and Settings\Administrator\?? ??"): CreateProcess error=267, ?©£¡¤¨¬??¢ç ??¡×?? ¢¯???
+[Ljava.lang.String;@19375c2
+[Ljava.lang.String;@18394a
+[Ljava.lang.String;@5962c4
+[Ljava.lang.String;@19f4cb2
+[Ljava.lang.String;@1646501
+[Ljava.lang.String;@2365fe
+[Ljava.lang.String;@1fd1313
+[Ljava.lang.String;@1ef6329
+[Ljava.lang.String;@1574c00
+[Ljava.lang.String;@3ed23c
+[Ljava.lang.String;@1bf03aa
+[Ljava.lang.String;@4e19c1
+[Ljava.lang.String;@17df6c1
+[Ljava.lang.String;@d304f3
+[Ljava.lang.String;@1470479
+[Ljava.lang.String;@176d5d3
+[Ljava.lang.String;@d04fff
+[Ljava.lang.String;@33f0d1
+[Ljava.lang.String;@72d8c
+[Ljava.lang.String;@16d471b
+[Ljava.lang.String;@15771a2
+[Ljava.lang.String;@12eafbf
+[Ljava.lang.String;@145ea6
+[Ljava.lang.String;@151fcf3
+[Ljava.lang.String;@1b5ba4c
+[Ljava.lang.String;@1da07be
+[Ljava.lang.String;@164394e
+[Ljava.lang.String;@130faf3
+[Ljava.lang.String;@ab767d
+[Ljava.lang.String;@f04776
+[Ljava.lang.String;@e39ba3
+[Ljava.lang.String;@ff0b9d
+[Ljava.lang.String;@538050
+[Ljava.lang.String;@d42ee
+[Ljava.lang.String;@a51748
+[Ljava.lang.String;@9bac9d

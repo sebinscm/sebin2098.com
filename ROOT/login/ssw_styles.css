@@ -1,0 +1,96 @@
+BODY {
+	MARGIN: 0px
+}
+.signUpBox {
+	BORDER-BOTTOM: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; LINE-HEIGHT: 24px; BACKGROUND-COLOR: #bfcd1a; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 11px; BORDER-TOP: #ffffff 1px solid; BORDER-RIGHT: #ffffff 1px solid
+}
+.formFileds {
+	BACKGROUND-COLOR: #fbfced; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #545a1f; FONT-SIZE: 11px
+}
+.con_cream {
+	LINE-HEIGHT: 25px; BACKGROUND-COLOR: #fbfce6; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px
+}
+.menu_style {
+	BACKGROUND-IMAGE: url(/login/menu_img.jpg); TEXT-ALIGN: right; LINE-HEIGHT: 30px; BACKGROUND-COLOR: #7a7c2b; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-POSITION: left 50%; COLOR: #ede42d; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.menu_style A:link {
+	COLOR: #ede42d; TEXT-DECORATION: none
+}
+.menu_style A:active {
+	COLOR: #ede42d; TEXT-DECORATION: none
+}
+.menu_style A:visited {
+	COLOR: #ede42d; TEXT-DECORATION: none
+}
+.menu_style A:hover {
+	COLOR: #ede42d; TEXT-DECORATION: none
+}
+.box_pro {
+	BORDER-BOTTOM: #c7d33d 1px solid; TEXT-ALIGN: justify; BORDER-LEFT: #c7d33d 1px solid; LINE-HEIGHT: 22px; BACKGROUND-COLOR: #f4f4df; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 11px; BORDER-RIGHT: #c7d33d 1px solid
+}
+.txt_blk_bold {
+	PADDING-LEFT: 10px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.txt_blk_bold A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.txt_blk_bold A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.txt_blk_bold A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.txt_blk_bold A:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.txt_blk_normal {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 8px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 11px; PADDING-TOP: 0px
+}
+.footer_bg1 {
+	BACKGROUND-IMAGE: url(/login/footer_bg1.jpg); TEXT-ALIGN: right; LINE-HEIGHT: 30px; BACKGROUND-COLOR: #b9c750; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-POSITION: left 50%; COLOR: #000000; FONT-SIZE: 11px
+}
+.footer_bg1 A:link {
+	COLOR: #ede42d; TEXT-DECORATION: none
+}
+.footer_bg1 A:active {
+	COLOR: #ede42d; TEXT-DECORATION: none
+}
+.footer_bg1 A:visited {
+	COLOR: #ede42d; TEXT-DECORATION: none
+}
+.footer_bg1 A:hover {
+	COLOR: #ede42d; TEXT-DECORATION: none
+}
+.footer_bg2 {
+	BACKGROUND-IMAGE: url(/login/footer_bg.gif); TEXT-ALIGN: center; LINE-HEIGHT: 30px; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 11px
+}
+.sub_sec {
+	LINE-HEIGHT: 22px; BACKGROUND-COLOR: #cacd43; PADDING-LEFT: 5px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.form_box {
+	BORDER-BOTTOM: #e8e9ab 1px solid; BORDER-LEFT: #e8e9ab 1px solid; BORDER-TOP: #e8e9ab 1px solid; BORDER-RIGHT: #e8e9ab 1px solid
+}
+.secHead {
+	BACKGROUND-IMAGE: url(../img/sub_ban_bg.jpg); BORDER-BOTTOM-COLOR: #cccccc; PADDING-LEFT: 10px; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 20px; FONT-WEIGHT: bold
+}
+.secHeadmain {
+	BACKGROUND-IMAGE: url(../img/sub_ban_left.jpg); BORDER-BOTTOM-COLOR: #cccccc; PADDING-LEFT: 12px; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-POSITION: left 50%; COLOR: #ffffff; FONT-SIZE: 20px; FONT-WEIGHT: bold
+}
+.row_odd {
+	BACKGROUND-COLOR: #dae28b
+}
+.row_even {
+	BACKGROUND-COLOR: #e8edb8
+}
+.txt_small_ashBG {
+	LINE-HEIGHT: 16px; BACKGROUND-COLOR: #f7f7f7; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: normal
+}
+.txt_red_small_bold {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #ff0000; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+.white_box {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; LINE-HEIGHT: 25px; BACKGROUND-COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px; BORDER-TOP: #cccccc 1px solid; FONT-WEIGHT: normal; BORDER-RIGHT: #cccccc 1px solid
+}
+.msg_large {
+	LINE-HEIGHT: 25px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #999900; FONT-SIZE: 22px; FONT-WEIGHT: bold
+}

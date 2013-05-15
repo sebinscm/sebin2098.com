@@ -1,0 +1,579 @@
+BODY {
+	MARGIN: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.blueround {
+	DISPLAY: block
+}
+.blueround * {
+	DISPLAY: block; BACKGROUND: #00899b; HEIGHT: 1px; FONT-SIZE: 0.01em; OVERFLOW: hidden
+}
+.blueround1 {
+	BORDER-LEFT: #afc6dd 1px solid; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #00899b; MARGIN-LEFT: 3px; MARGIN-RIGHT: 3px; BORDER-RIGHT: #afc6dd 1px solid
+}
+.inputsize {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 28px; COLOR: #333333; FONT-SIZE: 15px; FONT-WEIGHT: bold
+}
+.blueround2 {
+	BORDER-LEFT: #ecf1f7 1px solid; BACKGROUND-COLOR: #00899b; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; MARGIN-LEFT: 1px; MARGIN-RIGHT: 1px; BORDER-RIGHT: #ecf1f7 1px solid
+}
+.blueround3 {
+	BORDER-LEFT: #00a4bb 1px solid; MARGIN-LEFT: 1px; MARGIN-RIGHT: 1px; BORDER-RIGHT: #00a4bb 1px solid
+}
+.blueround4 {
+	BORDER-LEFT: #afc6dd 1px solid; BORDER-RIGHT: #afc6dd 1px solid
+}
+.blueround5 {
+	BORDER-LEFT: #00899b 1px solid; BORDER-RIGHT: #00899b 1px solid
+}
+.blueroundfg {
+	BACKGROUND: #00899b; HEIGHT: 100%
+}
+.whiteround {
+	DISPLAY: block
+}
+.whiteround * {
+	DISPLAY: block; BACKGROUND: #ffffff; HEIGHT: 1px; FONT-SIZE: 0.01em; OVERFLOW: hidden
+}
+.whiteround1 {
+	BORDER-LEFT: #96b4d3 1px solid; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #d1deeb; MARGIN-LEFT: 3px; MARGIN-RIGHT: 3px; BORDER-RIGHT: #96b4d3 1px solid
+}
+.whiteround2 {
+	BORDER-LEFT: #5989b9 1px solid; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #dce6f0; MARGIN-LEFT: 1px; MARGIN-RIGHT: 1px; BORDER-RIGHT: #5989b9 1px solid
+}
+.whiteround3 {
+	BORDER-LEFT: #dce6f0 1px solid; MARGIN-LEFT: 1px; MARGIN-RIGHT: 1px; BORDER-RIGHT: #dce6f0 1px solid
+}
+.whiteround4 {
+	BORDER-LEFT: #96b4d3 1px solid; BORDER-RIGHT: #96b4d3 1px solid
+}
+.whiteround5 {
+	BORDER-LEFT: #d1deeb 1px solid; BORDER-RIGHT: #d1deeb 1px solid
+}
+.whiteroundfg {
+	BACKGROUND: #ffffff; HEIGHT: 100%
+}
+.lightbluecorner {
+	DISPLAY: block
+}
+.lightbluecorner * {
+	DISPLAY: block; BACKGROUND: #cdf0f6; HEIGHT: 1px; FONT-SIZE: 0.01em; OVERFLOW: hidden
+}
+.lightbluecorner1 {
+	BORDER-LEFT: #f4faff 1px solid; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #edf6ff; MARGIN-LEFT: 3px; MARGIN-RIGHT: 3px; BORDER-RIGHT: #f4faff 1px solid
+}
+.lightbluecorner2 {
+	BORDER-LEFT: #fcfdff 1px solid; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #ebf6ff; MARGIN-LEFT: 1px; MARGIN-RIGHT: 1px; BORDER-RIGHT: #fcfdff 1px solid
+}
+.lightbluecorner3 {
+	BORDER-LEFT: #ebf6ff 1px solid; MARGIN-LEFT: 1px; MARGIN-RIGHT: 1px; BORDER-RIGHT: #ebf6ff 1px solid
+}
+.lightbluecorner4 {
+	BORDER-LEFT: #f4faff 1px solid; BORDER-RIGHT: #f4faff 1px solid
+}
+.lightbluecorner5 {
+	BORDER-LEFT: #edf6ff 1px solid; BORDER-RIGHT: #edf6ff 1px solid
+}
+.lightbluecornerfg {
+	BACKGROUND: #cdf0f6; HEIGHT: 100%
+}
+.padingrightleft {
+	
+}
+.whitecornerlightbluebg {
+	DISPLAY: block
+}
+.whitecornerlightbluebg * {
+	DISPLAY: block; BACKGROUND: #ffffff; HEIGHT: 1px; FONT-SIZE: 0.01em; OVERFLOW: hidden
+}
+.whitecornerlightbluebg1 {
+	BORDER-LEFT: #f1f8ff 1px solid; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #f9fcff; MARGIN-LEFT: 3px; MARGIN-RIGHT: 3px; BORDER-RIGHT: #f1f8ff 1px solid
+}
+.whitecornerlightbluebg2 {
+	BORDER-LEFT: #e9f5ff 1px solid; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #fafcff; MARGIN-LEFT: 1px; MARGIN-RIGHT: 1px; BORDER-RIGHT: #e9f5ff 1px solid
+}
+.whitecornerlightbluebg3 {
+	BORDER-LEFT: #fafcff 1px solid; MARGIN-LEFT: 1px; MARGIN-RIGHT: 1px; BORDER-RIGHT: #fafcff 1px solid
+}
+.whitecornerlightbluebg4 {
+	BORDER-LEFT: #f1f8ff 1px solid; BORDER-RIGHT: #f1f8ff 1px solid
+}
+.whitecornerlightbluebg5 {
+	BORDER-LEFT: #f9fcff 1px solid; BORDER-RIGHT: #f9fcff 1px solid
+}
+.whitecornerlightbluebgfg {
+	BACKGROUND: #ffffff
+}
+.bodybold1 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 15px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.border4sidesgray {
+	BORDER-BOTTOM: #ebebeb 1px solid; BORDER-LEFT: #ebebeb 1px solid; BORDER-TOP: #ebebeb 1px solid; BORDER-RIGHT: #ebebeb 1px solid
+}
+.outertable {
+	BACKGROUND-COLOR: #00899b
+}
+.bordergray4isdesrounded {
+	BORDER-BOTTOM: #e2e2e2 1px solid; BORDER-LEFT: #e2e2e2 1px solid; BORDER-TOP: #e2e2e2 1px solid; BORDER-RIGHT: #e2e2e2 1px solid; -moz-border-radius: 6px; -webkit-border-radius: 6px
+}
+.icons1 {
+	BACKGROUND-IMAGE: url(../images/icons1.gif); BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: no-repeat
+}
+.myprofileicon {
+	BACKGROUND-POSITION: center -3px
+}
+.paymentsetingsicon {
+	BACKGROUND-POSITION: center -26px
+}
+.refbannericon {
+	BACKGROUND-POSITION: center -49px
+}
+.emailpreficon {
+	BACKGROUND-POSITION: center -842px
+}
+.deleteaccounticon {
+	BACKGROUND-POSITION: center -73px
+}
+.myprofileicon1 {
+	BACKGROUND-POSITION: center bottom
+}
+.uploadicon {
+	BACKGROUND-POSITION: center -178px
+}
+.unlimitedspaceicon {
+	BACKGROUND-POSITION: center -120px
+}
+.upto200mbperfileicon {
+	BACKGROUND-POSITION: center -147px
+}
+.freeicon {
+	BACKGROUND-POSITION: center -95px
+}
+.filesicon {
+	BACKGROUND-POSITION: center -227px
+}
+.linksicon {
+	BACKGROUND-POSITION: center -251px
+}
+.foldersicon {
+	BACKGROUND-POSITION: center -275px
+}
+.pendingrequesticon {
+	BACKGROUND-POSITION: center -355px
+}
+.myfriendsicon {
+	BACKGROUND-POSITION: center -326px
+}
+.searchfriendsicon {
+	BACKGROUND-POSITION: center -870px
+}
+.ignoredfriendsicon {
+	BACKGROUND-POSITION: center -378px
+}
+.invitefriendsicon {
+	BACKGROUND-POSITION: center -405px
+}
+.photoalbumicon {
+	BACKGROUND-POSITION: center -459px
+}
+.audioalbumicon {
+	BACKGROUND-POSITION: center -486px
+}
+.videoalbumicon {
+	BACKGROUND-POSITION: center -514px
+}
+.myearingsdview {
+	BACKGROUND-POSITION: center -203px
+}
+.iconalbumlink {
+	BACKGROUND-POSITION: center -541px
+}
+.iconembedlink {
+	BACKGROUND-POSITION: center -565px
+}
+.myearingsicon {
+	BACKGROUND-POSITION: center -788px
+}
+.myfilesicon {
+	BACKGROUND-POSITION: center -297px
+}
+.myalbumsicon {
+	BACKGROUND-POSITION: center -700px
+}
+.friends {
+	BACKGROUND-POSITION: center -325px
+}
+.greetings {
+	BACKGROUND-POSITION: center -730px
+}
+.searchicon {
+	BACKGROUND-POSITION: right -760px
+}
+.downloadfilelinkicon {
+	BACKGROUND-POSITION: center -622px
+}
+.sendicon {
+	BACKGROUND-POSITION: center -644px
+}
+.inboxicon {
+	BACKGROUND-POSITION: center -922px
+}
+.sendmsgicon {
+	BACKGROUND-POSITION: center -900px
+}
+.iconstab {
+	BACKGROUND-IMAGE: url(../images/iconstab.gif); BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: no-repeat
+}
+.myaccounticonstab {
+	BACKGROUND-POSITION: left -121px
+}
+.myearingsiconstab {
+	BACKGROUND-POSITION: left -101px
+}
+.myfilesiconstab {
+	BACKGROUND-POSITION: left -3px
+}
+.myalbumsiconstab {
+	BACKGROUND-POSITION: left -52px
+}
+.friendsstab {
+	BACKGROUND-POSITION: left -27px
+}
+.greetingsstab {
+	BACKGROUND-POSITION: center -5px
+}
+.icons {
+	BACKGROUND-IMAGE: url(../images/icons.gif); BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: no-repeat
+}
+.exeicon {
+	BACKGROUND-POSITION: center -860px
+}
+.raricon {
+	BACKGROUND-POSITION: center -760px
+}
+.pdficon {
+	BACKGROUND-POSITION: center -690px
+}
+.imgicon {
+	BACKGROUND-POSITION: center -590px
+}
+.txticon {
+	BACKGROUND-POSITION: center -490px
+}
+.wordicon {
+	BACKGROUND-POSITION: center -290px
+}
+.xlsicon {
+	BACKGROUND-POSITION: center -100px
+}
+.ppticon {
+	BACKGROUND-POSITION: center -10px
+}
+.icons45 {
+	BACKGROUND-IMAGE: url(../images/icons45.gif); BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: no-repeat
+}
+.ppticon45 {
+	BACKGROUND-POSITION: center -5px
+}
+.xlsicon45 {
+	BACKGROUND-POSITION: center -61px
+}
+.wordicon45 {
+	BACKGROUND-POSITION: center -169px
+}
+.txticon45 {
+	BACKGROUND-POSITION: center -285px
+}
+.imgicon45 {
+	BACKGROUND-POSITION: center -340px
+}
+.pdficon45 {
+	BACKGROUND-POSITION: center -395px
+}
+.raricon45 {
+	BACKGROUND-POSITION: center -451px
+}
+.exeicon45 {
+	BACKGROUND-POSITION: center -510px
+}
+.musicicon45 {
+	BACKGROUND-POSITION: center -562px
+}
+.rightline {
+	BORDER-RIGHT: #cdf0f6 1px solid
+}
+.albumring {
+	BACKGROUND-IMAGE: url(../images/albumring.gif); BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: right center
+}
+.border4sidesgray {
+	BORDER-BOTTOM: #cce8ff 2px solid; BACKGROUND-COLOR: #cdf0f6; BORDER-RIGHT: #cce8ff 2px solid
+}
+.borderbottom {
+	BORDER-BOTTOM: #cdf0f6 1px solid
+}
+.tdblue {
+	BACKGROUND-COLOR: #00899b
+}
+.tdlightblue {
+	BACKGROUND-COLOR: #cdf0f6
+}
+.border4sidesblueinner {
+	BORDER-BOTTOM: #00899b 1px solid; BORDER-LEFT: #00899b 1px solid; BORDER-RIGHT: #00899b 1px solid
+}
+.curved {
+	BORDER-BOTTOM: #cdf0f6 2px solid; BORDER-LEFT: #cdf0f6 2px solid; BORDER-TOP: #cdf0f6 2px solid; BORDER-RIGHT: #cdf0f6 2px solid; -moz-border-radius: 7px
+}
+.curved1 {
+	BORDER-BOTTOM: #fb950b 1px solid; BORDER-LEFT: #fb950b 1px solid; BORDER-TOP: #fb950b 1px solid; BORDER-RIGHT: #fb950b 1px solid; -moz-border-radius: 4px
+}
+.curvedboot {
+	BACKGROUND-IMAGE: url(../images/barbgnew.gif); BORDER-BOTTOM: #cdf0f6 3px solid; BORDER-LEFT: #cdf0f6 3px solid; BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: center bottom; BORDER-TOP: #cdf0f6 3px solid; BORDER-RIGHT: #cdf0f6 3px solid; -webkit-border-radius: 8px; -moz-border-radius-bottomleft: 8px; -moz-border-radius-bottomright: 8px; -moz-border-radius-topleft: 8px; -moz-border-radius-topright: 8px
+}
+.borderbottomdot {
+	BORDER-BOTTOM: #e5e5e5 1px dotted
+}
+.curved4sides {
+	BORDER-BOTTOM: #9ce1ed 1px solid; BORDER-LEFT: #9ce1ed 1px solid; BORDER-TOP: #9ce1ed 1px solid; BORDER-RIGHT: #9ce1ed 1px solid; -webkit-border-radius: 5px; -moz-border-radius-bottomleft: 4px; -moz-border-radius-bottomright: 4px; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px
+}
+.ddd {
+	BACKGROUND-IMAGE: url(../images/audioplayer_12.gif); BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: right top
+}
+.fontfamilyverdana {
+	FONT-FAMILY: Verdana
+}
+.textsheet {
+	COLOR: #ffffff; FONT-SIZE: 15px; FONT-WEIGHT: bold
+}
+.smalltext11 {
+	COLOR: #666666; FONT-SIZE: 11px
+}
+.normal12black {
+	COLOR: #000000; FONT-SIZE: 12px
+}
+.bgtext {
+	COLOR: #006675; FONT-SIZE: 23px; FONT-WEIGHT: bold
+}
+A.textlinkblue:link {
+	COLOR: #00899b; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.textlinkblue:visited {
+	COLOR: #00899b; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.textlinkblue:active {
+	COLOR: #00899b; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.textlinkblue:hover {
+	COLOR: #ff6600
+}
+A.textlink11blue:link {
+	COLOR: #00899b; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.textlink11blue:visited {
+	COLOR: #00899b; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.textlink11blue:active {
+	COLOR: #00899b; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.textlink11blue:hover {
+	COLOR: #ff6600
+}
+A.pagination:link {
+	TEXT-ALIGN: center; LINE-HEIGHT: 20px; WIDTH: 20px; DISPLAY: block; COLOR: #00899b; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.pagination:visited {
+	TEXT-ALIGN: center; LINE-HEIGHT: 20px; WIDTH: 20px; DISPLAY: block; COLOR: #00899b; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.pagination:active {
+	TEXT-ALIGN: center; LINE-HEIGHT: 20px; WIDTH: 20px; DISPLAY: block; COLOR: #00899b; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.pagination:hover {
+	TEXT-ALIGN: center; LINE-HEIGHT: 20px; BACKGROUND-COLOR: #ff6600; WIDTH: 20px; DISPLAY: block; FLOAT: left; HEIGHT: 20px; COLOR: #000000; CLEAR: both
+}
+A.messaging:link {
+	BACKGROUND-IMAGE: url(../images/messagebut.gif); TEXT-ALIGN: center; LINE-HEIGHT: 19px; BACKGROUND-ATTACHMENT: scroll; DISPLAY: block; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Tahoma; BACKGROUND-POSITION: center top; COLOR: #00899b; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.messaging:visited {
+	BACKGROUND-IMAGE: url(../images/messagebut.gif); TEXT-ALIGN: center; LINE-HEIGHT: 19px; BACKGROUND-ATTACHMENT: scroll; DISPLAY: block; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Tahoma; BACKGROUND-POSITION: center top; COLOR: #00899b; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.messaging:active {
+	BACKGROUND-IMAGE: url(../images/messagebut.gif); TEXT-ALIGN: center; LINE-HEIGHT: 19px; BACKGROUND-ATTACHMENT: scroll; DISPLAY: block; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Tahoma; BACKGROUND-POSITION: center top; COLOR: #00899b; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.messaging:hover {
+	BACKGROUND-IMAGE: url(../images/messagebut.gif); TEXT-ALIGN: center; LINE-HEIGHT: 19px; DISPLAY: block; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 50% bottom; COLOR: #ffffff
+}
+A.textlinkbluebold:link {
+	COLOR: #00899b; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.textlinkbluebold:visited {
+	COLOR: #00899b; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.textlinkbluebold:active {
+	COLOR: #00899b; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.textlinkbluebold:hover {
+	COLOR: #ff6600
+}
+A.textlinkorange:link {
+	COLOR: #f7941d; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.textlinkorange:visited {
+	COLOR: #f7941d; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.textlinkorange:active {
+	COLOR: #f7941d; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.textlinkorange:hover {
+	COLOR: #00899b
+}
+A.linkbg:link {
+	BACKGROUND-IMAGE: url(../images/bgbutton.gif); LINE-HEIGHT: 20px; BACKGROUND-ATTACHMENT: scroll; DISPLAY: block; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.linkbg:visited {
+	BACKGROUND-IMAGE: url(../images/bgbutton.gif); LINE-HEIGHT: 20px; BACKGROUND-ATTACHMENT: scroll; DISPLAY: block; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.linkbg:active {
+	BACKGROUND-IMAGE: url(../images/bgbutton.gif); LINE-HEIGHT: 20px; BACKGROUND-ATTACHMENT: scroll; DISPLAY: block; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: center bottom; COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.linkbg:hover {
+	BACKGROUND-POSITION: 50% top; COLOR: #00899b
+}
+.textorange16 {
+	COLOR: #ff9900; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+.normal12bluebold {
+	COLOR: #00616f; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.normal11bluebold {
+	COLOR: #00616f; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.normal12blackbold {
+	COLOR: #000000; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.normal14boldblue {
+	FONT-FAMILY: Tahoma; COLOR: #006675; FONT-SIZE: 17px; FONT-WEIGHT: bold
+}
+.bgtextorange {
+	COLOR: #ff9900; FONT-SIZE: 20px; FONT-WEIGHT: bold
+}
+.normal12white {
+	COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.normal12blue {
+	COLOR: #006a79; FONT-SIZE: 12px
+}
+.normal11whitebold {
+	COLOR: #ffffff; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.textorange12 {
+	COLOR: #ff9900; FONT-SIZE: 11px; FONT-WEIGHT: normal
+}
+.textblue14 {
+	COLOR: #009fdf; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.textpink14 {
+	COLOR: #e80f8a; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.textgreen14 {
+	COLOR: #57bf0a; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.msgs {
+	COLOR: #00c100; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.error {
+	COLOR: #ff0000; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.fontfamilyarial {
+	FONT-FAMILY: Arial
+}
+.normaltext {
+	COLOR: #333333; FONT-SIZE: 12px
+}
+.normaltextbluebold {
+	COLOR: #004d57; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+A.textlinkbluebold1:link {
+	COLOR: #006699; FONT-SIZE: 18px; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.textlinkbluebold1:visited {
+	COLOR: #006699; FONT-SIZE: 18px; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.textlinkbluebold1:active {
+	COLOR: #006699; FONT-SIZE: 18px; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.textlinkbluebold1:hover {
+	COLOR: #ff6600; TEXT-DECORATION: none
+}
+A.textlinkblued:link {
+	COLOR: #00899b; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.textlinkblued:visited {
+	COLOR: #00899b; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.textlinkblued:active {
+	COLOR: #00899b; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.textlinkblued:hover {
+	COLOR: #ff6600
+}
+.normal11blue {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #006a79; FONT-SIZE: 11px
+}
+.normal11gray {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #8e8e8e; FONT-SIZE: 11px
+}
+.bordergray4isdesroundedbgblue {
+	BORDER-BOTTOM: #e2e2e2 1px solid; BORDER-LEFT: #e2e2e2 1px solid; BACKGROUND-COLOR: #eaf9fb; BORDER-TOP: #e2e2e2 1px solid; BORDER-RIGHT: #e2e2e2 1px solid; -moz-border-radius: 6px; -webkit-border-radius: 6px
+}
+.bordertopdotted {
+	BORDER-TOP: #caedf2 1px dotted
+}
+.msgover {
+	BACKGROUND-IMAGE: url(../images/messagebut.gif); TEXT-ALIGN: center; LINE-HEIGHT: 20px; DISPLAY: block; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Tahoma; BACKGROUND-POSITION: center -23px; COLOR: #ffffff; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.tabmouseover {
+	BORDER-LEFT: #ff6600 1px solid; BACKGROUND: url(../images/tabbg.gif) #fea021 repeat-x center bottom; BORDER-TOP: #ff6600 1px solid; BORDER-RIGHT: #ff6600 1px solid; -webkit-border-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-topright: 3px
+}
+.tabmouseout {
+	BORDER-LEFT: #a8d1e8 1px solid; BACKGROUND: url(../images/tabbg.gif) #efefef repeat-x center top; BORDER-TOP: #a8d1e8 1px solid; BORDER-RIGHT: #a8d1e8 1px solid; -webkit-border-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-topright: 3px
+}
+A.tablinks:link {
+	BACKGROUND-IMAGE: url(../images/tabbg.gif); LINE-HEIGHT: 25px; TEXT-INDENT: 25px; BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: center top; COLOR: #00899b; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.tablinks:visited {
+	BACKGROUND-IMAGE: url(../images/tabbg.gif); LINE-HEIGHT: 25px; TEXT-INDENT: 25px; BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: center top; COLOR: #00899b; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.tablinks:active {
+	BACKGROUND-IMAGE: url(../images/tabbg.gif); LINE-HEIGHT: 25px; TEXT-INDENT: 25px; BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: center top; COLOR: #00899b; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.tablinks:hover {
+	BACKGROUND-IMAGE: url(../images/tabbg.gif); TEXT-INDENT: 25px; BACKGROUND-ATTACHMENT: scroll; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: center bottom; COLOR: #ff6600
+}
+A.textlinkwhitebold:link {
+	COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.textlinkwhitebold:visited {
+	COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.textlinkwhitebold:active {
+	COLOR: #ffffff; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.textlinkwhitebold:hover {
+	COLOR: #ffffff
+}
+A.num:link {
+	LINE-HEIGHT: 15px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #00899b; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.num:visited {
+	LINE-HEIGHT: 15px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #00899b; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.num:hover {
+	BACKGROUND-COLOR: #00899b; COLOR: #fff
+}
+A.num:active {
+	BACKGROUND-COLOR: #f60; COLOR: #fff
+}
+.numno {
+	LINE-HEIGHT: 20px; BACKGROUND-COLOR: #f90; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #fff; FONT-SIZE: 12px
+}

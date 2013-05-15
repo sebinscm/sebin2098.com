@@ -1,0 +1,27 @@
+<%!
+//-------------------------------------------
+// DB_Connection()
+//       - Make DB Connection
+//   conn : Output Connection
+//
+//-------------------------------------------
+Connection DB_Connection() throws ClassNotFoundException, SQLException,Exception
+{
+	Class.forName("weblogic.jdbc.pool.Driver");
+	
+   	Connection conn = DriverManager.getConnection("jdbc:weblogic:pool:oraclePool");
+   	
+   	return conn;
+}
+
+//-------------------------------------------
+// DB_Disconnection()
+//       - Make DB Disconnection
+//   conn : Output Disconnection
+//
+//-------------------------------------------
+void DB_Disconnection(Connection conn) throws ClassNotFoundException, SQLException,Exception
+{
+	conn.close();
+}
+%>

@@ -1,0 +1,21 @@
+[2012-06-14 15:39:10] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2012-06-14 15:39:10] [info]  Running 'Tomcat6' Service...
+[2012-06-14 15:39:10] [info]  Starting service...
+[2012-06-14 15:39:11] [info]  Service started in 1140 ms.
+[2012-06-14 15:45:14] [info]  Console LOGOFF event signaled
+[2012-06-14 15:45:20] [info]  Console LOGOFF event signaled
+[2012-06-14 15:45:22] [info]  Console SHUTDOWN event signaled
+[2012-06-14 15:45:22] [info]  Stopping service...
+[2012-06-14 15:45:23] [info]  Service stopped.
+[2012-06-14 15:45:23] [info]  Run service finished.
+[2012-06-14 15:45:23] [info]  Commons Daemon procrun finished
+[2012-06-14 15:46:37] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2012-06-14 15:46:38] [info]  Running 'Tomcat6' Service...
+[2012-06-14 15:46:38] [info]  Starting service...
+[2012-06-14 15:46:39] [info]  Service started in 1156 ms.
+[2012-06-15 23:34:29] [info]  Console LOGOFF event signaled
+[2012-06-15 23:34:30] [info]  Console SHUTDOWN event signaled
+[2012-06-15 23:34:30] [info]  Stopping service...
+[2012-06-15 23:34:31] [info]  Service stopped.
+[2012-06-15 23:34:31] [info]  Run service finished.
+[2012-06-15 23:34:32] [info]  Commons Daemon procrun finished

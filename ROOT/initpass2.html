@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<SCRIPT for="document" event="onkeypress">
+if (window.event.keyCode==13)
+{
+        ChangePW()
+}
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+function init()
+{
+        frmPass.password.focus();
+}
+
+function Reset()
+{
+	frmPass.reset();
+}
+function ChangePW()
+{
+	var check = frmPass.password.value;
+	if( check.length < 1 ) {
+		alert('New password must be at least 1 characters.');
+		return;
+	}
+	if( frmPass.password.value == frmPass.confirm.value ) {
+		frmPass.submit();
+	}else {
+		alert('New Password and retype password must be same.');
+	}
+}
+</SCRIPT>
+<meta http-equiv='Content-Type' content='text/html; charset=euc-kr'>
+</HEAD>
+<BODY ONLOAD="init();" bgcolor="white" TOPMARGIN=5 LEFTMARGIN=5>
+<center>
+<TABlE width="800" >
+<!--TR><TD ><img border="0" src="img/banner_login.jpg" ></TD-->
+</TABLE>
+<FORM NAME="frmPass" ACTION="code_init.jsp" METHOD=POST>
+<TABLE WIDTH=800 >
+<TR> <TD >
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="23%" rowspan="4"><img border="0" src="img/pass.jpg" width="143" height="155"></td>
+    <td width="60%" colspan="2">
+      <p align="center"><font size="2" face="Verdana" color="red">Your password has been initialized for security reason.
+        <br>Please change your new password! </font></td> 
+    <td width="27%" rowspan="4"></td>
+  </tr>
+  <tr>
+    <td width="25%">
+      <p align="center"><FONT SIZE=2>New Password</font></td> 
+    <td width="25%">
+      <p align="center"><INPUT TYPE="password" NAME="password" SIZE=18 MAXLENGTH=10></td>
+  </tr>
+  <tr>
+    <td width="25%">
+      <p align="center"><FONT SIZE=2>Password confirm</td> 
+      <td width="25%">
+        <p align="center"><INPUT TYPE="password" NAME="confirm" SIZE=18 MAXLENGTH=10></td>
+    </tr>
+    <tr>
+      <td width="50%" colspan="2">
+        <p align="center"><INPUT TYPE=BUTTON VALUE="Apply" ONCLICK="JavaScript:ChangePW()">
+      </td>
+    </tr>
+  </table>
+</TD></TR>
+</FORM>
+</TABLE>
+<CENTER>
+	<p>
+		<p>
+<table width='99%' border='0' cellspacing='0' cellpadding='0' align='center'>
+ <tr><td width='100%' height='2' align='center'>
+  <HR color="#5BA3C1" width=100% size=1></td></tr>
+  <tr><td width='100%' align='center'>
+  <font face="Century Gothic" size=2 color="#FFFFFF" >&copy;Copyright 2011 </font>
+  <font face="Century Gothic" size=2 color=green>Sebin Enterprise Co,. Ltd. All Rights Reserved.</FONT><BR>
+  <font face="Century Gothic" size=2 > For more information,please contact &nbsp;&nbsp;<A href='mailto:scm@sebin2098.com'>scm@sebin2098.com</A></FONT>
+  </td></tr></table>
+</BODY>
+</HTML>

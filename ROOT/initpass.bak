@@ -1,0 +1,66 @@
+ <HTML>
+<HEAD>
+<SCRIPT for="document" event="onkeypress">
+if (window.event.keyCode==13)
+{
+        ChangePW()
+}
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+function init()
+{
+        frmPass.password.focus();
+}
+
+function Reset()
+{
+	frmPass.reset();
+}
+function ChangePW()
+{
+	var check = frmPass.password.value;
+	if( check.length < 1 ) {
+		alert('New password must be at least 1 characters.');
+		return;
+	}
+	if( frmPass.password.value == frmPass.confirm.value ) {
+		frmPass.submit();
+	}else {
+		alert('New Password and retype password must be same.');
+	}
+}
+</SCRIPT>
+<meta http-equiv='Content-Type' content='text/html; charset=euc-kr'>
+</HEAD>
+<BODY ONLOAD="init();" topmargin=0 leftmargin=3>
+<CENTER>
+<TABLE WIDTH=640 >
+<TR> <TD height="1">
+<img border="0" src="img/pass2.jpg" ></TD></TR>
+<TR>
+</TABLE>
+<FORM NAME="frmPass" ACTION="code_initpass.jsp" METHOD=POST>
+<TABLE border=0 CELLPADDING=0 CELLSPACING=0>
+<TR HEIGHT=50 VALIGN=TOP>
+<TD ALIGN=RIGHT COLSPAN=2 >
+<font size=2 color=#808080><b>&nbsp;Input your new password twice.</b></font>
+</TD>
+</TR><TR>
+<TD align=right><FONT SIZE=2>New Password : </TD>
+<TD>&nbsp;<INPUT TYPE="password" NAME="password" SIZE=10 MAXLENGTH=10></TD>
+</TR><TR>
+<TD align=right><FONT SIZE=2>Re-type Password : </TD>
+<TD>&nbsp;<INPUT TYPE="password" NAME="confirm" SIZE=10 MAXLENGTH=10></TD>
+</TR><TR>
+<TD COLSPAN=2 ALIGN=CENTER>
+<BR>
+<INPUT TYPE=BUTTON VALUE="Change PW" ONCLICK="JavaScript:ChangePW()">
+</TD></TR>
+</TABLE>
+</FORM>
+
+</TD></TR>
+</TABLE>
+
+</BODY>
+</HTML>

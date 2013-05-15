@@ -1,0 +1,12 @@
+2012. 9. 13 오후 12:51:48 org.apache.jk.common.MsgAjp processHeader
+심각: BAD packet signature 18245
+2012. 9. 13 오후 12:51:48 org.apache.jk.common.ChannelSocket processConnection
+심각: Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:628)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:585)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:693)
+	at org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:898)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:690)
+	at java.lang.Thread.run(Unknown Source)

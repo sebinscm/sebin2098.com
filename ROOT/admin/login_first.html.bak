@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE>Login first</TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<font face="Georgia">
+<BR><BR><BR>
+<FONT SIZE=5><img border="0" src="/img/sorry1.gif"><font color="#000080">Login</font></FONT><BR></font><HR>
+<font face="Georgia"><b>Session expired.<BR>
+Please log in again.</b><BR><BR>
+<a href="/admin/" target="_parent"> <font size="4">Login</font></a>
+</font>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p align="center">
+<font size="2" face="Georgia">&copy;Copyright 2007 <font color="green">Fast Future Brands Pty Ltd.</font> All Rights Reserved.<br>
+Contact <font color="blue"><a href="mailto:systemadmin@ffb.net.au">systemadmin@ffb.net.au</a></font>
+for more information.</font>
+<hr width="100%" SIZE="2">
+<p align="center"></p>
+<p></p>
+</BODY>
+</HTML>

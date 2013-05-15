@@ -1,0 +1,1000 @@
+   16  vi mailtest.
+   17  vi mailtest.java
+   18  ll
+   19  cd public_html/
+   20  ll
+   21  cd test
+   22  ll
+   23  vi vi Perform.java 
+   24  ll
+   25  vi Perform.
+   26  vi Perform.java 
+   27  pwd
+   28  ll
+   29  cd ..
+   30  ll
+   31  ls
+   32  vi code_login.jsp 
+   33  ll
+   34  vi shop_update.jsp 
+   35  vi code_login.jsp 
+   36  vi shop_update.jsp 
+   37  ll
+   38  set
+   39  ll
+   40  clear
+   41  ll
+   42  rm mailtest.*
+   43  y
+   44  ll
+   45  vi table.txt 
+   46  ll
+   47  rm table.txt 
+   48  ll
+   49  rm xterm.sh 
+   50  ll
+   51  vi user.sql 
+   52  ll
+   53  rm user.sql 
+   54  ll
+   55  wpd
+   56  pwd
+   57  apa
+   58  ll
+   59  cd admin
+   60  ll
+   61  exit
+   62  su - 
+   63  ll
+   64  cd public_html/
+   65  ll
+   66  pwd
+   67  ll
+   68  ll
+   69  pwd
+   70  su - 
+   71  ll
+   72  cd ..
+   73  vi .bash_profile 
+   74  mysql
+   75  ll
+   76  cd data/
+   77  ll
+   78  ll
+   79  rm *
+   80  ll
+   81  cd ..
+   82  rmdir data
+   83  ll
+   84  cd public_html/
+   85  ll
+   86  ll
+   87  cd ..
+   88  ll
+   89  cd public_html
+   90  ll
+   91  ll
+   92  su - 
+   93  ll
+   94  su - 
+   95  ll
+   96  vi main.jsp 
+   97  ll
+   98  cd board/
+   99  ll
+  100  cd skin
+  101  ll
+  102  vi list_head.txt 
+  103  cd
+  104  mysql
+  105  su - 
+  106  apa
+  107  ll
+  108  cd admin
+  109  cd daily/
+  110  ll
+  111  vi shop_edit.jsp 
+  112  vi daily_shop.
+  113  vi daily_shop.jsp
+  114  vi daily_date.jsp 
+  115  clear
+  116  ls
+  117  cd script
+  118  ver mysql
+  119  mysql
+  120  su -
+  121  ls
+  122  exit
+  123  su -
+  124  df
+  125  su -
+  126  mysql
+  127  cd /var/log
+  128  cd mysql
+  129  ll
+  130  pwd
+  131  cd /usr/local/mysql
+  132  ll
+  133  cd bin
+  134  ll
+  135  clear
+  136  ll
+  137  pwd
+  138  cd
+  139  ll
+  140  apa
+  141  ll
+  142  cd admin/daily/
+  143  ll
+  144  mysql
+  145  clear
+  146  ll
+  147  vi futura_test2.jsp 
+  148  ll
+  149  cd ..
+  150  cd ..
+  151  cd test
+  152  ll
+  153  vi input_courier.jsp 
+  154  ll
+  155  cp input_courier.jsp input_daily.jsp
+  156  vi input_daily.jsp 
+  157  clear
+  158  ll
+  159  apa
+  160  cd admin
+  161  cd daily/
+  162  ll
+  163  cp ../scanner/index.jsp .
+  164  vi index.jsp 
+  165  ll
+  166  vi daily_shop.jsp 
+  167  mysql
+  168  mysql
+  169  ls
+  170  ls
+  171  su -
+  172  exit
+  173  ls
+  174  alias
+  175  ls -a
+  176  view .bash_profile
+  177  su -
+  178  ls
+  179  cd public_html
+  180  ls
+  181  vi http.conf
+  182  ls
+  183  cd WEB-INF
+  184  ls
+  185  cd work
+  186  ls
+  187  cd ..
+  188  ls
+  189  cd tmp
+  190  ls
+  191  ls -a
+  192  cd ..
+  193  ls
+  194  cd ..
+  195  ls
+  196  su -root
+  197  ls
+  198  su
+  199  alias
+  200  apa
+  201  ls
+  202  pwd
+  203  ls
+  204  apa
+  205  res
+  206  alias
+  207  resin
+  208  ls
+  209  su
+  210  su
+  211  su - sol
+  212  /conf
+  213  ls
+  214  exit
+  215  ala
+  216  apa
+  217  ll
+  218  clear;
+  219  ll
+  220  cd perform/
+  221  ll
+  222  vi index2.html 
+  223  ll
+  224  rm index2.html 
+  225  vi index.jsp 
+  226  ll
+  227  vi index.jsp 
+  228  ll
+  229  vi gm.jsp 
+  230  ll
+  231  vi gm.jsp 
+  232  ll gm*
+  233  rm gm*
+  234  ll
+  235  cd mode3
+  236  ll
+  237  rm gm*
+  238  ll
+  239  cd ..
+  240  ll
+  241  mysql
+  242  mysql
+  243  cd 
+  244  ll
+  245  apa
+  246  ll
+  247  mysql
+  248  cd admin
+  249  ll
+  250  vi gm.jsp 
+  251  ll gm*
+  252  cd ..
+  253  vi menu.jsp
+  254  cd perform/
+  255  ll
+  256  vi index.jsp 
+  257  ll
+  258  ll
+  259  vi staff_form.jsp 
+  260  ll
+  261  vi admin.html
+  262  vi admin.html
+  263  vi admin.html
+  264  vi admin.html
+  265  vi admin.html
+  266  vi admin.html
+  267  ll
+  268  cd ../admin
+  269  vi gm.jsp 
+  270  cd perform
+  271  ll
+  272  cd ..
+  273  ll
+  274  cd ..
+  275  cd perform/
+  276  ll
+  277  vi staff_form.jsp 
+  278  ll
+  279  cd admin
+  280  cd ../admin
+  281  vi gm.jsp
+  282  cd /home/
+  283  cd mysql
+  284  ll
+  285  cd intranet
+  286  ll
+  287  cd ..
+  288  ll
+  289  mkdir intranet_200507
+  290  pwd
+  291  cd intranet
+  292  ll perfo*
+  293  cd ..
+  294  cd
+  295  apa
+  296  cd perform/
+  297  grep _04t *.jsp
+  298  cd ..
+  299  ll
+  300  vi ttt
+  301  ll
+  302  cp update_myinfo.jsp ttt
+  303  vi ttt
+  304  ll
+  305  ll *.jsp
+  306  cd ..
+  307  pwd
+  308  which gcc
+  309  which ls
+  310  vi .bash_profile 
+  311  vi .bashrc
+  312  ll
+  313  ll .*
+  314  clear;
+  315  ll
+  316  clear;
+  317  ll
+  318  mysql
+  319  su - 
+  320  date
+  321  ls
+  322  date
+  323  date
+  324  date
+  325  ls
+  326  cd public_html
+  327  ls
+  328  cd imr
+  329  ls
+  330  vi imr_form.jsp
+  331  ls
+  332  view imr_input.jsp
+  333  ls
+  334  ls
+  335  cp ./imr_form.jsp ./imr_form_bak.jsp
+  336  vi imr_form.jsp
+  337  ls
+  338  vi imr_form.jsp
+  339  mysql
+  340  desc imr_01t;
+  341  desc imr_01t;
+  342  mysql
+  343  bye
+  344  exit
+  345  ls
+  346  cd public_html
+  347  ls
+  348  cd imr
+  349  ls
+  350  vi imr_input.jsp
+  351  ls
+  352  vi imr_detail.jsp
+  353  ls
+  354  cp ./imr_detail.jsp ./imr_detail_bak.jsp
+  355  vi imr_detail.jsp
+  356  vi imr_detail.jsp
+  357  ls
+  358  vi imr_dev_list.jsp
+  359  vi imr_dev_list.jsp
+  360  ll -lrt
+  361  vi imr_form.jsp
+  362  ls
+  363  vi forms_head.html
+  364  ls
+  365  vi imr_mgr_update.jsp
+  366  ls
+  367  vi index.jsp
+  368  exit
+  369  date
+  370  ls
+  371  exit
+  372  ls
+  373  cd public_html
+  374  ls
+  375  view login_check.jsp
+  376  view login_first.htm
+  377  ls
+  378  view index.jsp
+  379  mysql
+  380  bye
+  381  exit
+  382  date
+  383  ls
+  384  cd public_html
+  385  ls
+  386  cd amin
+  387  ls
+  388  cd amin
+  389  ls
+  390  pwd
+  391  cd admin
+  392  ls
+  393  mysql
+  394  exit
+  395  mysql
+  396  exit
+  397  daet
+  398  date
+  399  date
+  400  date
+  401  date
+  402  date
+  403  date
+  404  date
+  405  date
+  406  date
+  407  date
+  408  exit
+  409  date
+  410  date
+  411  ls
+  412  cd public_html
+  413  ls
+  414  mysql
+  415  ls
+  416  date
+  417  exit
+  418  ls
+  419  su -
+  420  su -
+  421  su -
+  422  ls
+  423  passwd
+  424  ls
+  425  cd j*
+  426  ls
+  427  cd h*
+  428  cd H*
+  429  ls
+  430  cd cl*
+  431  ls
+  432  vi *.class
+  433  ls
+  434  vi *.java
+  435  exit
+  436  ls
+  437  cd public_html
+  438  ls
+  439  ls pay*
+  440  view pay*input*
+  441  grep -ni from *
+  442  grep -ni from pay*
+  443  ls
+  444  ls pay*
+  445  view payment_pre*
+  446  ls
+  447  ls pay*
+  448  view payment_print.jsp
+  449  mysql
+  450  exit
+  451  date
+  452  ls
+  453  cd public_html
+  454  ls
+  455  vi index.html
+  456  ls
+  457  ls c*
+  458  vi code_login.jsp
+  459  vi code_login.jsp
+  460  ls
+  461  vi login_pw.htm
+  462  exit
+  463  date
+  464  exit
+  465  ls
+  466  cd public_html
+  467  ls
+  468  mysql
+  469  pwd
+  470  cd daily
+  471  pwd
+  472  ls
+  473  cd daily
+  474  ls
+  475  cd daily
+  476  pwd
+  477  ls
+  478  ls -d
+  479  exit
+  480  pwd
+  481  ls
+  482  cd public_html
+  483  ls
+  484  vi menu.jsp
+  485  ls
+  486  ls inde*
+  487  vi index.jsp
+  488  ls
+  489  ls
+  490  cd ..
+  491  ls
+  492  cd script
+  493  ls
+  494  cd ..
+  495  ls
+  496  cd public_html
+  497  ls
+  498  view index.html
+  499  vi index.jsp
+  500  ls
+  501  vi main.jsp
+  502  ls
+  503  cd admin
+  504  ls
+  505  vi menu.jsp
+  506  ls
+  507  vi main.jsp
+  508  ls
+  509  pwd
+  510  ls
+  511  cd ..
+  512  ls
+  513  clear
+  514  ls
+  515  pwd
+  516  mysql
+  517  ls
+  518  cd public_html
+  519  ls
+  520  pwd
+  521  ls
+  522  ll -lrt
+  523  mysql
+  524  exit
+  525  ls
+  526  cd public_html
+  527  ls
+  528  cd imr
+  529  ls
+  530  vi index.jsp
+  531  grep -ni "Update" *
+  532  mysql
+  533  ls
+  534  grep -ni "imr*update" *
+  535  grep -ni "imr_mrg_" *
+  536  grep -ni "_mgr_" *.*
+  537  vi imr_detail.jsp
+  538  mysql
+  539  ls
+  540  vi imr_input.jsp
+  541  grep -ni imr_detail.jsp *.*
+  542  vi index.jsp
+  543  ls
+  544  vi index.jsp
+  545  grep -ni "imr_detail" *
+  546  vi imr_dev_list.jsp
+  547  ls
+  548  vi imr_detail.jsp
+  549  ls
+  550  grep -ni "9155" *
+  551  vi +135 imr_detail.jsp
+  552  ll -lrt
+  553  view imr_detail.jsp
+  554  ls
+  555  cd ~
+  556  ls
+  557  cd public_html
+  558  ls
+  559  ls
+  560  pwd
+  561  ls pay*
+  562  pwd
+  563  grep -ni "Meeting" *
+  564  ls men*
+  565  cp ./menu.jsp ./menu_0605.jsp
+  566  vi menu.jsp
+  567  grep -ni "10.2.1.5" *
+  568  ls
+  569  vi menu.jsp
+  570  ll -lrt
+  571  cd public_html
+  572  ls
+  573  ll -lrt
+  574  cd imr
+  575  ls
+  576  cd ..
+  577  cd ..
+  578  ls
+  579  cd -
+  580  ls
+  581  cd admin
+  582  ls
+  583  date
+  584  date
+  585  date
+  586  date
+  587  date
+  588  date
+  589  exit
+  590  ls
+  591  cd public_html
+  592  ls
+  593  view addbook.jsp
+  594  mysql
+  595  ls
+  596  mysql
+  597  clear
+  598  ls
+  599  ll -lrt
+  600  ls
+  601  cd imr
+  602  ls
+  603  ll -lrt
+  604  vi index.jsp
+  605  grep -ni "9155" *
+  606  vi imr_detail.jsp
+  607  cd ..
+  608  cd imr
+  609  ls
+  610  grep -ni "Waiting" *
+  611  vi imr_detail.jsp
+  612  ls
+  613  vi index.jsp
+  614  ll -lrt
+  615  vi index.jsp
+  616  pwd
+  617  ll -lrt
+  618  vi index.jsp
+  619  mysql
+  620  ll -lrt
+  621  vi index.jsp
+  622  exit
+  623  mysql
+  624  ls
+  625  cd public_html
+  626  ls
+  627  vi code_login.jsp
+  628  vi code_login.jsp
+  629  ls
+  630  vi code_login.jsp
+  631  ls
+  632  ll -lrt
+  633  rm xx.html
+  634  rm yy.html
+  635  mysql
+  636  ls
+  637  ll -lrt
+  638  mysql
+  639  clear
+  640  ls
+  641  exi
+  642  exit
+  643  ls
+  644  cd public_html
+  645  ls
+  646  ll -lrt
+  647  ls
+  648  vi 1
+  649  ls
+  650  vi index.html
+  651  mysql
+  652  ls
+  653  cd script
+  654  ls
+  655  cd ..
+  656  ls
+  657  cd charles
+  658  ls
+  659  view login_check.jsp
+  660  ls
+  661  cd ..
+  662  ls
+  663  ll -lrt
+  664  history
+  665  ll -lrt
+  666  view menu.jsp
+  667  mysql
+  668  grep -ni "main.jsp" *
+  669  ls
+  670  ls login*
+  671  cp ./login_check_1105.jsp
+  672  cp ./login_check.jsp ./login_check_1105.jsp
+  673  vi login_check.jsp
+  674  ls
+  675  ls *logi*
+  676  vi rlogin.jsp
+  677  mysql
+  678  grep -ni "password" *
+  679  grep -ni "user_01t" *
+  680  vi code_passwd.jsp
+  681  grep -ni "login_pw.htm" *
+  682  cp ./code_login.jsp ./code_login_1105.jsp
+  683  vi code_login.jsp
+  684  ls
+  685  grep -ni "insert" *
+  686  vi code_login.jsp
+  687  mysql
+  688  ls
+  689  ls code*
+  690  vi code_login.jsp
+  691  grep -ni "login_pw.htm" *
+  692  vi code_login.jsp
+  693  mysql
+  694  ls
+  695  ll -lrt
+  696  view code_login.jsp
+  697  cd admin
+  698  ls
+  699  cd sing
+  700  ls sign*
+  701  view sign.jsp
+  702  ls
+  703  cd ..
+  704  ls
+  705  grep -ni "sign_01" *
+  706  vi sign.jsp
+  707  grep -ni "sign_01" *
+  708  vi my_sign.jsp
+  709  grep -ni "password" "insert" *
+  710  vi code_passwd.jsp
+  711  ls
+  712  vi index.jsp
+  713  ls
+  714  pwd
+  715  vi login_pw.htm
+  716  grep -ni "login_pw" *
+  717  vi code_login.jsp
+  718  ll -lrt
+  719  cp ./code_login.jsp ./code_login_gil.jsp
+  720  grep -ni "code_login.jsp" *
+  721  cp ./index.html ./xx.html
+  722  vi xx.html
+  723  ls
+  724  ll -lrt
+  725  cp ./code_login_1105.jsp ./code_login.jsp
+  726  ls
+  727  vi xx.html
+  728  ls
+  729  vi xx.html
+  730  vi xx.html
+  731  cp ./xx.html ./yy.html
+  732  ls
+  733  vi xx.html
+  734  vi code_login_gil.jsp
+  735  ls
+  736  vi index.jsp
+  737  grep -ni "index" *
+  738  grep -ni "index.jsp" *
+  739  clear
+  740  grep -ni "index.jsp" *
+  741  vi +72 *gil.jsp
+  742  mysql
+  743  exit
+  744  mysql
+  745  ll -lrt
+  746  cd public_html
+  747  ls
+  748  exit
+  749  ls
+  750  mysql
+  751  ls
+  752  clear
+  753  cd public_html
+  754  ls
+  755  mysql
+  756  clear
+  757  mysql
+  758  clear
+  759  ll -lrt
+  760  mysql
+  761  mysql
+  762  clear
+  763  ll -lrt
+  764  mysql
+  765  clear
+  766  mysql
+  767  clear
+  768  clear
+  769  mysql
+  770  clear
+  771  ls
+  772  mysql
+  773  clear
+  774  ll -lrt
+  775  mysql
+  776  clear
+  777  mysql
+  778  clear
+  779  LL -LRT
+  780  ll -lrt
+  781  ls
+  782  ll -lrt
+  783  view code_login.jsp
+  784  grep -ni "gil_test" *
+  785  cp ./code_login.jsp ./code_login_1805.jsp
+  786  vi code_login.jsp
+  787  mysql
+  788  su -
+  789  su - root
+  790  mysql
+  791  ls
+  792  cd script
+  793  ls
+  794  cd ..
+  795  ls
+  796  mysql
+  797  mysql -uroot -pslow_lane
+  798  mysql root/slow_lane
+  799  mysq /?
+  800  mysql /?
+  801  mysql -u root -p slow_lane
+  802  mysql
+  803  mysql -u intranet -p temt7878
+  804  mysql -u root -p slow_lane
+  805  mysqladmin -u root -p slow_lane
+  806  mysqladmin
+  807  mysql
+  808  mysql -uroot
+  809  mysql -u root
+  810  mysql -u root -p yes
+  811  mysql -uroot
+  812  ifconfig
+  813  whoami
+  814  uname -a
+  815  mysql -u root
+  816  mysql -uroot -p
+  817  mysql -uroot
+  818  mysql -u root -p
+  819  ls
+  820  vi code_login.jsp
+  821  vi code_login.jsp
+  822  ls
+  823  cd admin
+  824  ls
+  825  vi detail_user.jsp
+  826  mysql
+  827  cd ..
+  828  ls
+  829  vi view_user.jsp
+  830  ls
+  831  cd admin
+  832  vi sign.jsp
+  833  vi trip_update.jsp
+  834  ls
+  835  vi sing_confirm.jsp
+  836  vi sign_confirm.jsp
+  837  ls
+  838  ll
+  839  grep -ni "sign_01t" *
+  840  vi insertSignTable.java
+  841  ls sig*
+  842  vi sign_confirm.jsp
+  843  ls
+  844  grep -ni "sign_01t" *
+  845  vi insert_sick.jsp
+  846  grep -ni "sign_01t" *
+  847  vi leave_confirm.jsp
+  848  grep -ni "sign_01t" *
+  849  grep -ni "confirm.old" *
+  850  grep -ni "confirm.new" *
+  851  rm leave_confirm.new
+  852  rm leave_confirm.old
+  853  grep -ni "sign_01t" *
+  854  ls *.java
+  855  javac -d . insertSignTable.java
+  856  vi *.java
+  857  ls *.java
+  858  javac insertSignTable.java
+  859  vi *.java
+  860  grep -ni ".java* *
+  861  grep -ni ".java" *
+  862  ls *.java
+  863  grep -ni "insertSignTable.java" *
+  864  vi insertSignTable.java
+  865  alias
+  866  su -
+  867  /user
+  868  su - root
+  869  su -
+  870  exit
+  871  exit
+  872  ls
+  873  cd public_html
+  874  ls
+  875  cd admin
+  876  ls
+  877  ls *.java
+  878  javac insertSignTable.java
+  879  exit
+  880  ls
+  881  cd public_html
+  882  ls
+  883  cd admin
+  884  ls
+  885  ll *.java
+  886  javac test.java
+  887  ll *.java
+  888  rm test.java
+  889  ls
+  890  ll *.java
+  891  cp ./insertSignTable.java ./insertSignxx.java
+  892  ll *.java
+  893  javac insertSignxx.java
+  894  ll -lrt
+  895  ls insert*
+  896  ll insert*
+  897  cd /home/homepage
+  898  ls
+  899  cd public_html
+  900  ls
+  901  cd ..
+  902  ls
+  903  cd ..
+  904  ls
+  905  pwd
+  906  ls
+  907  cd script
+  908  ls
+  909  ls
+  910  ll -lrt
+  911  cd ~
+  912  pwd
+  913  ls
+  914  ls
+  915  mysql
+  916  mysql -uroot -p
+  917  select * from sign_01t where ipaddress is not null;
+  918  mysql
+  919  mysql
+  920  clear
+  921  ls
+  922  cd public_html
+  923  ls
+  924  vi view*.jsp
+  925  ls
+  926  view view_user.jsp
+  927  mysql
+  928  ls
+  929  ll -lrt
+  930  exit
+  931  ls
+  932  ll -lrt
+  933  su -
+  934  su - root
+  935  su - root
+  936  ls
+  937  cd public_html
+  938  ls
+  939  vi index.html
+  940  ll -lrt
+  941  su - root
+  942  exit
+  943  ls
+  944  su - root
+  945  su -
+  946  exit
+  947  ls
+  948  cd public_html
+  949  ls
+  950  ll -lrt
+  951  ll intra*
+  952  ll -lrt in*
+  953  cp ./index.html ./index1.html
+  954  ll -lrt in*
+  955  vi index1.html
+  956  exit
+  957  su - root
+  958  mysql
+  959  exit
+  960  ls
+  961  cd public_html
+  962  ls
+  963  vi index.html
+  964  vi index1.html
+  965  ls
+  966  su - root
+  967  su - root
+  968  su - root
+  969  exit
+  970  su - root
+  971  exit
+  972  apa
+  973  cd bin
+  974  apa
+  975  pwd
+  976  su - root
+  977  ls
+  978  ll -lrt
+  979  exit
+  980  su - root
+  981  su - root
+  982  su - root
+  983  ls
+  984  exit
+  985  clear
+  986  pwd
+  987  su - root
+  988  ls
+  989  ls
+  990  ls
+  991  su - root
+  992  ls
+  993  su - root
+  994  pwd
+  995  ll
+  996  sycn;sync;sync;
+  997  init 6
+  998  su -
+  999  su -
+ 1000  su -
+ 1001  pwd
+ 1002  su - 
+ 1003  su -
+ 1004  su - 
+ 1005  ll
+ 1006  apa
+ 1007  pwd
+ 1008  cd board
+ 1009  ll
+ 1010  vi board.jsp 
+ 1011  su - 
+ 1012  mysql
+ 1013  su - 
+ 1014  history
+ 1015  history > history_intranet.txt

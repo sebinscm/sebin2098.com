@@ -1,0 +1,71 @@
+[2011-08-19 15:55:21] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2011-08-19 15:55:21] [info]  Service Tomcat6 name Apache Tomcat 6.0 Tomcat6
+[2011-08-19 15:55:22] [info]  Service 'Tomcat6' installed
+[2011-08-19 15:55:22] [info]  Commons Daemon procrun finished
+[2011-08-19 15:55:24] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2011-08-19 15:55:24] [info]  Updating service...
+[2011-08-19 15:55:24] [info]  Service 'Tomcat6' updated
+[2011-08-19 15:55:24] [info]  Update service finished.
+[2011-08-19 15:55:24] [info]  Commons Daemon procrun finished
+[2011-08-19 15:55:24] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2011-08-19 15:55:24] [info]  Updating service...
+[2011-08-19 15:55:24] [info]  Service 'Tomcat6' updated
+[2011-08-19 15:55:24] [info]  Update service finished.
+[2011-08-19 15:55:24] [info]  Commons Daemon procrun finished
+[2011-08-19 15:55:25] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2011-08-19 15:55:25] [info]  Updating service...
+[2011-08-19 15:55:25] [info]  Service 'Tomcat6' updated
+[2011-08-19 15:55:25] [info]  Update service finished.
+[2011-08-19 15:55:25] [info]  Commons Daemon procrun finished
+[2011-08-19 15:55:29] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2011-08-19 15:55:29] [info]  Running 'Tomcat6' Service...
+[2011-08-19 15:55:29] [info]  Starting service...
+[2011-08-19 15:55:31] [info]  Service started in 1281 ms.
+[2011-08-19 15:59:59] [info]  Stopping service...
+[2011-08-19 16:00:00] [info]  Service stopped.
+[2011-08-19 16:00:00] [info]  Run service finished.
+[2011-08-19 16:00:00] [info]  Commons Daemon procrun finished
+[2011-08-19 16:04:43] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2011-08-19 16:04:43] [info]  Running 'Tomcat6' Service...
+[2011-08-19 16:04:43] [info]  Starting service...
+[2011-08-19 16:04:44] [info]  Service started in 1062 ms.
+[2011-08-19 16:07:57] [info]  Stopping service...
+[2011-08-19 16:07:58] [info]  Service stopped.
+[2011-08-19 16:07:58] [info]  Run service finished.
+[2011-08-19 16:07:58] [info]  Commons Daemon procrun finished
+[2011-08-19 16:08:01] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2011-08-19 16:08:01] [info]  Running 'Tomcat6' Service...
+[2011-08-19 16:08:01] [info]  Starting service...
+[2011-08-19 16:08:02] [info]  Service started in 1062 ms.
+[2011-08-19 16:09:15] [info]  Stopping service...
+[2011-08-19 16:09:16] [info]  Service stopped.
+[2011-08-19 16:09:16] [info]  Run service finished.
+[2011-08-19 16:09:17] [info]  Commons Daemon procrun finished
+[2011-08-19 16:12:40] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2011-08-19 16:12:40] [info]  Running 'Tomcat6' Service...
+[2011-08-19 16:12:40] [info]  Starting service...
+[2011-08-19 16:12:42] [info]  Service started in 1906 ms.
+[2011-08-19 16:38:36] [info]  Console LOGOFF event signaled
+[2011-08-19 16:38:36] [info]  Console LOGOFF event signaled
+[2011-08-19 16:38:38] [info]  Console SHUTDOWN event signaled
+[2011-08-19 16:38:38] [info]  Stopping service...
+[2011-08-19 16:38:39] [info]  Service stopped.
+[2011-08-19 16:38:39] [info]  Run service finished.
+[2011-08-19 16:38:39] [info]  Commons Daemon procrun finished
+[2011-08-19 16:40:16] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2011-08-19 16:40:17] [info]  Running 'Tomcat6' Service...
+[2011-08-19 16:40:17] [info]  Starting service...
+[2011-08-19 16:40:19] [info]  Service started in 2437 ms.
+[2011-08-19 16:45:45] [info]  Stopping service...
+[2011-08-19 16:45:46] [info]  Service stopped.
+[2011-08-19 16:45:46] [info]  Run service finished.
+[2011-08-19 16:45:46] [info]  Commons Daemon procrun finished
+[2011-08-19 16:45:51] [info]  Commons Daemon procrun (1.0.7.0 32-bit) started
+[2011-08-19 16:45:51] [info]  Running 'Tomcat6' Service...
+[2011-08-19 16:45:51] [info]  Starting service...
+[2011-08-19 16:45:52] [info]  Service started in 1062 ms.
+[2011-09-28 13:30:15] [info]  Console SHUTDOWN event signaled
+[2011-09-28 13:30:15] [info]  Stopping service...
+[2011-09-28 13:30:18] [info]  Service stopped.
+[2011-09-28 13:30:18] [info]  Run service finished.
+[2011-09-28 13:30:18] [info]  Commons Daemon procrun finished

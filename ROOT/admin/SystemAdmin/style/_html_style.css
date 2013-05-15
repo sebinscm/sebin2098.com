@@ -1,0 +1,249 @@
+.page {color : #ffffff; FONT-SIZE: 16; FONT-FAMILY: Arial, Arial; FONT-WEIGHT:bold;}
+.from_to {color : #ffffff; FONT-SIZE: 14; FONT-FAMILY: Arial, Arial; FONT-WEIGHT:bold;}
+.table_name {color : #000000; FONT-SIZE: 16; FONT-FAMILY: Arial, Arial; FONT-WEIGHT:bold;}
+.data_title {color : #000000; FONT-SIZE: 14; FONT-FAMILY: Arial, Arial; FONT-WEIGHT:bold;}
+.data_name {color : #000000; FONT-SIZE: 11; FONT-FAMILY: Arial, Arial; FONT-WEIGHT:bold;}
+.data_data {color : #000000; FONT-SIZE: 12; FONT-FAMILY: Arial;}
+
+.razdel {color : #000000; FONT-SIZE: 42; FONT-FAMILY: Arial; FONT-WEIGHT:bold;}
+
+
+p.mainpage{
+	font-size:25.0pt;
+	font-family:Arial;
+	font-weight:bold;
+}
+
+p.Index{
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;
+}
+
+p{
+	font-family:Arial;
+}
+
+body{
+			font-family:Arial;
+}
+
+ /* ----------------------------------------------------------------------------------------------------- */
+ 
+ p.MsoHeadingB1, li.MsoHeadingB1, div.MsoHeadingB1
+	{
+		mso-outline-level:1;
+		font-size:16.0pt;
+		font-family:Arial;
+	}
+
+	p.MsoHeadingB2, li.MsoHeadingB2, div.MsoHeadingB2
+	{
+		mso-outline-level:2;
+		font-size:16.0pt;
+		font-family:Arial;
+	}
+
+	p.MsoHeadingB3, li.MsoHeadingB3, div.MsoHeadingB3
+	{
+		mso-outline-level:3;
+		font-size:14.0pt;
+		font-family:Arial;
+	}
+
+	p.MsoHeadingB4, li.MsoHeadingB4, div.MsoHeadingB4
+	{
+		mso-outline-level:4;
+		font-size:16.0pt;
+		font-family:Arial;
+	}
+
+	p.MsoHeadingB5, li.MsoHeadingB5 div.MsoHeadingB5
+	{
+		mso-outline-level:5;
+		font-size:14.0pt;
+		font-family:Arial;
+	}
+
+	p.MsoHeadingB6,li.MsoHeadingB6,div.MsoHeadingB6
+	{
+		mso-outline-level:6;
+		font-size:16.0pt;
+		font-family:Arial;
+	}
+
+	p.MsoHeadingB7, li.MsoHeadingB7, div.MsoHeadingB7
+	{
+		mso-outline-level:7;
+		font-size:14.0pt;
+		font-family:Arial;
+	}
+
+	p.MsoHeadingB8, li.MsoHeadingB8, div.MsoHeadingB8
+	{
+		mso-outline-level:8;
+		font-size:16.0pt;
+		font-family:Arial;
+	}
+
+	p.MsoHeadingB9, li.MsoHeadingB9, div.MsoHeadingB9
+	{
+		mso-outline-level:9;
+		font-size:14.0pt;
+		font-family:Arial;
+	}
+ 
+ 
+
+ /* ----------------------------------------------------------------------------------------------------- */
+ 
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-next:Normale;
+	margin-top:0.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+
+		font-family:Arial;
+
+	font-weight:bold;
+	font-style:italic;}
+
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-next:Normale;
+	margin-top:0.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+		font-family:Arial;
+	font-size:11.0pt;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-weight:bold;}
+
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+		font-family:Arial;
+	mso-style-next:Normale;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+}
+
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+		font-family:Arial;
+	mso-style-next:Normale;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+		font-family:Arial;
+	mso-style-next:Normale;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+
+}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+		font-family:Arial;
+	mso-style-next:Normale;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+
+}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+		font-family:Arial;
+	mso-style-next:Normale;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:72.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+		font-family:Arial;
+	mso-style-next:Normale;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+		font-family:Arial;
+	mso-style-next:Normale;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+}
+	
+	
+a:link, span.MsoHyperlink
+	{
+	font-family:Arial;
+	text-decoration:underline;
+	text-underline:single;
+	color:black;
+}
+
+a:visited, span.MsoHyperlinkFollowed
+	{
+	font-family:Arial;
+	text-decoration:underline;
+	text-underline:single;
+	color:black;
+}
+
+
+p.Titolo10, li.Titolo10, div.Titolo10
+	{mso-style-name:"Titolo 10";
+	font-family:Arial;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial";
+}
+@page Section1
+	{size:595.3pt 841.9pt;
+	font-family:Arial;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{
+	font-family:Arial;
+	page:Section1;}
+

@@ -1,0 +1,33 @@
+SMAP
+_shipment_0header_0update__jsp.java
+JSP
+*S JSP
+*F
++ 1 bottom_line.jsp
+bottom_line.jsp
++ 2 shipment_header_update.jsp
+order/shipment_header_update.jsp
++ 3 login_check.jsp
+login_check.jsp
++ 4 CommonVars.jsp
+common/CommonVars.jsp
+*L
+1#1,20:24
+20#1:44,18
+1#2:61
+1#3,47:62
+11#2:109
+1#4,68:110
+12#2:178
+14#2,196:179
+209#2:375
+215#2,2:376,2
+216#2,2:379
+217#2,2:381
+218#2,2:383
+219#2,2:385
+220#2:387
+223#2,2:388,2
+224#2:391
+229#2:392
+*E

@@ -1,0 +1,10 @@
+
+2012-06-14 15:39:10 Commons Daemon procrun stdout initialized
+
+2012-06-14 15:46:38 Commons Daemon procrun stdout initialized
+[Ljava.lang.String;@1e13e07
+[Ljava.lang.String;@9cfec1
+[Ljava.lang.String;@11946c2
+[Ljava.lang.String;@747fa2
+[Ljava.lang.String;@6782a9
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B1001'     ' at line 1

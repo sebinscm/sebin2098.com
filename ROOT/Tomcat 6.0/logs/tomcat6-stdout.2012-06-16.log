@@ -1,0 +1,15 @@
+
+2012-06-16 19:36:28 Commons Daemon procrun stdout initialized
+
+2012-06-16 20:01:55 Commons Daemon procrun stdout initialized
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9999'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9999'     ' at line 1
+splitSinglePart : begin
+Header
+content-type: text/html
+Header
+
+
+2012-06-16 23:49:15 Commons Daemon procrun stdout initialized
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9999'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9999'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9999'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9999'     ' at line 1
+DataProcess RetrieveData Err1:com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9999'     ' at line 1You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1,0,1) = 1   minus  select seqno from s_memo_02t   where staffid = 'B9999'     ' at line 1

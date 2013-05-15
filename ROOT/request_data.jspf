@@ -1,0 +1,54 @@
+  <table width=100% border=1 cellpadding=6 cellspacing=0>
+  <tr align="center" bgcolor="lightgrey"><td>Request Information</td></tr>
+  <tr align="left"><td>
+  <b>Request</b>:<br>
+  <c:out value="${pageContext.request.method} ${pageContext.request.requestURL}"/><c:if 
+  test="${not empty pageContext.request.queryString}">?<c:out 
+  value="${pageContext.request.queryString}"/></c:if>
+  <p><b>Session ID</b>:<br>
+  <c:choose>
+    <c:when test="${empty pageContext.request.requestedSessionId}">None.</c:when>
+    <c:when test="${pageContext.request.requestedSessionIdValid}">
+      <c:out value="${pageContext.request.requestedSessionId}"/> (Location:
+      <c:choose>
+        <c:when test="${pageContext.request.requestedSessionIdFromCookie}">Session & Cookie)</c:when>
+        <c:when test="${pageContext.request.requestedSessionIdFromURL}">URL)</c:when>
+        <c:otherwise>Unknown)</c:otherwise>
+      </c:choose>
+    </c:when>
+    <c:otherwise>Session id not available & expired </c:otherwise>
+  </c:choose>
+  </td></tr>
+  </table>
+<p>
+  <table width=100% border=1 cellpadding=6 cellspacing=0>
+  <tr align="center" bgcolor="lightgrey"><td>Request Parameter</td></tr>
+  <tr align="left"><td>
+  <b>Parameters</b>:<br>
+  <c:forEach var="pn" items="${pageContext.request.parameterNames}">
+    <c:forEach var="pv" items="${paramValues[pn]}">
+      &nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${pn} = ${pv}"/><br>
+    </c:forEach>
+  </c:forEach>
+  </td></tr>
+  </table>
+<p>
+  <table width=100% border=1 cellpadding=6 cellspacing=0>
+  <tr align="center" bgcolor="lightgrey"><td>Requesst Header</td></tr>
+  <tr align="left"><td>
+  <b>Headers</b>:<br>
+  <c:forEach var="hn" items="${pageContext.request.headerNames}">
+    &nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${hn} = ${header[hn]}"/><br>
+  </c:forEach>
+  </td></tr>
+  </table>
+<p>
+  <table width=100% border=1 cellpadding=6 cellspacing=0>
+  <tr align="center" bgcolor="lightgrey"><td>Session Information</td></tr>
+  <tr align="left"><td>
+  <b>Cookies</b>:<br>
+  <c:forEach var="cook" items="${pageContext.request.cookies}">
+    &nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${cook.name} = ${cook.value}"/><br>
+  </c:forEach>
+  </td></tr>
+  </table>

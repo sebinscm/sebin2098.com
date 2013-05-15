@@ -1,0 +1,11 @@
+<STYLE>
+A
+{
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    COLOR: red;
+    TEXT-DECORATION: underline
+}
+</STYLE>

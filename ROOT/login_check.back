@@ -1,0 +1,47 @@
+<%
+response.setHeader("Pragma","no-cache"); //HTTP 1.0
+response.setDateHeader ("Expires", 0);
+response.setHeader("Cache-Control","no-cache"); //HTTP 1.1
+
+String scmid = "";
+String scmnm = "";
+String usertype = "";
+String usergroup = "";
+//String scmsubids = "";
+//String _adminid = "";
+//String _adminname = "";
+//String _admingroup = "";
+//String _apessid = "";
+//String _apessname = "";
+
+try{
+  scmid = (String) session.getAttribute("scmid");
+  //_adminid = (String) session.getAttribute("adminid");
+
+  if( (scmid == null || scmid.length() == 0 || scmid.equals("null"))
+      && (_adminid == null || _adminid.length() == 0 || _adminid.equals("null")) ) {
+    response.sendRedirect("/login_first.html");
+    return;
+  }
+
+  //_adminname = (String) session.getAttribute("adminname");
+
+  //_apessid = (String) session.getAttribute("apessid");
+  //_apessname = (String) session.getAttribute("apessname");
+
+  scmnm = (String) session.getAttribute("scmnm");
+
+  usertype = (String) session.getAttribute("usertype");
+  if (usertype == null) usertype = "";
+
+  usergroup = (String) session.getAttribute("usergroup");
+  if (usergroup == null) usergroup = "";
+
+  //scmsubids = (String) session.getAttribute("scmsubids");
+  //session.setMaxInactiveInterval(60*60);
+
+}catch( Exception e ) {
+  response.sendRedirect("/login_first.html");
+  return;
+}
+%>

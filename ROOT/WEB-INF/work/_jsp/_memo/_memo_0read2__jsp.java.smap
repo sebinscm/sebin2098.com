@@ -1,0 +1,15 @@
+SMAP
+_memo_0read2__jsp.java
+JSP
+*S JSP
+*F
++ 1 memo_read2.jsp
+memo/memo_read2.jsp
++ 2 login_check.jsp
+memo/../login_check.jsp
+*L
+1#1:34
+1#2,47:35
+5#1,42:82
+46#1,2:124
+*E
