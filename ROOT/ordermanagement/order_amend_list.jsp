@@ -54,12 +54,18 @@ sql = " select  a.order_no, "
     + "          a.buyer_name, "
     + "         a.supplier_name, "
     + "         a.order_status, "
-    + "         date_format(a.amend_date, '%Y/%m/%d'),a.total_qty,b.code_name "
+    + "         date_format(a.amend_date, '%Y/%m/%d'),a.total_qty,b.code_name, a.user_name "
     + " from   purchase_order a LEFT OUTER JOIN vg_common_code b  " 
     + "                                ON(a.order_status = b.code and b.type='ORDER_STATUS' and b.use_yn='Y')  "
     + " where  a.backorder_flag = 'N' " ;
 
- 
+/*
+  *  display PO based on coresponding manager
+*/
+if(!_admingroup.equals("A")){
+   sql += " and a.USER_NAME ="+ _adminid;
+}
+
 
 if (ag_po_no.length() > 0 || ag_style_no.length() > 0) {
   if (ag_po_no.length() > 0) {
@@ -152,6 +158,7 @@ for (int i = 0; i < iRet; i++) {
   String amend_date = matrix.getRowData(i).getData(j++); 
   String total_qty = matrix.getRowData(i).getData(j++);   
   String po_status_nm = matrix.getRowData(i).getData(j++);
+  String user_name = matrix.getRowData(i).getData(j++);
   String colour_code = "";
   if (i%2 == 0) {
     colour_code = "#FFFFF0";
@@ -169,6 +176,7 @@ for (int i = 0; i < iRet; i++) {
   outS += "<tr align='center' bgcolor='" + colour_code + "'>"
         + " <td>" + (i+1) + "</td>"
         + " <td><a href=\"javascript:fnView('" + po_no + "')\">" + po_no + "</td>"
+        + "<td>"+user_name+"</td>"  
         + " <td>" + style_no + "</td>"
         + " <td>" + season + "</td>"
          + " <td>" + total_qty + "</td>"

@@ -27,6 +27,7 @@ String outS06 = "";
 String outS07 = "";
 String outS08 = "";
 String outS09 = "";
+String outS10 = "";
 String sql = "";
 String fromUrl = "PO_Details.jsp";
 String today = DateUtil.getToday("yyyy/MM/dd");
@@ -154,7 +155,6 @@ try {
     outS09  += "<option value=\"" + ship_code + "\"";    
     outS09  += ">" + ship_name + "</option>";
   }
-  
 } catch (Exception e) {
   System.out.println("Exception /admin/account/supplier : " + e.getMessage());
   throw e;
@@ -466,8 +466,8 @@ function displayLeng( sz, id )
 <tr><td>
 (*)marked item must be filled in. Style# should be numeric only. Style# will be create as "SubGroup Code+Style#" when the PO is created. 	
 <table width='100%' border='0' cellspacing='1' cellpadding='2' align='center' class='table_bg'>
-<form name="form1" method="post">
-	<INPUT TYPE=HIDDEN NAME=input_flag VALUE='INSERT' >	
+    <form name="form1" method="POST">
+	<INPUT TYPE=HIDDEN NAME=input_flag VALUE='INSERT' >
 	<input type='hidden' name='fromUrl' value='<%= fromUrl %>'>
   <tr class="table_header_center">
     <td width="21%" height="16" class='table_header_center'>*PO#</td>
@@ -518,7 +518,7 @@ function displayLeng( sz, id )
     <td width="21%" height="22" class='table_header_center'>Shipping Type</td>
     <td width="23%" height="22" class='table_header_center'>Local Price(RMB)</td>
     <td width="19%" height="22" class='table_header_center'>Re-Order SEQ</td>
-    <!--td width="16%" height="22" class='table_header_center'>PT#3 DATE</td-->
+    <td width="16%" height="22" class='table_header_center'>PO from Buyer</td>
   </tr>
   <tr class="table_header_center">
     <td width="21%" height="27" class='table_bg_bright'><input type='text' name='brand' size='20' maxlength='20' class='input_text'></td>
@@ -528,7 +528,7 @@ function displayLeng( sz, id )
       </SELECT></td>
     <td width="23%" height="27" class='table_bg_bright'><input type='text' onblur="extractNumber(this,2,false);" onkeyup="extractNumber(this,2,false);" onkeypress="return blockNonNumbers(this, event, true, false);"  name='local_price' size='10' maxlength='10' class='input_text_right'></td>
     <td width="19%" height="27" class='table_bg_bright'><input type='text' name='reorder' size='10' maxlength='10' class='input_text'></td>
-    <!--td width="16%" height="27" class='table_bg_bright'><input type='text' name='pt3' size='20' maxlength='20' class='input_text'></td-->
+    <td width="16%" height="27" class='table_bg_bright'><input type="file" name="poFromBuyer"></td>
   </tr>
   
   <tr class="table_header_center">

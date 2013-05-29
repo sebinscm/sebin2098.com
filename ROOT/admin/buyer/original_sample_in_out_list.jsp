@@ -128,7 +128,7 @@ mainSql = " select  a.sequence_no, a.sample_no, a.item_class, date_format(a.inpu
         + "                                              LEFT OUTER JOIN login_01t c ON ( a.buyer = c.id )  "
         + "         where a.sequence_no > 0 ";
 // 2000 see every sample.
-if(!_adminid.equals("2000")){
+if(!_admingroup.equals("A")){
     mainSql += "and a.designer = '"+_adminid+"'";
 }
 if (searchStyleNo.equals("")) {

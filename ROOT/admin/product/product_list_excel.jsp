@@ -230,15 +230,26 @@ for (int i = 0; i < iRet; i++) {
    if ( pp_in_date.equals("0000/00/00") )  pp_in_date ="";
    
    String colour_code = "#FFFFF0";
-  // set item imagae
+  
+   // Check and obtain appropriate url whether local or remote.
+   String whereAreWe = request.getLocalName();
+    String tmp_uploadPath = "";
+    if(whereAreWe.equals("127.0.0.1")){
+        tmp_uploadPath = _localScmImageUrl;
+    }
+    else{
+        tmp_uploadPath = _SCMIMGURL;
+    }
+   // set item imagae
+   style_no = style_no.toLowerCase();
     File imgFile = new File(application.getRealPath(_styleImgURL) + File.separator + style_no + ".jpg");
 	if (imgFile.exists()) {
-	  imgUrl = "<img src='" + _styleImgURL + "/" + style_no + ".jpg' width='50' height='70'>";
+	  imgUrl = "<img src='" + tmp_uploadPath +  style_no + ".jpg' width='50' height='70'>";
 	} else {
-		  imgUrl = "<img src='" + _styleImgURL + "/noimage.jpg' width='50' height='70'>";
+		  imgUrl = "<img src='" + tmp_uploadPath + "noimage.jpg' width='50' height='70'>";
 	}	
 
- outS += "<tr align='center' bgcolor='" + colour_code + "'>"
+ outS += "<tr height='72' align='center' bgcolor='" + colour_code + "'>"
         + " <td>" + (i+1) + "</td>"
         + " <td>" + po_no + "</td>" 
         + " <td>" + style_no + "</td>"

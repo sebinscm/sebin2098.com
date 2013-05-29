@@ -70,9 +70,16 @@ sql = " select  a.order_no, "
     + "         a.supplier_name, "
     + "         a.order_status, "
     + "         date_format(a.created, '%Y/%m/%d'),total_qty, "
-    + "         date_format(a.initial_del_date, '%Y/%m/%d'),a.sgr,a.buyer,b.code_name "
+    + "         date_format(a.initial_del_date, '%Y/%m/%d'),a.sgr,a.buyer,b.code_name, a.user_name "
     + " from   purchase_order a LEFT OUTER JOIN vg_common_code b ON (  a.order_status = b.code and type='ORDER_STATUS' and b.use_yn='Y'  )  " 
     + " where   backorder_flag = 'N' " ;
+
+/*
+   *  display PO based on coresponding manager
+*/
+if(!_admingroup.equals("A")){
+    sql += " and a.USER_NAME ="+ _adminid;
+}
 
 if (ag_po_no.length() > 0 || ag_style_no.length() > 0) {
   if (ag_po_no.length() > 0) {
@@ -215,6 +222,7 @@ for (int i = 0; i < iRet; i++) {
   String  sgr = matrix.getRowData(i).getData(j++);
   String  buyer_code = matrix.getRowData(i).getData(j++);
   String  status_name = matrix.getRowData(i).getData(j++);
+  String  user_name = matrix.getRowData(i).getData(j++);
   String colour_code = "#FFFFF0";
   
   if(status_name.equals("Requested PO-Confirm")){
@@ -243,6 +251,7 @@ for (int i = 0; i < iRet; i++) {
   outS += "<tr align='center' bgcolor='" + colour_code + "'>"
         + " <td>" + (i+1) + "</td>"
         + " <td>" + strLink + "</td>"
+        + " <td>" + user_name + "</td>"  
         + " <td>" + sgr + "</td>"
         + " <td>" + style_no + "</td>"
         + " <td>" + season + "</td>"
@@ -472,6 +481,7 @@ if (_admingroup.equals("A")) {
 <TR class="table_header_center">
   <TD>No</TD>
   <TD>PO No.</TD>
+  <TD>Managed By</TD>
   <TD>SGR</TD>
   <TD>Style No.</TD>
   <TD>Season</TD>

@@ -180,7 +180,21 @@ for (int i = 0; i < iRet; i++) {
 	} else {
 		  imgUrl = "<img src='" + _styleImgURL + "/noimage.jpg' width='50' height='70'>";
 	}	
-  
+        
+        
+        /*
+         *  display price only to the user admin group.
+         */
+String tmp_price = "";
+if(_admingroup.equals("A")){
+    tmp_price = " <td>" + StringUtil.formatNumber(unit_price, MONEY_FORMAT)  + "</td>"
+        + " <td>" + StringUtil.formatNumber(total_qty, QTY_FORMAT) + "</td>"
+        + " <td>" + StringUtil.formatNumber(total_price, MONEY_FORMAT) + "</td>"
+        + " <td><font color=blue>" + StringUtil.formatNumber(local_price, MONEY_FORMAT)  + "</font></td>"
+        + " <td><font color=blue>" + StringUtil.formatNumber(sub_qty, QTY_FORMAT) + "</font></td>"
+        + " <td><font color=blue>" + StringUtil.formatNumber(subtotal_price, MONEY_FORMAT) + "</font></td>";
+} 
+
   outS += "<tr align='center' bgcolor='" + colour_code + "'>"
         + " <td>" + (i+1) + "</td>"
         + " <td><a href=\"javascript:fnView('" + po_no + "')\">" + po_no + "</td>"
@@ -188,12 +202,7 @@ for (int i = 0; i < iRet; i++) {
         + " <td>" + style_no + "</td>"
         + " <td>" + season + "</td>"
         + " <td>" + subsupplier + "</td>"
-        + " <td>" + StringUtil.formatNumber(unit_price, MONEY_FORMAT)  + "</td>"
-        + " <td>" + StringUtil.formatNumber(total_qty, QTY_FORMAT) + "</td>"
-        + " <td>" + StringUtil.formatNumber(total_price, MONEY_FORMAT) + "</td>"
-        + " <td><font color=blue>" + StringUtil.formatNumber(local_price, MONEY_FORMAT)  + "</font></td>"
-        + " <td><font color=blue>" + StringUtil.formatNumber(sub_qty, QTY_FORMAT) + "</font></td>"
-        + " <td><font color=blue>" + StringUtil.formatNumber(subtotal_price, MONEY_FORMAT) + "</font></td>"       
+        + tmp_price
         + " <td>" + order_date + "</td>"
         + " <td>" + buyer + "</td>"
         + " <td>" + po_status + "</td>"
@@ -348,12 +357,21 @@ function fnExcel(frm) {
   <TD>Style No.</TD>
   <TD>Season</TD>
   <TD>Manufacturer</TD>
+  <%
+      /*
+         *  display price only to the user admin group.
+         */
+      if(_admingroup.equals("A")){
+      %>
   <TD>Unit Price</TD>
   <TD>PO Total Qty</TD>
   <TD>PO Total Price</TD>
   <TD>Local Price(RMB)</TD>
   <TD>Sub-Qty</TD>
   <TD>Sub-Total Price(RMB)</TD>
+  <%
+      }
+  %>
   <TD>Order Date</TD>
   <TD>Buyer</TD>
   <TD>Status Code</TD>

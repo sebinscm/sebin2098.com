@@ -48,11 +48,18 @@ PreparedStatement pstmt = null;
 
 HashMap params = new HashMap();               // for parameter
 String savePath = application.getRealPath(_specSheetUrl ) + File.separator;   // file path
-
+String whereAreWe = request.getLocalName();
+    String tmp_uploadPath = "";
+    if(whereAreWe.equals("127.0.0.1")){
+        tmp_uploadPath = _uploadPathForLocal;
+    }
+    else{
+        tmp_uploadPath = _uploadPath2;
+    }
 // Jakarta Commons Project FileUpload
 // -> http://jakarta.apache.org/commons/fileupload/
 DiskFileItemFactory factory = new DiskFileItemFactory();
-factory.setRepository(new File(_uploadPath));                 // Set factory constraints
+factory.setRepository(new File(tmp_uploadPath));                 // Set factory constraints
 ServletFileUpload upload = new ServletFileUpload(factory);    // Create a new file upload handler
 upload.setSizeMax(_maxFileSize);                              // Set overall request size constraint
 List items = upload.parseRequest(request);                    // Parse the request

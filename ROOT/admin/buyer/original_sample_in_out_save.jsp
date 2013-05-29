@@ -40,6 +40,7 @@ String returnDate = request.getParameter("returnDate");
 String remarks = request.getParameter("remarks").trim();
 String remarks2 = request.getParameter("remarks2").trim();
 String order_status = request.getParameter("order_status");
+String designer = request.getParameter("designer");
 String buyer_name="";
 String supplier_name="";
 String status_name="";
@@ -92,12 +93,12 @@ try {
     sql = " insert into VG_SAMPLE_IN_OUT "
         + " ( "
         + "   sample_no, item_class, input_date, item_group, qty, buyer, supplier, "
-        + "   sending_date, return_date, remarks, modifier, modified_date, season,style_no,status "
+        + "   sending_date, return_date, remarks, modifier, modified_date, season, style_no,status, designer "
         + " ) "
         + " values "
         + " ( "
         + "    ?, ?, str_to_date(?, '%Y/%m/%d'), ?, ?, ?, ?, "
-        + "   str_to_date(?, '%Y/%m/%d'), str_to_date(?, '%Y/%m/%d'), ?, ?, sysdate(), ?, ?, ? "
+        + "   str_to_date(?, '%Y/%m/%d'), str_to_date(?, '%Y/%m/%d'), ?, ?, sysdate(), ?, ?, ?, ? "
         + " ) ";
       order_status ="00";
       pstmt = conn.prepareStatement(sql);
@@ -116,6 +117,7 @@ try {
       pstmt.setString(idx++, season.toUpperCase());
       pstmt.setString(idx++, style_no.toUpperCase()); 
       pstmt.setString(idx++, order_status);
+      pstmt.setString(idx++, designer);
       pstmt.executeUpdate();
 
   } else if (actionFlag.equals("U")) {
@@ -171,7 +173,8 @@ try {
         + "   modifier = ?, "
         + "   modified_date = sysdate(), "
         + "   style_no = ? , "
-        + "   status = ? "
+        + "   status = ? ,"
+        + "   designer = ?"     
         + " where   sequence_no = ? ";
 
     pstmt = conn.prepareStatement(sql);
@@ -188,6 +191,7 @@ try {
     pstmt.setString(idx++, _adminid);
     pstmt.setString(idx++, style_no.toUpperCase());
     pstmt.setString(idx++, order_status);
+    pstmt.setString(idx++, designer);
     pstmt.setString(idx++, sequenceNo);
     iCnt = pstmt.executeUpdate();
 
@@ -198,12 +202,12 @@ try {
     sql = " insert into SAMPLE_HISTORY "
         + " ( "
         + "   sample_no, item_class, input_date, item_group, qty, buyer, supplier, "
-        + "   sending_date, return_date, remarks, modifier, modified_date, season,style_no,status "
+        + "   sending_date, return_date, remarks, modifier, modified_date, season,style_no, status, designer "
         + " ) "
         + " values "
         + " ( "
         + "    ?, ?, str_to_date(?, '%Y/%m/%d'), ?, ?, ?, ?, "
-        + "   str_to_date(?, '%Y/%m/%d'), str_to_date(?, '%Y/%m/%d'), ?, ?, sysdate(), ?, ?, ? "
+        + "   str_to_date(?, '%Y/%m/%d'), str_to_date(?, '%Y/%m/%d'), ?, ?, sysdate(), ?, ?, ?, ? "
         + " ) ";
       idx = 1;    
       pstmt = conn.prepareStatement(sql);   
@@ -221,6 +225,7 @@ try {
       pstmt.setString(idx++, season.toUpperCase());
       pstmt.setString(idx++, style_no.toUpperCase()); 
       pstmt.setString(idx++, order_status);
+      pstmt.setString(idx++, designer);
       iCnt = pstmt.executeUpdate();
        if (iCnt != 1) {
         throw new UserDefinedException("Check SAMPLE_HISTORY data.");

@@ -892,7 +892,21 @@ Purchase Order History
   <tr class="table_header_center">
     <td width="21%" height="23" class='table_bg_bright'><%=pgrname %></td>
     <td width="21%" height="23" class='table_bg_bright'><%=sgrname %></td>
-    <td width="23%" height="23" class='table_bg_bright'><%=unitprice%>  &nbsp;&nbsp;<%=curname %></td>
+    <td width="23%" height="23" class='table_bg_bright'>
+        <%
+      /*
+         *  display price only to the user admin group.
+         */
+        if(_admingroup.equals("A")){
+      %>
+            <%=unitprice%>  &nbsp;&nbsp;<%=curname %>
+      <%
+        }
+        else{
+            out.println("<p style='color:red;'>Admin only</p>");
+        }
+      %>
+    </td>
     <td width='19%' class="table_bg_bright"><%= order_date %></td>
     <td width='16%' class="table_bg_bright"><%= delivery_date %></td>
   </tr>
