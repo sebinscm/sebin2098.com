@@ -37,6 +37,10 @@ if (ag_style_no == null) ag_style_no = "";
 if (ag_orderby == null) ag_orderby = "6";
 if (ag_buyer == null) ag_buyer = "";
 
+String getDomain=request.getServerName();
+String getPort=Integer.toString(request.getServerPort());
+String getPath = getDomain + ":"+ getPort;
+
 Connection conn = null;
 
 MatrixDataSet matrix = null;
@@ -88,7 +92,8 @@ sql = " select  order_no, "
 	    + "	     date_format(col_order_date,'%Y/%m/%d'), " 
 	    + "	     date_format(col_in_date,'%Y/%m/%d'), " 
 	    + "	     date_format(pp_in_date,'%Y/%m/%d'), " 
-	    + "        subsupplier_name "
+	    + "        subsupplier_name, "
+            + "        has_order_sheet "
     + " from   purchase_order "
     + " where   backorder_flag = 'N' " ;
 
@@ -251,6 +256,7 @@ for (int i = 0; i < iRet; i++) {
   String col_in_date = matrix.getRowData(i).getData(j++);
   String pp_in_date = matrix.getRowData(i).getData(j++);  
   String subsupplier_name = matrix.getRowData(i).getData(j++);
+  String has_order_sheet = matrix.getRowData(i).getData(j++);
   
    if ( order_date.equals("0000/00/00") )  order_date ="";
    if (delivery_date.equals("0000/00/00") ) delivery_date ="";
@@ -325,10 +331,18 @@ for (int i = 0; i < iRet; i++) {
  //   }
     
   //}
+  String tmp_add_or_edit = "";
+  if(has_order_sheet.equals("1")){
+      tmp_add_or_edit = "<a href='http://" + getPath + "/admin/product/order_sheet_create.jsp?po_num="+po_no+"&sheetUpdate=true' >view</a>";
+  }
+  else{
+      tmp_add_or_edit = "<a href='http://" + getPath + "/admin/product/order_sheet_create.jsp?po_num="+po_no+"' >add</a>";
+  }
 
   outS += "<tr align='center' bgcolor='" + colour_code + "'>"
         + " <td>" + (i+1) + "</td>"
         + " <td><a href=\"javascript:fnView('" + po_no + "')\">" + po_no + "</td>" 
+        + "<td>"+tmp_add_or_edit+"</td>"
         + " <td>" + style_no + "</td>"
         + " <td>" + season + "</td>"
         + "  <td><input type='hidden' name='po_no' value='" + po_no + "'>" + order_date + "</td>"
@@ -483,7 +497,6 @@ for (int i = 0; i < iRet3; i++) {
 //             + codeName + "</option>";
 // 
 //}
-
 
 %>
 <HTML>
@@ -711,7 +724,7 @@ function fnClearDate(idx, dateType) {
 <input type='hidden' name='ag_orderby' value='<%= ag_orderby %>'>
 <input type='hidden' name='ag_buyer' value='<%= ag_buyer %>'>
 <tr class='table_header_center'>
-  <td colspan='8'>PO Detail. </td>
+  <td colspan='9'>PO Detail. </td>
   <td> Order Status</td>
   <td colspan='2'>DELIVERY</td>
   <td colspan='3'>CONTRACT</td>
@@ -727,6 +740,7 @@ function fnClearDate(idx, dateType) {
 <TR class="table_header_center">
   <TD>No</TD>
   <TD>PO No.</TD>
+  <TD>Order Sheet</TD>
   <TD>Style No.</TD>
   <TD>Season</TD>
   <TD>Order Date</TD>

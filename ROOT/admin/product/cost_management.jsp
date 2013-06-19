@@ -249,7 +249,7 @@ function fnSubmit(frm)
 {
   frm.ag_po_no.value = jf_AllTrim(frm.ag_po_no.value);
   frm.ag_style_no.value = jf_AllTrim(frm.ag_style_no.value);
-  frm.action = "./cost_management.jsp"
+  frm.action = "./cost_management.jsp";
   frm.submit();
 }
 
@@ -333,9 +333,9 @@ function fnExcel(frm) {
 </tr>
 <TR>  
   <TD class='table_header_center'>PO#</TD>
-  <TD class='table_bg_bright'><input type=text name='ag_po_no' value='<%= ag_po_no %>' size='10' maxlength='6'></TD>
+  <TD class='table_bg_bright'><input type=text name='ag_po_no' value='<%= ag_po_no %>' size='14' maxlength='14'></TD>
   <TD class='table_header_center'>Style#</TD>
-  <TD class='table_bg_bright'><input type=text name='ag_style_no' value='<%= ag_style_no %>' size='10' maxlength='6'></TD>
+  <TD class='table_bg_bright'><input type=text name='ag_style_no' value='<%= ag_style_no %>' size='14' maxlength='14'></TD>
   <TD colspan="2" class='table_bg_bright_center'><!--input type='button' value='Save as Excel' onclick='fnExcel(document.form2);'--></td>
 </TR>
 </FORM>

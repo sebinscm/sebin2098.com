@@ -19,12 +19,12 @@ String _ManagementNoticeUploadUrl = "/admin/notice/upload";
 //String _uploadPath = "../../var/tmp";
 String _uploadPath = "C:/SCM_MYSQL/ROOT/var/tmp";
 String _uploadPath2 = "C:/SCM_MYSQL/ROOT/var/tmp";
-String _uploadPathForLocal = "D:/workplace/local.sebin/ROOT/var/tmp";
+String _uploadPathForLocal = "C:/Program Files/Apache Software Foundation/Tomcat 6.0/webapps/ROOT/var/tmp";
 long _maxFileSize = 50*1024*1024;
 
 // SCM Image Path
 String _SCMIMGURL = "http://www.sebin2098.com/images/";
-String _localScmImageUrl = "D:/workplace/local.sebin/ROOT/images/";
+String _localScmImageUrl = "C:/Program Files/Apache Software Foundation/Tomcat 6.0/webapps/ROOT/images/";
 
 // style image path
 String _styleImgURL = "/images";
