@@ -93,7 +93,8 @@ sql = " select  order_no, "
 	    + "	     date_format(col_in_date,'%Y/%m/%d'), " 
 	    + "	     date_format(pp_in_date,'%Y/%m/%d'), " 
 	    + "        subsupplier_name, "
-            + "        has_order_sheet "
+            + "        has_order_sheet, "
+            + "        has_rm_po "
     + " from   purchase_order "
     + " where   backorder_flag = 'N' " ;
 
@@ -257,6 +258,7 @@ for (int i = 0; i < iRet; i++) {
   String pp_in_date = matrix.getRowData(i).getData(j++);  
   String subsupplier_name = matrix.getRowData(i).getData(j++);
   String has_order_sheet = matrix.getRowData(i).getData(j++);
+  String has_rm_po = matrix.getRowData(i).getData(j++);
   
    if ( order_date.equals("0000/00/00") )  order_date ="";
    if (delivery_date.equals("0000/00/00") ) delivery_date ="";
@@ -333,17 +335,24 @@ for (int i = 0; i < iRet; i++) {
   //}
   String tmp_add_or_edit = "";
   if(has_order_sheet.equals("1")){
-      tmp_add_or_edit = "<a href='http://" + getPath + "/admin/product/order_sheet_create.jsp?po_num="+po_no+"&sheetUpdate=true' >view</a>";
+      tmp_add_or_edit = "<a href='http://" + getPath + "/admin/product/order_sheet_create.jsp?po_num="+po_no+"&sheetUpdate=true' style='text-decoration: none; color:green' >view</a>";
   }
   else{
-      tmp_add_or_edit = "<a href='http://" + getPath + "/admin/product/order_sheet_create.jsp?po_num="+po_no+"' >add</a>";
+      tmp_add_or_edit = "<a href='http://" + getPath + "/admin/product/order_sheet_create.jsp?po_num="+po_no+"'  style='text-decoration: none; color:red'> + </a>";
+  }
+  String tmp_rm_add_or_edit = "";
+  if(has_rm_po.equals("1")){
+      tmp_rm_add_or_edit = "<a href='http://" + getPath + "/admin/product/raw_material_po_create.jsp?po_num="+po_no+"&rm_poUpdate=true'  style='text-decoration: none; color:green'>view</a>";
+  }
+  else{
+      tmp_rm_add_or_edit = "<a href='http://" + getPath + "/admin/product/raw_material_po_create.jsp?po_num="+po_no+"' style='text-decoration: none; color:red'> + </a>";
   }
 
   outS += "<tr align='center' bgcolor='" + colour_code + "'>"
         + " <td>" + (i+1) + "</td>"
         + " <td><a href=\"javascript:fnView('" + po_no + "')\">" + po_no + "</td>" 
         + "<td>"+tmp_add_or_edit+"</td>"
-        + "<td>"+"<a href='http://" + getPath + "/admin/product/raw_material_po_create.jsp?po_num="+po_no+"'>ADD</a>"+"</td>"
+        + "<td>"+tmp_rm_add_or_edit+"</td>"
         + " <td>" + style_no + "</td>"
         + " <td>" + season + "</td>"
         + "  <td><input type='hidden' name='po_no' value='" + po_no + "'>" + order_date + "</td>"
@@ -641,6 +650,7 @@ function fnClearDate(idx, dateType) {
 }
 
 </SCRIPT>
+
 </HEAD>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <table width="840" border="0" cellspacing="0" cellpadding="0">

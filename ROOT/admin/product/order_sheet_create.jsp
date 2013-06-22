@@ -249,7 +249,6 @@ try {
   if (conn != null) {
     try { conn.rollback(); } catch (Exception ex) {}
   }
-
   System.out.println("Exception in admin_delivery_status_list : " + e.getMessage());
   throw e;
 } finally {
