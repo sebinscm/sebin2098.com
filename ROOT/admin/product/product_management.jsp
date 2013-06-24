@@ -352,7 +352,7 @@ for (int i = 0; i < iRet; i++) {
         + " <td>" + (i+1) + "</td>"
         + " <td><a href=\"javascript:fnView('" + po_no + "')\">" + po_no + "</td>" 
         + "<td>"+tmp_add_or_edit+"</td>"
-        + "<td>"+tmp_rm_add_or_edit+"</td>"
+      //  + "<td>"+tmp_rm_add_or_edit+"</td>"
         + " <td>" + style_no + "</td>"
         + " <td>" + season + "</td>"
         + "  <td><input type='hidden' name='po_no' value='" + po_no + "'>" + order_date + "</td>"
@@ -735,7 +735,7 @@ function fnClearDate(idx, dateType) {
 <input type='hidden' name='ag_orderby' value='<%= ag_orderby %>'>
 <input type='hidden' name='ag_buyer' value='<%= ag_buyer %>'>
 <tr class='table_header_center'>
-  <td colspan='10'>PO Detail. </td>
+  <td colspan='9'>PO Detail. </td>
   <td> Order Status</td>
   <td colspan='2'>DELIVERY</td>
   <td colspan='3'>CONTRACT</td>
@@ -752,7 +752,7 @@ function fnClearDate(idx, dateType) {
   <TD>No</TD>
   <TD>PO No.</TD>
   <TD>Order Sheet</TD>
-  <TD>R/M PO</TD>
+  <!--<TD>R/M PO</TD>-->
   <TD>Style No.</TD>
   <TD>Season</TD>
   <TD>Order Date</TD>

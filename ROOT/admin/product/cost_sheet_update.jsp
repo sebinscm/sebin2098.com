@@ -51,6 +51,10 @@
     String in_stock_date_checked_f[] = request.getParameterValues("in_stock_date_checked_f[]");
     String in_stock_qty_f[] = request.getParameterValues("in_stock_qty_f[]");
     String in_stock_diff[] = request.getParameterValues("in_stock_diff[]");
+    String r_m_order_sheet_cons[] = request.getParameterValues("r_m_order_sheet_cons[]");
+    String r_m_order_sheet_qty[] = request.getParameterValues("r_m_order_sheet_qty[]");
+    String r_m_order_sheet_cost[] = request.getParameterValues("r_m_order_sheet_cost[]");
+    String r_m_order_sheet_total[] = request.getParameterValues("r_m_order_sheet_total[]");
     try{
         Context ic = new InitialContext(); 
         DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/scm"); 		
@@ -91,9 +95,10 @@
                 + " ( "
                 + "po_num, purchase_date,  purchase_qty, purchase_cost, purchase_etc, in_stock_date_received"
                 + ", in_stock_qty, in_stock_date_received_f, in_stock_date_checked_f, in_stock_qty_f, in_stock_diff"
+                + ", consumption, qty, cost "
                 + " ) "
                 + " Values "
-                + " (?,?,?,?,?,?,?,?,?,?,?);";
+                + " (?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(idx++, po_num);
             pstmt.setString(idx++, purchase_date[i]);
@@ -106,6 +111,9 @@
             pstmt.setString(idx++, in_stock_date_checked_f[i]);
             pstmt.setString(idx++, in_stock_qty_f[i]);
             pstmt.setString(idx++, in_stock_diff[i]);
+            pstmt.setString(idx++, r_m_order_sheet_cons[i]);
+            pstmt.setString(idx++, r_m_order_sheet_qty[i]);
+            pstmt.setString(idx++, r_m_order_sheet_cost[i]);
             pstmt.executeUpdate();
         }
         conn.commit();

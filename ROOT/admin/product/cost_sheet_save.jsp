@@ -23,9 +23,7 @@
     int iRet = 0;
     String sql = "";
     String error_message = "";
-    String po_num = request.getParameter("po_num");
-    String r_m_order_total = request.getParameter("r_m_order_total");
-    String purchase_total = request.getParameter("purchase_total");
+    String po_num = request.getParameter("po_num");        
     String forwarding_company_1 = request.getParameter("forwarding_company_1");
     String forwarding_vehicle_no_1 = request.getParameter("forwarding_vehicle_no_1");
     String forwarding_cost_1 = request.getParameter("forwarding_cost_1");
@@ -50,6 +48,10 @@
     String in_stock_date_checked_f[] = request.getParameterValues("in_stock_date_checked_f[]");
     String in_stock_qty_f[] = request.getParameterValues("in_stock_qty_f[]");
     String in_stock_diff[] = request.getParameterValues("in_stock_diff[]");
+    String r_m_order_sheet_cons[] = request.getParameterValues("r_m_order_sheet_cons[]");
+    String r_m_order_sheet_qty[] = request.getParameterValues("r_m_order_sheet_qty[]");
+    String r_m_order_sheet_cost[] = request.getParameterValues("r_m_order_sheet_cost[]");
+    
     try{
         Context ic = new InitialContext(); 
         DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/scm"); 		
@@ -59,17 +61,15 @@
         
         sql = " INSERT INTO cost_sheet"
           + " ( "
-          + "  po_num, r_m_order_total, purchase_total, forwarding_company_1, forwarding_vehicle_no_1, forwarding_cost_1, "
+          + "  po_num, forwarding_company_1, forwarding_vehicle_no_1, forwarding_cost_1, "
           + "forwarding_company_2, forwarding_vehicle_no_2, forwarding_cost_2, rely_on_factory, r_m_total, factory_fee, "
           + "domestic, international, etc, benefit  "
           + " ) "
           + " Values "
-          + " ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+          + " ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 
         pstmt = conn.prepareStatement(sql);
         pstmt.setString(idx++, po_num);        
-        pstmt.setString(idx++, r_m_order_total);
-        pstmt.setString(idx++, purchase_total);
         pstmt.setString(idx++, forwarding_company_1);
         pstmt.setString(idx++, forwarding_vehicle_no_1);
         pstmt.setString(idx++, forwarding_cost_1);
@@ -90,10 +90,11 @@
             sql = " INSERT INTO cost_sheet_purchase_in_stock"
                 + " ( "
                 + "po_num, purchase_date,  purchase_qty, purchase_cost, purchase_etc, in_stock_date_received"
-                    + ", in_stock_qty, in_stock_date_received_f, in_stock_date_checked_f, in_stock_qty_f, in_stock_diff"
+                + ", in_stock_qty, in_stock_date_received_f, in_stock_date_checked_f, in_stock_qty_f, in_stock_diff"
+                + ", consumption, qty, cost "
                 + " ) "
                 + " Values "
-                + " (?,?,?,?,?,?,?,?,?,?,?);";
+                + " (?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(idx++, po_num);
             pstmt.setString(idx++, purchase_date[i]);
@@ -106,6 +107,9 @@
             pstmt.setString(idx++, in_stock_date_checked_f[i]);
             pstmt.setString(idx++, in_stock_qty_f[i]);
             pstmt.setString(idx++, in_stock_diff[i]);
+            pstmt.setString(idx++, r_m_order_sheet_cons[i]);
+            pstmt.setString(idx++, r_m_order_sheet_qty[i]);
+            pstmt.setString(idx++, r_m_order_sheet_cost[i]);
             pstmt.executeUpdate();
         }
         conn.commit();        

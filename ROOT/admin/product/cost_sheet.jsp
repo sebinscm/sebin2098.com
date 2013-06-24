@@ -31,32 +31,37 @@ String unit_price = "";
 String buyer_name = "";
 String imgUrl = "";
 Double total_qty_cost = 0.0;
-String r_m_order_total = "";
-String purchase_total = "";
+Double r_m_order_total = 0.0;
+Double purchase_total = 0.0;
 String forwarding_company_1 = "";
 String forwarding_vehicle_no_1 = "";
-String forwarding_cost_1 = "";
+String forwarding_cost_1 = "0";
 String forwarding_company_2 = "";
 String forwarding_vehicle_no_2 = "";
-String forwarding_cost_2 = "";
-String rely_on_factory = "";
-String r_m_total = "";
-String factory_fee = "";
-String domestic = "";
-String international = "";
-String etc = "";
-String benefit = "";
+String forwarding_cost_2 = "0";
+String rely_on_factory = "0";
+String r_m_total = "0";
+String factory_fee = "0";
+String domestic = "0";
+String international = "0";
+String etc = "0";
+Double benefit = 0.0;
 String purchase_date = "";
-String purchase_qty = "";
-String purchase_cost = "";
+String purchase_qty = "0";
+String purchase_cost = "0";
 String purchase_etc = "";
 String in_stock_date_received = "";
-String in_stock_qty = "";
+String in_stock_qty = "0";
 String in_stock_date_received_f = "";
 String in_stock_date_checked_f = "";
-String in_stock_qty_f = "";
+String in_stock_qty_f = "0";
 String in_stock_diff = "";
 String path_to_save_or_update = "";
+String r_m_order_sheet_cons = "";
+String r_m_order_sheet_qty = "0";
+String r_m_order_sheet_cost = "0";
+Double r_m_order_sheet_total = 0.0;
+int rowspan_img = 2;
 String[] tmp_default = {"","","","","","","",""};
 String isUpdate = request.getParameter("isUpdate");
 String po_num = request.getParameter("po_no_selected");
@@ -99,6 +104,7 @@ try {
                 + " from    purchase_order_line "
                 + " where order_no = '"+po_num+"'; ";
     iRet = dataProcess.RetrieveData(sql, matrix, conn);
+    rowspan_img = iRet;
     for(int i = 0; i<iRet; i++){
         k = 0;
         colour = matrix.getRowData(i).getData(k++);
@@ -117,6 +123,7 @@ try {
     if(isUpdate.equals("true")){
         sql = " select po_num, purchase_date,  purchase_qty, purchase_cost, purchase_etc, in_stock_date_received"
                     + ", in_stock_qty, in_stock_date_received_f, in_stock_date_checked_f, in_stock_qty_f, in_stock_diff"
+                    + ", consumption, qty, cost"
                     + " from cost_sheet_purchase_in_stock"
                     + " where po_num = '"+po_num+"'; ";
         iRet = dataProcess.RetrieveData(sql, matrix, conn);
@@ -137,11 +144,23 @@ try {
             in_stock_date_checked_f = matrix.getRowData(i).getData(k++);
             in_stock_qty_f = matrix.getRowData(i).getData(k++);
             in_stock_diff = matrix.getRowData(i).getData(k++);
+            r_m_order_sheet_cons = matrix.getRowData(i).getData(k++);
+            r_m_order_sheet_qty = matrix.getRowData(i).getData(k++);
+            r_m_order_sheet_cost = matrix.getRowData(i).getData(k++);
+            if(r_m_order_sheet_qty==null ||r_m_order_sheet_qty=="") r_m_order_sheet_qty="0";
+            if(r_m_order_sheet_cost==null ||r_m_order_sheet_cost=="") r_m_order_sheet_cost="0";
+            if(purchase_qty==null || purchase_qty=="") purchase_qty="0";
+            if(purchase_cost==null ||purchase_cost=="") purchase_cost="0";
+            if(in_stock_qty==null ||in_stock_qty=="") in_stock_qty="0";
+            if(in_stock_qty_f==null ||in_stock_qty_f=="") in_stock_qty_f="0";            
+            r_m_order_sheet_total = Double.parseDouble(r_m_order_sheet_qty) * Double.parseDouble(r_m_order_sheet_cost);
+            r_m_order_total += r_m_order_sheet_total;
+            purchase_total+= Double.parseDouble(purchase_cost);
         }
-        outPut2 += "<tr><td><input type='text' name='r_m_order_sheet_cons[]' size='7' value='"+"d"+"' /></td>"
-                + "<td><input type='text' name='r_m_order_sheet_qty[]' size='2' value='"+"d"+"' /></td>"
-                + "<td><input type='text' name='r_m_order_sheet_cost[]'  size='2' value='"+"d"+"'/></td>"
-                + "<td><input type='text' name='r_m_order_sheet_total[]'  size='2' value='"+"d"+"'/></td>"
+        outPut2 += "<tr><td><input type='text' name='r_m_order_sheet_cons[]' size='7' value='"+r_m_order_sheet_cons+"' /></td>"
+                + "<td><input type='n' name='r_m_order_sheet_qty[]' size='2' value='"+r_m_order_sheet_qty+"' /></td>"
+                + "<td><input type='text' name='r_m_order_sheet_cost[]'  size='2' value='"+r_m_order_sheet_cost+"'/></td>"
+                + "<td>"+r_m_order_sheet_total+"</td>"
                 + "<td><input type='text' name='purchase_date[]'  size='9'  value='"+purchase_date+"'/></td>"
                 + "<td><input type='text' name='purchase_qty[]'  size='2' value='"+purchase_qty+"'/></td>"
                 + "<td><input type='text' name='purchase_cost[]'  size='2' value='"+purchase_cost+"'/></td>"
@@ -156,16 +175,14 @@ try {
     
     if(isUpdate.equals("true")){
         path_to_save_or_update = "cost_sheet_update.jsp";
-        sql = " select po_num, r_m_order_total, purchase_total, forwarding_company_1, forwarding_vehicle_no_1, forwarding_cost_1, "
+        sql = " select po_num, forwarding_company_1, forwarding_vehicle_no_1, forwarding_cost_1, "
               + "forwarding_company_2, forwarding_vehicle_no_2, forwarding_cost_2, rely_on_factory, r_m_total, factory_fee, "
-              + "domestic, international, etc, benefit"
+              + "domestic, international, etc"
               + " from    cost_sheet "
               + " where po_num = '"+po_num+"';";
         iRet = dataProcess.RetrieveData(sql, matrix, conn);   
         k = 0;
         po_num = matrix.getRowData(0).getData(k++);
-        r_m_order_total = matrix.getRowData(0).getData(k++);
-        purchase_total = matrix.getRowData(0).getData(k++);
         forwarding_company_1 = matrix.getRowData(0).getData(k++);
         forwarding_vehicle_no_1 = matrix.getRowData(0).getData(k++);
         forwarding_cost_1 = matrix.getRowData(0).getData(k++);
@@ -178,7 +195,7 @@ try {
         domestic = matrix.getRowData(0).getData(k++);
         international = matrix.getRowData(0).getData(k++);
         etc = matrix.getRowData(0).getData(k++);
-        benefit = matrix.getRowData(0).getData(k++);
+        benefit = (total_qty_cost) - (Double.parseDouble(etc)+Double.parseDouble(international)+Double.parseDouble(domestic)+Double.parseDouble(factory_fee)+purchase_total+Double.parseDouble(rely_on_factory));
     }
 }catch (Exception e) {
   if (conn != null) {
@@ -234,7 +251,7 @@ try {
             <td width="13%" style="background-color:gray; color:white;">QTY</td>
             <td width="13%" style="background-color:gray; color:white;">Cost</td>
             <td width="13%" style="background-color:gray; color:white;">QTY * Cost</td>
-            <td rowspan="6" width="400px"><%= imgUrl %></td>
+            <td rowspan="<%= (rowspan_img+2) %>" width="400px"><%= imgUrl %></td>
         </tr>
         <%= outPut %>
         <tr>
@@ -270,27 +287,28 @@ try {
         </tr>
         <%= outPut2 %>
         <tr>
-            <td width="110px" class="gray_background">&nbsp;</td>
-            <td width="70px" class="gray_background">&nbsp;</td>
-            <td width="70px" class="gray_background">&nbsp;</td>
-            <td width="70px" class="gray_background">&nbsp;</td>
-            <td width="70px" class="gray_background">&nbsp;</td>
-            <td width="110px" class="gray_background">&nbsp;</td>
-            <td width="110px" class="gray_background">&nbsp;</td>
+            <td width="110px" class="gray_background"></td>
+            <td width="70px" class="gray_background"></td>
+            <td width="70px">Total : </td>
+            <td width="70px"><%= r_m_order_total %></td>
+            <td width="70px" class="gray_background"></td>
+            <td width="110px">Total : </td>
+            <td width="110px"><%= purchase_total %></td>
+            
             <td width="70px" class="gray_background">&nbsp;</td>
             <td width="60px" colspan='2'>Forwarding:<input type="text" size="10" name="forwarding_company_1" value="<%= forwarding_company_1 %>" /></td>
             <td width="60px" colspan='2'>Vehicle No:<input type="text" size="10" name="forwarding_vehicle_no_1"  value="<%= forwarding_vehicle_no_1 %>"/></td>
             <td width="70px" colspan='2'>Cost:<input type="text" size="10" name="forwarding_cost_1"  value="<%= forwarding_cost_1 %>"/></td>
         </tr>
         <tr>
-            <td width="110px" class="gray_background"></td>
-            <td width="70px" class="gray_background"></td>
-            <td width="70px">Total : </td>
-            <td width="70px"><input type="text" name="r_m_order_total" size='2' value="<%= r_m_order_total %>"/></td>
-            <td width="70px" class="gray_background"></td>
-            <td width="110px">Total : </td>
-            <td width="110px"><input type="text" name="purchase_total" size='2' value="<%= purchase_total %>"/></td>
             <td width="70px" class="gray_background">&nbsp;</td>
+            <td width="110px" class="gray_background">&nbsp;</td>
+            <td width="70px" class="gray_background">&nbsp;</td>
+            <td width="70px" class="gray_background">&nbsp;</td>
+            <td width="70px" class="gray_background">&nbsp;</td>
+            <td width="70px" class="gray_background">&nbsp;</td>
+            <td width="110px" class="gray_background">&nbsp;</td>
+            <td width="110px" class="gray_background">&nbsp;</td>
             <td width="60px" colspan='2'>Forwarding:<input type="text" size="10" name="forwarding_company_2" value="<%= forwarding_company_2 %>" /></td>
             <td width="60px" colspan='2'>Vehicle No:<input type="text" size="10" name="forwarding_vehicle_no_2" value="<%= forwarding_vehicle_no_2 %>" /></td>
             <td width="70px" colspan='2'>Cost:<input type="text" size="10" name="forwarding_cost_2" value="<%= forwarding_cost_2 %>" /></td>
@@ -313,12 +331,12 @@ try {
         </tr>
         <tr>
             <td><input type="text" name="rely_on_factory" value="<%= rely_on_factory %>"/></td>
-            <td><input type="text" name="r_m_total" value="<%= r_m_total %>"/></td>
+            <td><input type="hidden" name="r_m_total" value="<%= purchase_total %>"/><%= purchase_total %></td>
             <td><input type="text" name="factory_fee" value="<%= factory_fee %>"/></td>
             <td><input type="text" name="domestic" value="<%= domestic %>"/></td>
             <td><input type="text" name="international" value="<%= international %>"/></td>
             <td><input type="text" name="etc" value="<%= etc %>"/></td>
-            <td><input type="text" name="benefit" value="<%= benefit %>"/></td>
+            <td><input type="hidden" name="benefit" value="<%= benefit %>"/><%= benefit %></td>
         </tr>
     </table>
         <input type="submit" value="Submit">
