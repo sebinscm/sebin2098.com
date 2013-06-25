@@ -21,6 +21,12 @@ MatrixDataSet matrix = null;
 DataProcess dataProcess = null;
 int iRet = 0;
 String sql = "";
+String outPut_colour = "";
+String outPut_qty = "";
+String outPut_default_line = "";
+String outPut_default_blank = "";
+int count_colour = 0;
+
 String tmp_po_num = "";
 String tmp_style = "";
 String po_num = request.getParameter("po_num");
@@ -80,164 +86,23 @@ try {
     iRet = dataProcess.RetrieveData(sql, matrix, conn);
     int k = 0;
     tmp_po_num = matrix.getRowData(0).getData(k++);
-    tmp_style = matrix.getRowData(0).getData(k++);    
+    tmp_style = matrix.getRowData(0).getData(k++);       
     
-    if(rm_poUpdate == null){
-        rm_poUpdate = "false";
-        file_to_choose = "raw_material_po_save.jsp";
-    }
-    if(rm_poUpdate.equals("true")){
-        file_to_choose = "raw_material_po_update.jsp";
-        sql = "select "
-                + " po_num, date_ordered, writer, factory, out_shell_length, combination_length, lining_length, inter_lining_length, "
-                + " button_length, hanger_tape_length, sewing_yarn_length, "
-                + " out_shell_store, out_shell_name, out_shell_add, out_shell_comp, out_shell_cost, out_shell_tel, "
-                + " combination_1_store, combination_1_name, combination_1_add, combination_1_comp, combination_1_cost, combination_1_tel, "
-                + " combination_2_store, combination_2_name, combination_2_add, combination_2_comp, combination_2_cost, combination_2_tel, "
-                + " lining_store, lining_name, lining_add, lining_comp, lining_cost, lining_tel, "
-                + " button_store, button_name, button_add, button_comp, button_cost, button_tel "
-                + " from "
-                + " raw_material_purchase_order where po_num = '"+po_num+"';";
-        iRet = dataProcess.RetrieveData(sql, matrix, conn);
+    sql = " select  colour, total_qty "
+            + " from    purchase_order_line "
+            + " where order_no = '"+po_num+"'; "; 
+    iRet = dataProcess.RetrieveData(sql, matrix, conn);
+    count_colour = iRet;
+    for(int i=0; i<iRet; i++){
         k = 0;
-        String po_num1 =  matrix.getRowData(0).getData(k++);
-        date_ordered =  matrix.getRowData(0).getData(k++);
-        writer =  matrix.getRowData(0).getData(k++);
-        factory =  matrix.getRowData(0).getData(k++);
-        out_shell_length =  matrix.getRowData(0).getData(k++);
-        combination_length =  matrix.getRowData(0).getData(k++);
-        lining_length =  matrix.getRowData(0).getData(k++);
-        inter_lining_length = matrix.getRowData(0).getData(k++);
-        button_length =  matrix.getRowData(0).getData(k++);
-        hanger_tape_length =  matrix.getRowData(0).getData(k++);
-        sewing_yarn_length = matrix.getRowData(0).getData(k++);
-        out_shell_store =  matrix.getRowData(0).getData(k++);
-        out_shell_name =  matrix.getRowData(0).getData(k++);
-        out_shell_add = matrix.getRowData(0).getData(k++);
-        out_shell_comp = matrix.getRowData(0).getData(k++);
-        out_shell_cost =  matrix.getRowData(0).getData(k++);
-        out_shell_tel = matrix.getRowData(0).getData(k++);
-        combination_1_store =  matrix.getRowData(0).getData(k++);
-        combination_1_name =  matrix.getRowData(0).getData(k++);
-        combination_1_add =  matrix.getRowData(0).getData(k++);
-        combination_1_comp = matrix.getRowData(0).getData(k++);
-        combination_1_cost =  matrix.getRowData(0).getData(k++);
-        combination_1_tel = matrix.getRowData(0).getData(k++);
-        combination_2_store = matrix.getRowData(0).getData(k++);
-        combination_2_name = matrix.getRowData(0).getData(k++);
-        combination_2_add =  matrix.getRowData(0).getData(k++);
-        combination_2_comp =  matrix.getRowData(0).getData(k++);
-        combination_2_cost =  matrix.getRowData(0).getData(k++);
-        combination_2_tel = matrix.getRowData(0).getData(k++);
-        lining_store = matrix.getRowData(0).getData(k++);
-        lining_name =  matrix.getRowData(0).getData(k++);
-        lining_add = matrix.getRowData(0).getData(k++);
-        lining_comp =  matrix.getRowData(0).getData(k++);
-        lining_cost = matrix.getRowData(0).getData(k++);
-        lining_tel = matrix.getRowData(0).getData(k++);
-        button_store = matrix.getRowData(0).getData(k++);
-        button_name =  matrix.getRowData(0).getData(k++);
-        button_add =  matrix.getRowData(0).getData(k++);
-        button_comp = matrix.getRowData(0).getData(k++);
-        button_cost = matrix.getRowData(0).getData(k++);
-        button_tel = matrix.getRowData(0).getData(k++);
-        
-        sql = " select  colour, qty, out_shell_qty, combination_qty, lining_qty, inter_lining_qty, button_qty, hanger_tape_qty, sewing_yarn_qty,"
-                + " out_shell_stocked, combination_stocked, lining_stocked, inter_lining_stocked, button_stocked, hanger_tape_stocked, sewing_yarn_stocked "
-                + " from raw_material_fabric "
-                + " where po_num = '"+po_num+"'; ";         
-        iRet = dataProcess.RetrieveData(sql, matrix, conn);
-        for(int i=0; i<iRet; i++){
-            k = 0;
-            String tmp_colour = matrix.getRowData(i).getData(k++);
-            String total_qty = matrix.getRowData(i).getData(k++);
-            String out_shell_qty = matrix.getRowData(i).getData(k++);
-            String combination_qty = matrix.getRowData(i).getData(k++);
-            String lining_qty = matrix.getRowData(i).getData(k++);
-            String inter_lining_qty = matrix.getRowData(i).getData(k++);
-            String button_qty = matrix.getRowData(i).getData(k++);
-            String hanger_tape_qty = matrix.getRowData(i).getData(k++);
-            String sewing_yarn_qty = matrix.getRowData(i).getData(k++);
-            String out_shell_stocked = matrix.getRowData(i).getData(k++);
-            String combination_stocked = matrix.getRowData(i).getData(k++);
-            String lining_stocked = matrix.getRowData(i).getData(k++);
-            String inter_lining_stocked = matrix.getRowData(i).getData(k++);
-            String button_stocked = matrix.getRowData(i).getData(k++);
-            String hanger_tape_stocked = matrix.getRowData(i).getData(k++);
-            String sewing_yarn_stocked = matrix.getRowData(i).getData(k++);
-            
-            outPut +=   "<tr height='110px'>"
-                    +   "<td><input size='6' type='text' name='colour[]' value='"+tmp_colour+"' /></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    + "</tr>"
-                    + "<tr height='30px'>"
-                    +   "<td rowspan='2'><input size='1' type='text' name='qty[]' value='"+total_qty+"' />PCS</td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input value='"+out_shell_qty+"' type='text' name='out_shell_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input value='"+combination_qty+"' type='text' name='combination_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input value='"+lining_qty+"' type='text' name='lining_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input value='"+inter_lining_qty+"' type='text' name='inter_lining_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input value='"+button_qty+"' type='text' name='button_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input value='"+hanger_tape_qty+"' type='text' name='hanger_tape_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input value='"+sewing_yarn_qty+"' type='text' name='sewing_yarn_qty[]' size='3' /></td><tr></table></td>"
-                    + "</tr>"
-                    + "<tr height='30px'>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input value='"+out_shell_stocked+"' type='text' name='out_shell_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input value='"+combination_stocked+"' type='text' name='combination_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input value='"+lining_stocked+"' type='text' name='lining_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input value='"+inter_lining_stocked+"' type='text' name='inter_lining_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input value='"+button_stocked+"' type='text' name='button_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input value='"+hanger_tape_stocked+"' type='text' name='hanger_tape_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input value='"+sewing_yarn_stocked+"' type='text' name='sewing_yarn_stocked[]' size='3' /></td><tr></table></td>"
-                    + "</tr>";
-            }
-    }
-    else{
-        sql = " select  colour, total_qty "
-                + " from    purchase_order_line "
-                + " where order_no = '"+po_num+"'; "; 
-        iRet = dataProcess.RetrieveData(sql, matrix, conn);
-        for(int i=0; i<iRet; i++){
-            k = 0;
-            int a = 0;
-            String tmp_colour = matrix.getRowData(i).getData(k++);
-            String total_qty = matrix.getRowData(i).getData(k++);
-            outPut +=   "<tr height='110px'>"
-                    +   "<td><input size='6' type='text' name='colour[]' value='"+tmp_colour+"' /></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    +   "<td></td>"
-                    + "</tr>"
-                    + "<tr height='30px'>"
-                    +   "<td rowspan='2'><input size='1' type='text' name='qty[]' value='"+total_qty+"' />PCS</td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input type='text' name='out_shell_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input type='text' name='combination_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input type='text' name='lining_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input type='text' name='inter_lining_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input type='text' name='button_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input type='text' name='hanger_tape_qty[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='gray_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>O/QTY :</td><td style='border:0;'><input type='text' name='sewing_yarn_qty[]' size='3' /></td><tr></table></td>"
-                    + "</tr>"
-                    + "<tr height='30px'>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input type='text' name='out_shell_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input type='text' name='combination_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input type='text' name='lining_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input type='text' name='inter_lining_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input type='text' name='button_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input type='text' name='hanger_tape_stocked[]' size='3' /></td><tr></table></td>"
-                    +   "<td class='blue_background'><table><tr style='border:0;'><td width='57px' style='border:0;'>Stocked :</td><td style='border:0;'><input type='text' name='sewing_yarn_stocked[]' size='3' /></td><tr></table></td>"
-                    + "</tr>";
-            }
-    }
+        String tmp_colour = matrix.getRowData(i).getData(k++);
+        String total_qty = matrix.getRowData(i).getData(k++);
+        outPut_colour +=  "<td><input type='hidden' name='colour[]' value='"+tmp_colour+"' />"+tmp_colour+"</td>";
+        outPut_qty += "<td>"+total_qty+" PCS</td>";
+        outPut_default_line += "<td>O/qty : <input size='7' type='text' name='order_qty[]' /><br/>"
+                            +  "Stocked: <input size='7' type='text' name='stocked[]' /></td>";
+        outPut_default_blank += "<td></td>";
+    }    
     
 }catch (Exception e) {
   if (conn != null) {
@@ -326,26 +191,21 @@ try {
             </tr>
             <table width="900px">
                 <tr>
-                    <td width="80px" height="40px">CONS.</td>
-                    <td width="110px">Out Shell / 主布</td>
-                    <td width="110px">Combination / 配布</td>
-                    <td width="110px">Lining / 里布</td>
-                    <td width="110px">Inter Lining / 朴</td>
-                    <td width="110px">Button / 扣子</td>
-                    <td width="110px">Hanger Tape /<br/> 挂衣带</td>
-                    <td width="110px">Sewing Yarn / 线</td>
+                    <td width="80px" height="30px">Colour</td>
+                    <%= outPut_colour %>
                 </tr>
                 <tr>
-                    <td height="30px">Colour</td>
-                    <td>用量 : <input type="text" name='out_shell_length' size="6" value="<%= out_shell_length %>"/></td>
-                    <td>用量 : <input type="text" name='combination_length' size="6" value="<%= combination_length %>"/></td>
-                    <td>用量 : <input type="text" name='lining_length' size="6" value="<%= lining_length %>"/></td>
-                    <td>用量 : <input type="text" name='inter_lining_length' size="6" value="<%= inter_lining_length %>"/></td>
-                    <td>用量 : <input type="text" name='button_length' size="6" value="<%= button_length %>"/></td>
-                    <td>用量 : <input type="text" name='hanger_tape_length' size="6" value="<%= hanger_tape_length %>"/></td>
-                    <td>用量 : <input type="text" name='sewing_yarn_length' size="6" value="<%= sewing_yarn_length %>"/></td>
+                    <td width="80px" height="30px">CONS.</td>
+                    <%= outPut_qty %>
                 </tr>
-                <%= outPut %>
+                <tr>
+                    <td width="80px" height="100px"><input type="hidden" name="cons[]" value="out_shell" />Out Shell</td>
+                    <%= outPut_default_blank %>
+                </tr>
+                <tr>
+                    <td width="80px">Length: <input size="2" type="text" name="length[]" /></td>
+                    <%= outPut_default_line %>
+                </tr>
             </table>        
             <table width="900px">
                 <tr height="10px" style="border:0px;">
