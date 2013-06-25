@@ -17,8 +17,8 @@ String _ManagementNoticeUploadUrl = "/admin/notice/upload";
 
 // Uplod
 //String _uploadPath = "../../var/tmp";
-String _uploadPath = "C:/Program Files/Apache Software Foundation/Tomcat 6.0/webapps/ROOT/var/tmp";
-String _uploadPath2 = "C:/Program Files/Apache Software Foundation/Tomcat 6.0/webapps/ROOT/var/tmp";
+String _uploadPath = "C:/SCM_MYSQL/ROOT/var/tmp";
+String _uploadPath2 = "C:/SCM_MYSQL/ROOT/var/tmp";
 String _uploadPathForLocal = "C:/Program Files/Apache Software Foundation/Tomcat 6.0/webapps/ROOT/var/tmp";
 long _maxFileSize = 50*1024*1024;
 
