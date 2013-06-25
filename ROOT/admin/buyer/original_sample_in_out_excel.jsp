@@ -141,7 +141,7 @@ for (int i = 0; i < iRet; i++) {
     }
   }
 
-   outS += "<tr align='center' >"
+   outS += "<tr align='center'  height='53' >"
         + " <td align='left'>" + sampleNo + "</td>"
         + " <td>" + inputDate + "</td>"
         + " <td>" + item_class + "</td>"

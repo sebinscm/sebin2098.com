@@ -63,11 +63,17 @@ sql = " select  a.order_no, "
     + "          a.buyer_name, "
     + "         a.supplier_name, "
     + "         a.order_status, "
-    + "         date_format(a.created, '%Y/%m/%d'),ifnull(a.total_qty,0) ,b.code_name,a.sgr, ifnull(a.vendor_price,0),  (a.total_qty * a.vendor_price) total_amount  "
+    + "         date_format(a.created, '%Y/%m/%d'),ifnull(a.total_qty,0) ,b.code_name,a.sgr, ifnull(a.vendor_price,0),  (a.total_qty * a.vendor_price) total_amount, user_name  "
     + " from   purchase_order a LEFT OUTER JOIN vg_common_code b ON (  a.order_status = b.code and type='ORDER_STATUS' and b.use_yn='Y')  "
     + " where  a.backorder_flag = 'N' " ;
-
  
+
+/*
+   *  display PO based on coresponding manager
+*/
+if(!_admingroup.equals("A")){
+    sql += " and a.USER_NAME ="+ _adminid;
+}
 
 if (ag_po_no.length() > 0 || ag_style_no.length() > 0) {
   if (ag_po_no.length() > 0) {
@@ -161,11 +167,21 @@ for (int i = 0; i < iRet; i++) {
   String sgr = matrix.getRowData(i).getData(j++);
   double unit_price = Double.parseDouble(matrix.getRowData(i).getData(j++));
   double total_price = Double.parseDouble(matrix.getRowData(i).getData(j++));
+  String user_name = matrix.getRowData(i).getData(j++); 
   String colour_code = "";
   if (i%2 == 0) {
     colour_code = "#FFFFF0";
   } else {
     colour_code = "#EEEEE0";
+  }
+  if(po_status_nm.equals("Requested PO-Confirm")){
+    colour_code = "#D8F0F8";
+  }
+  else if(po_status_nm.equals("Shipping Out")){
+      colour_code = "#5EAE9E";
+  }
+  else if(po_status_nm.equals("CANCEL ORDER")){
+      colour_code = "#FF7373";
   }
   // set item imagae
     File imgFile = new File(application.getRealPath(_styleImgURL) + File.separator + style_no.toLowerCase() + ".jpg");
@@ -175,9 +191,10 @@ for (int i = 0; i < iRet; i++) {
 		  imgUrl = "<img src='" + _styleImgURL + "/noimage.jpg' width='50' height='70'>";
 	}	
   
-  outS += "<tr align='center' bgcolor='" + colour_code + "'>"
+  outS += "<tr align='center' bgcolor='" + colour_code + "'>" 
         + " <td>" + (i+1) + "</td>"
         + " <td><a href=\"javascript:fnView('" + po_no + "')\">" + po_no + "</td>"
+        + " <td>" + user_name + "</td>"
         + " <td>" + sgr + "</td>"
         + " <td>" + style_no + "</td>"
         + " <td>" + season + "</td>"
@@ -350,6 +367,7 @@ function fnExcel(frm) {
 <TR class='table_header_center'>
   <TD>No</TD>
   <TD>PO No.</TD>
+  <TD>Managed By</TD>
   <TD>SGR</TD>
   <TD>Style No.</TD>
   <TD>Season</TD>

@@ -77,6 +77,17 @@ String comments = "";
 String total_qty = "";
 String order_date = "";
 String ship_date = "";
+String value_outS01 = "";
+String value_outS02 = "";
+String value_outS03 = "";
+String value_outS04 = "";
+String value_outS05 = "";
+String value_outS06 = "";
+String value_outS07 = "";
+String value_outS08 = "";
+String value_outS09 = "";
+String value_outS10 = "";
+
 int last_cnt=0;
 // for po details
 String[] col = new String[5];
@@ -191,8 +202,10 @@ try {
   for (int i = 0; i < iRet; i++) {
     String bid  = matrix.getRowData(i).getData(0);
     String bname  = matrix.getRowData(i).getData(1);
+    
     outS01  += "<option value=\"" + bid + "\"";  
     if ( buyer.equals(bid) ) {
+        value_outS01 = bid;
        outS01  += " SELECTED ";  
     }
     outS01  += ">" + bname + "</option>";
@@ -206,8 +219,10 @@ try {
   for (int i = 0; i < iRet; i++) {
     String sid  = matrix.getRowData(i).getData(0);
     String sname  = matrix.getRowData(i).getData(1);
+    
     outS02  += "<option value=\"" + sid + "\"";    
     if ( supplier.equals(sid) ) {
+        value_outS02 = sid;
        outS02  += " SELECTED ";  
     }
     outS02  += ">" + sname + "</option>";
@@ -221,8 +236,10 @@ try {
   for (int i = 0; i < iRet; i++) {
     String pgrcode  = matrix.getRowData(i).getData(0);
     String pgrname  = matrix.getRowData(i).getData(1);
+    
     outS03  += "<option value=\"" + pgrcode + "\"";    
     if ( pgr.equals(pgrcode) ) {
+        value_outS03 = pgrcode;
        outS03  += " SELECTED ";  
     }
     outS03  += ">" + pgrname + "</option>";
@@ -236,8 +253,10 @@ try {
   for (int i = 0; i < iRet; i++) {
     String sgrcode  = matrix.getRowData(i).getData(0);
     String sgrname  = matrix.getRowData(i).getData(1);
+    
     outS04  += "<option value=\"" + sgrcode + "\"";    
     if ( sgr.equals(sgrcode) ) {
+        value_outS04 = sgrcode;
        outS04  += " SELECTED ";  
     }
     outS04  += ">" + sgrname + "</option>";
@@ -251,8 +270,10 @@ try {
   for (int i = 0; i < iRet; i++) {
     String mcode  = matrix.getRowData(i).getData(0);
     String mname  = matrix.getRowData(i).getData(1);
+    
     outS05  += "<option value=\"" + mcode + "\"";    
    if ( fabric.equals(mcode) ) {
+       value_outS05 = mcode;
        outS05  += " SELECTED ";  
     }
     outS05  += ">" + mname + "</option>";
@@ -267,8 +288,10 @@ try {
   for (int i = 0; i < iRet; i++) {
     String curcode  = matrix.getRowData(i).getData(0);
     String curname  = matrix.getRowData(i).getData(1);
+    
     outS06  += "<option value=\"" + curcode + "\""; 
     if ( currency.equals(curcode) ) {
+        value_outS06 = curcode;
        outS06  += " SELECTED ";  
     }   
     outS06  += ">" + curname + "</option>";
@@ -282,8 +305,10 @@ try {
   for (int i = 0; i < iRet; i++) {
     String subid  = matrix.getRowData(i).getData(0);
     String subname  = matrix.getRowData(i).getData(1);
+    
     outS07  += "<option value=\"" + subid + "\"";
     if ( subsupplier.equals(subid) ) {
+        value_outS07 = subid;
        outS07  += " SELECTED ";  
     }    
     outS07  += ">" + subname + "</option>";
@@ -297,8 +322,10 @@ try {
   for (int i = 0; i < iRet; i++) {
     String season_code  = matrix.getRowData(i).getData(0);
     String season_name  = matrix.getRowData(i).getData(1);
+    
     outS08  += "<option value=\"" + season_code + "\"";
     if ( season.equals(season_code) ) {
+        value_outS08 = season_code;
        outS08  += " SELECTED ";  
     }    
     outS08  += ">" + season_name + "</option>";
@@ -312,8 +339,10 @@ try {
   for (int i = 0; i < iRet; i++) {
     String trans_code  = matrix.getRowData(i).getData(0);
     String trans_name  = matrix.getRowData(i).getData(1);
+    
     outS09  += "<option value=\"" + trans_code + "\"";
     if ( deltype.equals(trans_code) ) {
+        value_outS09 = trans_code;
        outS09  += " SELECTED ";  
     }    
     outS09  += ">" + trans_name + "</option>";
@@ -328,8 +357,10 @@ try {
   for (int i = 0; i < iRet; i++) {
     String ship_code  = matrix.getRowData(i).getData(0);
     String ship_name  = matrix.getRowData(i).getData(1);
+    
     outS10  += "<option value=\"" + ship_code + "\"";
     if ( trans_type.equals(ship_code) ) {
+        value_outS10 = ship_code;
        outS10  += " SELECTED ";  
     }    
     outS10  += ">" + ship_name + "</option>";
@@ -584,46 +615,46 @@ try {
 <script language="javascript">
 
 function fnSave(frm) { 
-  if (!frm.styno.value) {
-    alert('Input style no!');
-    frm.styno.focus();
-    return;
-  }
-  if (!frm.buyer.value) {
-    alert('Input Buyer!');
-    frm.buyer.focus();
-    return;
-  }
-   if (!frm.pgr.value) {
-    alert('Input PGR!');
-    frm.pgr.focus();
-    return;
-  }
-   if (!frm.sgr.value) {
-    alert('Input SGR!');
-    frm.sgr.focus();
-    return;
-  }
-  if (!frm.unitprice.value) {
-    alert('Input Unit Price!');
-    frm.unitprice.focus();
-    return;
-  }
-  if (!frm.itemtext.value) {
-    alert('Input Item text!');
-    frm.itemtext.focus();
-    return;
-  }
-  if (!frm.size1.value) {
-    alert('Input at least one or more Size code!');
-    frm.size1.focus();
-    return;
-  }
-  if (!frm.col_1.value) {
-    alert('Input at least one or more color and quantity!');
-    frm.col_1.focus();
-    return;
-  }
+//  if (!frm.styno.value) {
+//    alert('Input style no!');
+//    frm.styno.focus();
+//    return;
+//  }
+//  if (!frm.buyer.value) {
+//    alert('Input Buyer!');
+//    frm.buyer.focus();
+//    return;
+//  }
+//   if (!frm.pgr.value) {
+//    alert('Input PGR!');
+//    frm.pgr.focus();
+//    return;
+//  }
+//   if (!frm.sgr.value) {
+//    alert('Input SGR!');
+//    frm.sgr.focus();
+//    return;
+//  }
+//  if (!frm.unitprice.value) {
+//    alert('Input Unit Price!');
+//    frm.unitprice.focus();
+//    return;
+//  }
+//  if (!frm.itemtext.value) {
+//    alert('Input Item text!');
+//    frm.itemtext.focus();
+//    return;
+//  }
+//  if (!frm.size1.value) {
+//    alert('Input at least one or more Size code!');
+//    frm.size1.focus();
+//    return;
+//  }
+//  if (!frm.col_1.value) {
+//    alert('Input at least one or more color and quantity!');
+//    frm.col_1.focus();
+//    return;
+//  }
   if (confirm('Do you really want to save these data?')) { 
     frm.action = './buyer_order_input.jsp';
     frm.submit();
@@ -869,6 +900,16 @@ function fnPrint(frm) {
    <input type='hidden' name='ag_from_date' value='<%= ag_from_date %>'>
    <input type='hidden' name='ag_to_date' value='<%= ag_to_date %>'>	
 	<input type='hidden' name='fromUrl' value='<%= fromUrl %>'>
+        <input type='hidden' name='buyer' value='<%= value_outS01 %>'>
+        <input type='hidden' name='supplier' value='<%= value_outS02 %>'>
+        <input type='hidden' name='pgr' value='<%= value_outS03 %>'>
+        <input type='hidden' name='sgr' value='<%= value_outS04 %>'>
+        <input type='hidden' name='material' value='<%= value_outS05 %>'>
+        <input type='hidden' name='currency' value='<%= value_outS06 %>'>        
+        <input type='hidden' name='season' value='<%= value_outS08 %>'>
+        <input type='hidden' name='deltype' value='<%= value_outS09 %>'>
+        <input type='hidden' name='shiptype' value='<%= value_outS10 %>'>
+        
   <tr class="table_header_center">
     <td width="21%" height="16" class='table_header_center'>*PO#</td>
     <td width="21%" height="16" class='table_header_center'>*Style#</td>
@@ -894,9 +935,9 @@ function fnPrint(frm) {
     <td width="23%" height="23" class='table_bg_bright'><input type='text' onblur="extractNumber(this,2,false);" onkeyup="extractNumber(this,2,false);" onkeypress="return blockNonNumbers(this, event, true, false);"  name='unitprice' value='<%=unitprice%>' size='10' maxlength='10' class='input_text' >
     	      &nbsp;&nbsp;<select name="currency"><%=outS06 %></select></td>
     <td width='19%' class="table_bg_bright"><input type='text' name='orderdate' value='<%= order_date %>' size='12' readonly class='input_text'>
-    <img src="/img/calendar.gif" style="cursor:hand" align="absmiddle" onclick="javascript:popFrame.fPopCalendar(this, document.form1.orderdate, document.all['popCal'], 'RIGHT', event);"></td>
+    <!--<img src="/img/calendar.gif" style="cursor:hand" align="absmiddle" onclick="javascript:popFrame.fPopCalendar(this, document.form1.orderdate, document.all['popCal'], 'RIGHT', event);"></td>-->
     <td width='16%' class="table_bg_bright"><input type='text' name='deliverydate' value='<%= delivery_date %>' size='12' readonly class='input_text'>
-    <img src="/img/calendar.gif" style="cursor:hand" align="absmiddle" onclick="javascript:popFrame.fPopCalendar(this, document.form1.deliverydate, document.all['popCal'], 'RIGHT', event);"></td>
+    <!--<img src="/img/calendar.gif" style="cursor:hand" align="absmiddle" onclick="javascript:popFrame.fPopCalendar(this, document.form1.deliverydate, document.all['popCal'], 'RIGHT', event);"></td>-->
   </tr>
   <tr class="table_header_center">
     <td width="21%" height="22" class='table_header_center'>Ship type</td>
@@ -970,5 +1011,20 @@ out.println(CopyRightLogo());
 %>
 </tr></td>
 </table>
+<script language="javascript">
+    /* 
+     * disable all input and select in this page
+     */    
+    var inputs = document.getElementsByTagName("input");
+    var selects = document.getElementsByTagName("select");
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].type === 'text') {
+            inputs[i].readOnly = true;
+        }
+    }
+    for (var i = 0; i < selects.length; i++) {        
+        selects[i].disabled = true;        
+    }
+</script>
 </body>
 </html>

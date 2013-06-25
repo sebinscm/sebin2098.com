@@ -18,6 +18,14 @@ response.setDateHeader ("Expires", 0); //prevents caching at the proxy server
 
 boolean isSucceeded = false;
 String strMsg = "";
+String whereAreWe = request.getLocalName();
+String tmp_uploadPath = "";
+if(whereAreWe.equals("127.0.0.1")){
+    tmp_uploadPath = _uploadPathForLocal;
+}
+else{
+    tmp_uploadPath = _uploadPath2;
+}
 
 HashMap params = new HashMap();               // parameter 저장 임시 변수
 String savePath = application.getRealPath(_styleImgURL) + File.separator;   // file path
@@ -26,10 +34,11 @@ String image_file ="";
 // Jakarta Commons 프로젝트의 FileUpload 모듈을 사용함.
 // -> http://jakarta.apache.org/commons/fileupload/
 DiskFileItemFactory factory = new DiskFileItemFactory();
-factory.setRepository(new File(_uploadPath2));                 // Set factory constraints
+factory.setRepository(new File(tmp_uploadPath));                 // Set factory constraints
 ServletFileUpload upload = new ServletFileUpload(factory);    // Create a new file upload handler
 upload.setSizeMax(_maxFileSize);                              // Set overall request size constraint
 List items = upload.parseRequest(request);                    // Parse the request
+
 
 try {
 

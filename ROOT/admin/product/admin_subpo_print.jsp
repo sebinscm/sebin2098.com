@@ -198,9 +198,9 @@ try {
    	  page_title="<font color=blue>Pre-PURCHASE ORDER</font>";
    	}   
  // set item imagae
-    File imgFile = new File(application.getRealPath(_styleImgURL) + File.separator + style_no + ".jpg");
+    File imgFile = new File(application.getRealPath(_styleImgURL) + File.separator + style_no.toLowerCase() + ".jpg");
 	if (imgFile.exists()) {
-	  imgUrl = "<img src='" + _styleImgURL + "/" + style_no + ".jpg' width='110' height='169'>";
+	  imgUrl = "<img src='" + _styleImgURL + "/" + style_no.toLowerCase() + ".jpg' width='110' height='169'>";
 	}
  // get sub-supplier code
  sql = "  select  a.id, a.name,a.phone1,a.fax, concat(a.addr1,' ',a.addr2) as addr , " +
