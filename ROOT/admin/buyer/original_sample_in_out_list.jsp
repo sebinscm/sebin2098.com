@@ -631,7 +631,11 @@ function fnSetData(strParams) {
   }
 
   document.all['sampleImage'].src = '<%= _sampleImageUrl %>/' + document.form2.sampleNo.value.toLowerCase() + '.jpg';
+  document.all['new_sampleImage'].src = '<%= _sampleImageUrl %>/' + document.form2.sampleNo.value.toLowerCase() + '_new.jpg';
+  document.all['confirmed_sampleImage'].src = '<%= _sampleImageUrl %>/' + document.form2.sampleNo.value.toLowerCase() + '_confirmed.jpg';
   document.all['popSampleImage'].style.visibility = 'visible';
+  document.all['popSampleImage1'].style.visibility = 'visible';
+  document.all['popSampleImage2'].style.visibility = 'visible';
 }
 
 function fnOpenStyleWin(style_no_selected)
@@ -751,15 +755,45 @@ function displayLeng( sz, id )
   </table>
   <table width="1000" border="0" cellspacing="0" cellpadding="0">  	
   <tr>
-  	<td width='*'>
-  <table width='100%' border='0' class='table_bg' cellspacing='0' cellpadding='0' align='center'>
-  <tr><td width='10%' class='table_header_center'>Sample Image </td></tr><tr>
-    <td width='100%' height='170' align='right' class='table_bg_bright' ><div id='popSampleImage' style='position:relative;visibility:hidden;border:0px;'>
-      <img id='sampleImage' src='' width='110' height='169'>
-      </div></td>
-  </tr>
-  </table>
-</td><td width='1000'>
+    <td width='*'>
+        <table width='100%' border='0' class='table_bg' cellspacing='0' cellpadding='0' align='center'>
+          <tr>
+              <td width='10%' class='table_header_center'>Sample Image </td>
+          </tr>
+          <tr>
+            <td width='100%' height='170' align='right' class='table_bg_bright' >
+              <div id='popSampleImage' style='position:relative;visibility:hidden;border:0px;'>
+                  <img id='sampleImage' src='' width='110' height='169'>
+              </div>
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td width='*'>
+        <table width='100%' border='0' class='table_bg' cellspacing='0' cellpadding='0' align='center'>
+          <tr>
+              <td width='10%' class='table_header_center'>N/S Image </td>
+          </tr>
+          <tr>
+            <td width='100%' height='74' align='right' class='table_bg_bright' >
+              <div id='popSampleImage1' style='position:relative;visibility:hidden;border:0px;'>
+                  <img id='new_sampleImage' src='' width='110' height='70'>
+              </div>
+            </td>
+          </tr>
+          <tr>
+              <td width='10%' class='table_header_center'>Confirmed</td>
+          </tr>
+          <tr>
+            <td width='100%' height='74' align='right' class='table_bg_bright' >
+              <div id='popSampleImage2' style='position:relative;visibility:hidden;border:0px;'>
+                  <img id='confirmed_sampleImage' src='' width='110' height='70'>
+              </div>
+            </td>
+          </tr>
+        </table>
+    </td>
+<td width='1000'>
   <table width='99%' border='0' cellspacing='1' cellpadding='2' align='center' class='table_bg'>
   <form name='form2' method='post'>  	
   <input type="hidden" name="curPage" value="<%= curPage %>">

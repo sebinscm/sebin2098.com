@@ -45,16 +45,20 @@ if (ag_style_no == null) ag_style_no = "";
 MatrixDataSet matrix = null;
 MatrixDataSet matrix2 = null;
 MatrixDataSet matrix3 = null;
+MatrixDataSet matrix4 = null;
 DataProcess dataProcess = null;
 Connection conn = null;
+String statusList = "";
 String status_name ="";
 String sql = "";
 String sql2 = "";
+String isUpdate = "";
 int iRet = 0;
 int iRet2 = 0;
 int iRet3 = 0;
+int iRet4 = 0;
 String outS = "";
-
+String supplierList = "";
 // query for po list
 sql = " select  a.order_no, "
     + "             a.style, "
@@ -64,7 +68,7 @@ sql = " select  a.order_no, "
     + "         a.supplier_name, "
     + "         a.order_status, "
     + "         date_format(a.created, '%Y/%m/%d'),ifnull(a.total_qty,0) ,b.code_name,a.sgr, ifnull(a.vendor_price,0),  (ifnull(a.total_qty,0) * ifnull(a.vendor_price,0)) total_amount,  "
-    + "         ifnull(a.local_price,0), a.subsupplier, f.name,  (ifnull(d.subqty,0) * ifnull(a.local_price,0)) subtotal_amount , a.reorder_seq, a.buyer, ifnull(k.status,'N') ,ifnull(d.subqty,'0') "
+    + "         ifnull(a.local_price,0), a.subsupplier, f.name,  (ifnull(d.subqty,0) * ifnull(a.local_price,0)) subtotal_amount , a.reorder_seq, a.buyer, ifnull(k.status,'N') ,ifnull(d.subqty,'0'), delivery_date "
     + " from   purchase_order a LEFT OUTER JOIN vg_common_code b ON (  a.order_status = b.code and type='ORDER_STATUS' and b.use_yn='Y'  )  "
     +  "                                    LEFT OUTER JOIN login_01t f ON ( a.subsupplier = f.id ) "
     + "                                     LEFT OUTER JOIN cost_01t  k ON ( a.order_no = k.order_no and a.style = k.style and a.buyer = k.buyer ) "
@@ -111,10 +115,10 @@ else if ( ag_orderby.equals("5"))  {
 //out.println(sql);
 
 // query for buyer list
-sql2 = " select id, name from login_01t  where user_type = 'B' order by name ";
+sql2 = " select id, name from login_01t  where user_type = 'B' order by name; ";
 // ORDER STATUS
 String sql3 = " select code,code_name  from vg_common_code " +
-                   " where type='ORDER_STATUS' and use_yn='Y' order by sort_order ";
+                   " where type='ORDER_STATUS' and use_yn='Y' order by sort_order; ";
 try {
 
   Context ic = new InitialContext(); 
@@ -123,6 +127,7 @@ try {
   matrix = new MatrixDataSet();
   matrix2 = new MatrixDataSet();
   matrix3 = new MatrixDataSet();
+  matrix4 = new MatrixDataSet();
   dataProcess = new DataProcess();
 
   // po list
@@ -135,18 +140,7 @@ try {
   // order status
   iRet3 = dataProcess.RetrieveData(sql3, matrix3, conn);
 
-} catch (Exception e) {
-  if (conn != null) {
-    try { conn.rollback(); } catch (Exception ex) {}
-  }
 
-  System.out.println("Exception in admin_po_status : " + e.getMessage());
-  throw e;
-} finally {
-  if (conn != null) {
-     conn.close();
-  }
-}
 
 // print po list
 for (int i = 0; i < iRet; i++) {
@@ -171,7 +165,8 @@ for (int i = 0; i < iRet; i++) {
   String reorder_seq = matrix.getRowData(i).getData(j++);
   String buyer_id = matrix.getRowData(i).getData(j++);
   String cost_status = matrix.getRowData(i).getData(j++);
-  double subtotal_qty = Double.parseDouble(matrix.getRowData(i).getData(j++));   
+  double subtotal_qty = Double.parseDouble(matrix.getRowData(i).getData(j++));  
+  String delivery_date = matrix.getRowData(i).getData(j++);
   String colour_code = "";
   if (i%2 == 0) {
     colour_code = "#FFFFF0";
@@ -186,16 +181,24 @@ for (int i = 0; i < iRet; i++) {
   }
  // set item imagae
     File imgFile = new File(application.getRealPath(_styleImgURL) + File.separator + style_no.toLowerCase() + ".jpg");
-	if (imgFile.exists()) {
-	  imgUrl = "<img src='" + _styleImgURL + "/" + style_no.toLowerCase() + ".jpg' width='50' height='70'>";
-	} else {
-		  imgUrl = "<img src='" + _styleImgURL + "/noimage.jpg' width='50' height='70'>";
-	}	
+    if (imgFile.exists()) {
+      imgUrl = "<img src='" + _styleImgURL + "/" + style_no.toLowerCase() + ".jpg' width='50' height='70'>";
+    } else {
+              imgUrl = "<img src='" + _styleImgURL + "/noimage.jpg' width='50' height='70'>";
+    }
+  sql2 = "select id, po_num from cost_sheet where po_num = '" + po_no + "';";
+  iRet4 = dataProcess.RetrieveData(sql2, matrix4, conn);
+  if(iRet4 > 0){
+      isUpdate = "true";
+  }
+  else{
+      isUpdate = "false";
+  }
   
   outS += "<tr align='center' bgcolor='" + colour_code + "'>"
-        + " <td>" + (i+1) + "</td>"
+        + " <td>" + (i+1) +"</td>"
         + " <td>" + status_name + "</td>" 
-        + " <td><a href=\"javascript:fnView('" + po_no + "', '" + style_no + "', '" + buyer_id + "')\">" + po_no + "</td>"
+        + " <td><a href=\"javascript:fnView('" + po_no + "', '" + style_no + "', '" + buyer_id + "', '" + subsupplier_name + "', '" + delivery_date + "', '" + isUpdate + "')\">" + po_no + "</td>"
         + " <td>" + sgr + "</td>"
         + " <td>" + style_no + "</td>"
         + " <td>" + season + "</td>"
@@ -215,7 +218,7 @@ for (int i = 0; i < iRet; i++) {
 }
 
 // print supplier list
-String supplierList = "<option value=''>All</option>";
+supplierList = "<option value=''>All</option>";
 
 for (int i = 0; i < iRet2; i++) {
   int j = 0;
@@ -227,7 +230,7 @@ for (int i = 0; i < iRet2; i++) {
                 + supplier_id + "-" + supplier_name + "</option>";
 }
 // order status list
-String statusList = "<option value=''>All</option>";
+statusList = "<option value=''>All</option>";
 
 for (int i = 0; i < iRet3; i++) {
   int j = 0;
@@ -238,7 +241,18 @@ for (int i = 0; i < iRet3; i++) {
                 + (ag_status.equals(code) ? " selected" : "") + ">" 
                 + code + "-" + code_name + "</option>";
 }
+} catch (Exception e) {
+  if (conn != null) {
+    try { conn.rollback(); } catch (Exception ex) {}
+  }
 
+  System.out.println("Exception in admin_po_status : " + e.getMessage());
+  throw e;
+} finally {
+  if (conn != null) {
+     conn.close();
+  }
+}
 %>
 <HTML>
 <HEAD>
@@ -249,15 +263,18 @@ function fnSubmit(frm)
 {
   frm.ag_po_no.value = jf_AllTrim(frm.ag_po_no.value);
   frm.ag_style_no.value = jf_AllTrim(frm.ag_style_no.value);
-  frm.action = "./cost_management.jsp"
+  frm.action = "./cost_management.jsp";
   frm.submit();
 }
 
-function fnView(po_no_selected,style_selected,buyer_selected) {
+function fnView(po_no_selected,style_selected,buyer_selected, subsupplier_name, delivery_date,isUpdate) {
   frmMain.po_no_selected.value = po_no_selected;
   frmMain.style_selected.value = style_selected;
   frmMain.buyer_selected.value = buyer_selected;
-  frmMain.action = "./cost_details_screen.jsp";
+  frmMain.subsupplier_name.value = subsupplier_name;
+  frmMain.delivery_date.value = delivery_date;
+  frmMain.isUpdate.value = isUpdate;
+  frmMain.action = "./cost_sheet.jsp";
   frmMain.submit();
 }
 function fnExcel(frm) {
@@ -269,6 +286,7 @@ function fnExcel(frm) {
   }
 }
 </SCRIPT>
+
 </HEAD>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <table width="840" border="0" cellspacing="0" cellpadding="0">
@@ -295,7 +313,10 @@ function fnExcel(frm) {
 <input type='hidden' name='po_no_selected'>
 <input type='hidden' name='style_selected'>
 <input type='hidden' name='buyer_selected'>
-<input type='hidden' name='fromUrl' value='<%= fromUrl %>'>	
+<input type='hidden' name='subsupplier_name'>
+<input type='hidden' name='delivery_date'>
+<input type='hidden' name='isUpdate'>
+<input type='hidden' name='fromUrl' value='<%= fromUrl %>'>
 
 <TR>
   <TD width='10%' class='table_header_center'>Buyer</TD>
@@ -333,9 +354,9 @@ function fnExcel(frm) {
 </tr>
 <TR>  
   <TD class='table_header_center'>PO#</TD>
-  <TD class='table_bg_bright'><input type=text name='ag_po_no' value='<%= ag_po_no %>' size='10' maxlength='6'></TD>
+  <TD class='table_bg_bright'><input type=text name='ag_po_no' value='<%= ag_po_no %>' size='14' maxlength='14'></TD>
   <TD class='table_header_center'>Style#</TD>
-  <TD class='table_bg_bright'><input type=text name='ag_style_no' value='<%= ag_style_no %>' size='10' maxlength='6'></TD>
+  <TD class='table_bg_bright'><input type=text name='ag_style_no' value='<%= ag_style_no %>' size='14' maxlength='14'></TD>
   <TD colspan="2" class='table_bg_bright_center'><!--input type='button' value='Save as Excel' onclick='fnExcel(document.form2);'--></td>
 </TR>
 </FORM>
