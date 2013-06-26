@@ -61,7 +61,8 @@ int iRet4 = 0;
 int iRet5 = 0;
 String outS = "";
 String statusList="";
-
+String supplierList = "";
+String buyerList = "";
 // query for po list
 sql = " select  order_no, "
     + "             style, "
@@ -207,19 +208,7 @@ try {
 
   iRet4 = dataProcess.RetrieveData(sql4, matrix4, conn); 
   
-} catch (Exception e) {
-  if (conn != null) {
-    try { conn.rollback(); } catch (Exception ex) {}
-  }
 
-  System.out.println("Exception in admin_delivery_status_list : " + e.getMessage());
-  throw e;
-} finally {
-  if (conn != null) {
-    conn.close();
-  }
- 
-}
 
 // print po list
 int editableCnt = 0;
@@ -471,8 +460,7 @@ for (int i = 0; i < iRet; i++) {
   outS += "</tr>";
 }
 
-// print supplier list
-String supplierList = "<option value=''>All</option>";
+supplierList = "<option value=''>All</option>";
 for (int i = 0; i < iRet2; i++) {
   int j = 0;
   String supplier_id = matrix2.getRowData(i).getData(j++);
@@ -484,7 +472,7 @@ for (int i = 0; i < iRet2; i++) {
 }
 
 // print buyer list
-String buyerList = "<option value=''>All</option>";
+buyerList = "<option value=''>All</option>";
 for (int i = 0; i < iRet3; i++) {
   int j = 0;
   String buyer_id = matrix3.getRowData(i).getData(j++);
@@ -494,7 +482,18 @@ for (int i = 0; i < iRet3; i++) {
              + (ag_buyer.equals(buyer_id) ? " selected" : "") + ">" 
              + buyer_name +"-"+buyer_id+ "</option>";
 }
+} catch (Exception e) {
+  if (conn != null) {
+    try { conn.rollback(); } catch (Exception ex) {}
+  }
 
+  System.out.println("Exception in admin_delivery_status_list : " + e.getMessage());
+  throw e;
+} finally {
+  if (conn != null) {
+    conn.close();
+  }
+}
 // print user brand options
 //String brandList = "<option value=''>All</option>";
 
