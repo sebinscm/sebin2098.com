@@ -112,6 +112,13 @@
             pstmt.setString(idx++, r_m_order_sheet_cost[i]);
             pstmt.executeUpdate();
         }
+         sql = " UPDATE purchase_order"
+            + " SET "
+            + " has_rm_po = 1 "
+            + "where order_no = '" + po_num +"'";
+        pstmt = conn.prepareStatement(sql);    
+        pstmt.executeUpdate();
+        
         conn.commit();        
         response.sendRedirect("cost_sheet.jsp?po_no_selected="+po_num+"&isUpdate=true");
     }catch (SQLException se) {
