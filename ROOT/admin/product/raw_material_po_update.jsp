@@ -24,13 +24,13 @@
     String stocked[] = request.getParameterValues("stocked[]");
     String colour[] = request.getParameterValues("colour[]");
     
-    String store_name[] = {"","","","","","","","","",""};
-    String composition[] = {"","","","","","","","","",""};
-    String cons_name[] = {"","","","","","","","","",""};
-    String cons_cost[] = {"","","","","","","","","",""};
-    String cons_add[] = {"","","","","","","","","",""};
-    String cons_tel[] = {"","","","","","","","","",""};
-    String consumption[] = {"","","","","","","","","",""};
+    String store_name[] = request.getParameterValues("store_name[]");
+    String composition[] = request.getParameterValues("composition[]");
+    String cons_name[] = request.getParameterValues("cons_name[]");
+    String cons_cost[] = request.getParameterValues("cons_cost[]");
+    String cons_add[] = request.getParameterValues("cons_add[]");
+    String cons_tel[] = request.getParameterValues("cons_tel[]");
+    String consumption[] = request.getParameterValues("consumption[]");
     
     MatrixDataSet matrix = null;
     DataProcess dataProcess = null;

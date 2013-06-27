@@ -129,7 +129,10 @@ try {
         iRet = dataProcess.RetrieveData(sql, matrix, conn);
     }
     else{
-        iRet = tmp_default.length;
+        sql = " select distinct cons, po_num"
+                    + " from raw_material_purchase_order"
+                    + " where po_num = '"+po_num+"'; ";
+        iRet = dataProcess.RetrieveData(sql, matrix, conn);
     }
     for(int i =0; i < iRet; i++){
         if(isUpdate.equals("true")){
@@ -156,6 +159,10 @@ try {
             r_m_order_sheet_total = Double.parseDouble(r_m_order_sheet_qty) * Double.parseDouble(r_m_order_sheet_cost);
             r_m_order_total += r_m_order_sheet_total;
             purchase_total+= Double.parseDouble(purchase_cost);
+        }
+        else{
+             k = 0;
+            r_m_order_sheet_cons = matrix.getRowData(i).getData(k++);
         }
         outPut2 += "<tr><td><input type='text' name='r_m_order_sheet_cons[]' size='7' value='"+r_m_order_sheet_cons+"' /></td>"
                 + "<td><input type='n' name='r_m_order_sheet_qty[]' size='2' value='"+r_m_order_sheet_qty+"' /></td>"
