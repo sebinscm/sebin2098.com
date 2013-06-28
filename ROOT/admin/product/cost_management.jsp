@@ -68,7 +68,7 @@ sql = " select  a.order_no, "
     + "         a.supplier_name, "
     + "         a.order_status, "
     + "         date_format(a.created, '%Y/%m/%d'),ifnull(a.total_qty,0) ,b.code_name,a.sgr, ifnull(a.vendor_price,0),  (ifnull(a.total_qty,0) * ifnull(a.vendor_price,0)) total_amount,  "
-    + "         ifnull(a.local_price,0), a.subsupplier, f.name,  (ifnull(d.subqty,0) * ifnull(a.local_price,0)) subtotal_amount , a.reorder_seq, a.buyer, ifnull(k.status,'N') ,ifnull(d.subqty,'0'), delivery_date "
+    + "         ifnull(a.local_price,0), a.subsupplier, f.name,  (ifnull(d.subqty,0) * ifnull(a.local_price,0)) subtotal_amount , a.reorder_seq, a.buyer, ifnull(k.status,'N') ,ifnull(d.subqty,'0'), delivery_date, has_rm_po "
     + " from   purchase_order a LEFT OUTER JOIN vg_common_code b ON (  a.order_status = b.code and type='ORDER_STATUS' and b.use_yn='Y'  )  "
     +  "                                    LEFT OUTER JOIN login_01t f ON ( a.subsupplier = f.id ) "
     + "                                     LEFT OUTER JOIN cost_01t  k ON ( a.order_no = k.order_no and a.style = k.style and a.buyer = k.buyer ) "
@@ -167,6 +167,7 @@ for (int i = 0; i < iRet; i++) {
   String cost_status = matrix.getRowData(i).getData(j++);
   double subtotal_qty = Double.parseDouble(matrix.getRowData(i).getData(j++));  
   String delivery_date = matrix.getRowData(i).getData(j++);
+  String has_rm_po = matrix.getRowData(i).getData(j++);
   String colour_code = "";
   if (i%2 == 0) {
     colour_code = "#FFFFF0";
@@ -197,9 +198,14 @@ for (int i = 0; i < iRet; i++) {
   
   outS += "<tr align='center' bgcolor='" + colour_code + "'>"
         + " <td>" + (i+1) +"</td>"
-        + " <td>" + status_name + "</td>" 
-        + " <td><a href=\"javascript:fnView('" + po_no + "', '" + style_no + "', '" + buyer_id + "', '" + subsupplier_name + "', '" + delivery_date + "', '" + isUpdate + "')\">" + po_no + "</td>"
-        + " <td>" + sgr + "</td>"
+        + " <td>" + status_name + "</td>"; 
+  if(has_rm_po.equals("1")){
+    outS += " <td><a href=\"javascript:fnView('" + po_no + "', '" + style_no + "', '" + buyer_id + "', '" + subsupplier_name + "', '" + delivery_date + "', '" + isUpdate + "')\">" + po_no + "</td>";
+  }
+  else{
+      outS += " <td>" + po_no + "</td>";
+  }
+  outS += " <td>" + sgr + "</td>"
         + " <td>" + style_no + "</td>"
         + " <td>" + season + "</td>"
         + " <td>" + reorder_seq + "</td>"
