@@ -61,6 +61,9 @@ String r_m_order_sheet_cons = "";
 String r_m_order_sheet_qty = "0";
 String r_m_order_sheet_cost = "0";
 Double r_m_order_sheet_total = 0.0;
+Double rely_on_factory_total = 0.0;
+Double factory_fee_total = 0.0;
+Double unit_cost = 0.0;
 int rowspan_img = 2;
 String[] tmp_default = {"","","","","","","",""};
 String isUpdate = request.getParameter("isUpdate");
@@ -202,7 +205,16 @@ try {
         domestic = matrix.getRowData(0).getData(k++);
         international = matrix.getRowData(0).getData(k++);
         etc = matrix.getRowData(0).getData(k++);
-        benefit = (total_qty_cost) - (Double.parseDouble(etc)+Double.parseDouble(international)+Double.parseDouble(domestic)+Double.parseDouble(factory_fee)+purchase_total+Double.parseDouble(rely_on_factory));
+        rely_on_factory_total = (Double.parseDouble(rely_on_factory) * all_qty);
+        factory_fee_total = (Double.parseDouble(factory_fee) * all_qty);
+        if(rely_on_factory_total == 0.0){
+            unit_cost = (Double.parseDouble(r_m_total)+ factory_fee_total ) / all_qty;  
+            benefit = (total_qty_cost) - (Double.parseDouble(etc)+Double.parseDouble(international)+Double.parseDouble(domestic)+factory_fee_total+purchase_total);
+        }
+        else{
+            unit_cost = Double.parseDouble(rely_on_factory); 
+            benefit = (total_qty_cost) - (Double.parseDouble(etc)+Double.parseDouble(international)+Double.parseDouble(domestic)+rely_on_factory_total);
+        }
     }
 }catch (Exception e) {
   if (conn != null) {
@@ -324,9 +336,12 @@ try {
         <table height="20px"><tr><td></td></tr></table>
     <table id="box" width="100%" border="1">
         <tr>
+            <td rowspan="2" style="background:gray; color:white;">R.O.F/Piece</td>
             <td rowspan="2">Rely on Factory</td>
             <td rowspan="2">R/M Total</td>
+            <td rowspan="2" style="background:#C0C0C0;">F/Piece</td>
             <td rowspan="2">Factory fee</td>
+            <td rowspan="2" style="background:blue; color:white;">Unit Cost</td>
             <td colspan='2'>Forwarding</td>
             <td rowspan="2">ETC</td>
             <td rowspan="2">Benefit</td>
@@ -337,9 +352,12 @@ try {
             <td>International</td>
         </tr>
         <tr>
-            <td><input type="text" name="rely_on_factory" value="<%= rely_on_factory %>"/></td>
+            <td><input size="2" type="text" name="rely_on_factory" value="<%= rely_on_factory %>"/></td>
+            <td><%= rely_on_factory_total %></td>
             <td><input type="hidden" name="r_m_total" value="<%= purchase_total %>"/><%= purchase_total %></td>
-            <td><input type="text" name="factory_fee" value="<%= factory_fee %>"/></td>
+            <td><input size="2" type="text" name="factory_fee" value="<%= factory_fee %>"/></td>
+            <td><%= factory_fee_total %></td>
+            <td><%= unit_cost %></td>
             <td><input type="text" name="domestic" value="<%= domestic %>"/></td>
             <td><input type="text" name="international" value="<%= international %>"/></td>
             <td><input type="text" name="etc" value="<%= etc %>"/></td>
