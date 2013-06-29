@@ -40,6 +40,8 @@
     String international = request.getParameter("international");
     String etc = request.getParameter("etc");
     String benefit = request.getParameter("benefit");
+    String dollor = request.getParameter("dollor");
+    String currency = request.getParameter("currency");
     
     String purchase_date[] = request.getParameterValues("purchase_date[]");
     String purchase_qty[] = request.getParameterValues("purchase_qty[]");
@@ -64,7 +66,7 @@
         sql = " UPDATE cost_sheet SET "
           + "po_num = ?, r_m_order_total = ?, purchase_total = ?, forwarding_company_1 = ?, forwarding_vehicle_no_1 = ?, forwarding_cost_1 = ?, "
           + "forwarding_company_2 = ?, forwarding_vehicle_no_2 = ?, forwarding_cost_2 = ?, rely_on_factory = ?, r_m_total = ?, factory_fee = ?, "
-          + "domestic = ?, international = ?, etc = ?, benefit = ? where po_num ='"+po_num+"';";
+          + "domestic = ?, international = ?, etc = ?, benefit = ?, dollor = ?, currency = ? where po_num ='"+po_num+"';";
 
         pstmt = conn.prepareStatement(sql);
         pstmt.setString(idx++, po_num);        
@@ -83,6 +85,8 @@
         pstmt.setString(idx++, international);
         pstmt.setString(idx++, etc);
         pstmt.setString(idx++, benefit);
+        pstmt.setString(idx++, dollor);
+        pstmt.setString(idx++, currency);
         pstmt.executeUpdate();
         
         sql = "delete from cost_sheet_purchase_in_stock where po_num='" + po_num + "'";

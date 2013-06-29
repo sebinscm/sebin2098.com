@@ -60,6 +60,8 @@ String path_to_save_or_update = "";
 String r_m_order_sheet_cons = "";
 String r_m_order_sheet_qty = "0";
 String r_m_order_sheet_cost = "0";
+String currency = "0.0";
+String dollor = "0.0";
 Double r_m_order_sheet_total = 0.0;
 Double rely_on_factory_total = 0.0;
 Double factory_fee_total = 0.0;
@@ -119,7 +121,7 @@ try {
                 + "<td>"+delivery_date+"</td>"
                 + "<td>"+colour+"</td>"
                 + "<td>"+total_qty+"</td>"
-                + "<td>"+Double.parseDouble(unit_price)+"</td>"
+                + "<td>"+String.format("%.2f",Double.parseDouble(unit_price))+"</td>"
                 + "<td>"+String.format("%.2f",tmp_total_cost)+"</td>"
                 + "</tr>";
     }
@@ -187,7 +189,7 @@ try {
         path_to_save_or_update = "cost_sheet_update.jsp";
         sql = " select po_num, forwarding_company_1, forwarding_vehicle_no_1, forwarding_cost_1, "
               + "forwarding_company_2, forwarding_vehicle_no_2, forwarding_cost_2, rely_on_factory, r_m_total, factory_fee, "
-              + "domestic, international, etc"
+              + "domestic, international, etc, dollor, currency"
               + " from    cost_sheet "
               + " where po_num = '"+po_num+"';";
         iRet = dataProcess.RetrieveData(sql, matrix, conn);   
@@ -205,6 +207,9 @@ try {
         domestic = matrix.getRowData(0).getData(k++);
         international = matrix.getRowData(0).getData(k++);
         etc = matrix.getRowData(0).getData(k++);
+        dollor = matrix.getRowData(0).getData(k++);
+        currency =  matrix.getRowData(0).getData(k++);
+        
         rely_on_factory_total = (Double.parseDouble(rely_on_factory) * all_qty);
         factory_fee_total = (Double.parseDouble(factory_fee) * all_qty);
         if(rely_on_factory_total == 0.0){
@@ -229,10 +234,16 @@ try {
 }
 // set item imagae
     File imgFile = new File(application.getRealPath(_styleImgURL) + File.separator + style_no.toLowerCase() + ".jpg");
+    File imgFile2 = new File(application.getRealPath(_styleImgURL) + File.separator + style_no.toLowerCase() + "_back.jpg");
 	if (imgFile.exists()) {
-	  imgUrl = "<img src='" + _styleImgURL + "/" + style_no.toLowerCase() + ".jpg' width='300' height='200'>";
+            imgUrl = "<img src='" + _styleImgURL + "/" + style_no.toLowerCase() + ".jpg' width='150' height='200'/>";
 	} else {
-		  imgUrl = "<img src='" + _styleImgURL + "/noimage.jpg' width='300' height='200'>";
+            imgUrl = "<img src='" + _styleImgURL + "/noimage.jpg' width='150' height='200'/>";
+	}
+        if (imgFile2.exists()) {
+            imgUrl += "<img src='" + _styleImgURL + "/" + style_no.toLowerCase() + "_back.jpg' width='150' height='200'/>";
+	} else {
+            imgUrl += "<img src='" + _styleImgURL + "/noimage.jpg' width='150' height='200'/>";
 	}
 %>
 <style>
@@ -277,7 +288,9 @@ try {
             <td style="background-color:gray; color:white;">Total</td>
             <td style="background-color:#CFCFCF;"></td>
             <td><b><%= all_qty %></b></td>
-            <td style="background-color:#CFCFCF;"></td>
+            <td> Dollor : <input type="text" size="5" name="dollor" value="<%= dollor %>" /><br/>
+                Currency: <input type="text" size="5" name="currency" value="<%= currency %>" />
+            </td>
             <td><b><%= total_qty_cost %></b></td>
         </tr>
     </table> 
@@ -357,7 +370,7 @@ try {
             <td><input type="hidden" name="r_m_total" value="<%= purchase_total %>"/><%= purchase_total %></td>
             <td><input size="2" type="text" name="factory_fee" value="<%= factory_fee %>"/></td>
             <td><%= factory_fee_total %></td>
-            <td><%= unit_cost %></td>
+            <td><%= String.format("%.2f",unit_cost) %></td>
             <td><input type="text" name="domestic" value="<%= domestic %>"/></td>
             <td><input type="text" name="international" value="<%= international %>"/></td>
             <td><input type="text" name="etc" value="<%= etc %>"/></td>
