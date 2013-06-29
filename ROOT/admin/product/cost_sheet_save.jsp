@@ -68,7 +68,7 @@
           + "domestic, international, etc, benefit, dollor, currency "
           + " ) "
           + " Values "
-          + " ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+          + " ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? );";
 
         pstmt = conn.prepareStatement(sql);
         pstmt.setString(idx++, po_num);        
@@ -138,4 +138,4 @@
       }
     }
 %>
-1 = <%= error_message %><br/>
+s = <%= error_message %><br/>

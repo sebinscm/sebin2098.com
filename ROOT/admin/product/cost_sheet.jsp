@@ -234,10 +234,16 @@ try {
 }
 // set item imagae
     File imgFile = new File(application.getRealPath(_styleImgURL) + File.separator + style_no.toLowerCase() + ".jpg");
+    File imgFile2 = new File(application.getRealPath(_styleImgURL) + File.separator + style_no.toLowerCase() + "_back.jpg");
 	if (imgFile.exists()) {
-	  imgUrl = "<img src='" + _styleImgURL + "/" + style_no.toLowerCase() + ".jpg' width='300' height='200'>";
+            imgUrl = "<img src='" + _styleImgURL + "/" + style_no.toLowerCase() + ".jpg' width='150' height='200'/>";
 	} else {
-		  imgUrl = "<img src='" + _styleImgURL + "/noimage.jpg' width='300' height='200'>";
+            imgUrl = "<img src='" + _styleImgURL + "/noimage.jpg' width='150' height='200'/>";
+	}
+        if (imgFile2.exists()) {
+            imgUrl += "<img src='" + _styleImgURL + "/" + style_no.toLowerCase() + "_back.jpg' width='150' height='200'/>";
+	} else {
+            imgUrl += "<img src='" + _styleImgURL + "/noimage.jpg' width='150' height='200'/>";
 	}
 %>
 <style>

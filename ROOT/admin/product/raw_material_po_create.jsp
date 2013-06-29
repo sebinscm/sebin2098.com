@@ -34,13 +34,19 @@ String outPut_edit = "";
 String output_stores = "";
 String options_cons = "<select name='cons[]'>"
                     + "<option value=''>Select One</option>"
-                    + "<option value='out_shell'>Out Shell</option>"
-                    + "<option value='combination'>Combination</option>"
+                    + "<option value='out_shell_2'>Out Shell 2</option>"
+                    + "<option value='combination_1'>Combination 1</option>"
+                    + "<option value='combination_2'>Combination 2</option>"
                     + "<option value='lining'>Lining</option>"
+                    + "<option value='lining_2'>Lining 2</option>"
                     + "<option value='inter_lining'>Inter Lining</option>"
+                    + "<option value='inter_lining_2'>Inter Lining 2</option>"
                     + "<option value='button'>Button</option>"
+                    + "<option value='button_2'>Button_2</option>"
                     + "<option value='hanger_tape'>Hanger Tape</option>"
+                    + "<option value='hanger_tape_2'>Hanger Tape 2</option>"
                     + "<option value='sewing_yarn'>Sewing Yarn</option>"                    
+                    + "<option value='sewing_yarn_2'>Sewing Yarn 2</option>"
                     + "</select>";
 int count_colour = 0;
 int count_lines = 5;
