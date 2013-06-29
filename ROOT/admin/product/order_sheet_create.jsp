@@ -64,6 +64,13 @@ String value_hanger_tape_simple = "";
 String value_price_tag = "";
 String value_packing = "";
 String file_to_choose = "";
+String sizc_1 = "";
+String sizc_2 = "";
+String sizc_3 = "";
+String sizc_4 = "";
+String sizc_5 = "";
+String sizc_6 = "";
+String total_qty = "";
 try {
     Context ic = new InitialContext(); 
     matrix = new MatrixDataSet();
@@ -106,23 +113,25 @@ try {
     }
     
     sql = "select order_no, brand, delivery_date, confirm_date, style, sizc_1, "
-            + "sizc_2, sizc_3, sizc_4, sizc_5, sizc_6, total_qty, inhouse_date  from purchase_order where order_no='"+ po_num +"';";
+            + "sizc_2, sizc_3, sizc_4, sizc_5, sizc_6, total_qty, inhouse_date from purchase_order where order_no='"+ po_num +"';";
     iRet = dataProcess.RetrieveData(sql, matrix, conn);
 
     int j = 0;
-    po_num1 = matrix.getRowData(0).getData(j++);
-    brand = matrix.getRowData(0).getData(j++);
-    delivery_date = matrix.getRowData(0).getData(j++);
-    confirm_date = matrix.getRowData(0).getData(j++);
-    style = matrix.getRowData(0).getData(j++);
-    String sizc_1 = matrix.getRowData(0).getData(j++);
-    String sizc_2 = matrix.getRowData(0).getData(j++);
-    String sizc_3 = matrix.getRowData(0).getData(j++);
-    String sizc_4 = matrix.getRowData(0).getData(j++);
-    String sizc_5 = matrix.getRowData(0).getData(j++);
-    String sizc_6 = matrix.getRowData(0).getData(j++);
-    String total_qty = matrix.getRowData(0).getData(j++);
-    inhouse_date = matrix.getRowData(0).getData(j++);
+    if(iRet > 0){
+        po_num1 = matrix.getRowData(0).getData(j++);
+        brand = matrix.getRowData(0).getData(j++);
+        delivery_date = matrix.getRowData(0).getData(j++);
+        confirm_date = matrix.getRowData(0).getData(j++);
+        style = matrix.getRowData(0).getData(j++);
+        sizc_1 = matrix.getRowData(0).getData(j++);
+        sizc_2 = matrix.getRowData(0).getData(j++);
+        sizc_3 = matrix.getRowData(0).getData(j++);
+        sizc_4 = matrix.getRowData(0).getData(j++);
+        sizc_5 = matrix.getRowData(0).getData(j++);
+        sizc_6 = matrix.getRowData(0).getData(j++);
+        total_qty = matrix.getRowData(0).getData(j++);
+        inhouse_date = matrix.getRowData(0).getData(j++);
+    }
     sql = " select  colour,total_qty,sqty_1,sqty_2,sqty_3,sqty_4,sqty_5,sqty_6 "
         + " from    purchase_order_line "
         + " where order_no = '"+po_num1+"'; "; 
