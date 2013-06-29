@@ -288,7 +288,7 @@ try {
             <td style="background-color:gray; color:white;">Total</td>
             <td style="background-color:#CFCFCF;"></td>
             <td><b><%= all_qty %></b></td>
-            <td> Dollor : <input type="text" size="5" name="dollor" value="<%= dollor %>" /><br/>
+            <td> Dollar : <input type="text" size="5" name="dollor" value="<%= dollor %>" /><br/>
                 Currency: <input type="text" size="5" name="currency" value="<%= currency %>" />
             </td>
             <td><b><%= total_qty_cost %></b></td>
