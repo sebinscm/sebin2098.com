@@ -105,7 +105,7 @@ try {
   if (conn != null) {conn.close();}	
 }
 %>
-<html>
+<!DOCTYPE html>
 <head>
 <title></title>
 <link href="/common/css/style.css" rel="stylesheet" type="text/css">
@@ -127,7 +127,7 @@ function fnNew(frm) {
   frm.related_code.value = "";
   frm.useYn.selectedIndex = 0;
   frm.catalogDesc.value = "";
-  frm.catalogCode.setAttribute('readOnly',false);
+  frm.catalogCode.readOnly = false;
   frm.catalogCode.style.backgroundColor = "white";
 }
 
@@ -145,7 +145,7 @@ function fnSetData(strParams) {
     jf_fnSetSelectOption(useYn, params[i++]);
     related_code.value = params[i++];
     catalogDesc.value = params[i++];
-    catalogCode.setAttribute('readOnly',true);
+    catalogCode.readOnly = true;
     catalogCode.style.backgroundColor = "#e8e8e8";
   }
 }
