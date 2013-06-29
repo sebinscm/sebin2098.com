@@ -43,9 +43,9 @@ String[] qty4 = new String[6];
 String[] qty5 = new String[6];
 String[] qty6 = new String[6];
 String[]  siztotal_qty = new String[6];
-String[] size_default_options = {"前衣长/총기장","前中长/앞중심기장",
-    "后中长/뒷중심기장","肩宽/어깨너비","领宽/목너비","前领深/앞목깊이","后领深/뒷목깊이",
-    "1/2胸围/가슴","1/2腰围","1/2下摆/밑단  弯量", "夹圈", "", "", "", "", "", ""
+String[] size_default_options = {"前衣?/총기장","前中?/앞중심기장",
+    "后中?/뒷중심기장","肩?/어깨너비","??/목너비","前?深/앞목깊이","后?深/뒷목깊이",
+    "1/2胸?/가슴","1/2腰?","1/2下?/밑단  ?量", "?圈", "", "", "", "", "", ""
 };
 String sql = "";
 String[] value_first = {"","","","","","","","","","","","","","","","",""};
@@ -292,11 +292,11 @@ try {
         <table width="800px">
             <tr>
                 <td rowspan="2" width="450px" height="80px"><b style="font-size: 27px;">Order Sheet</b></td>
-                <td width="60px" >担当</td>
-                <td width="60px">组长</td>
-                <td width="60px">室长</td>
+                <td width="60px" >??</td>
+                <td width="60px">??</td>
+                <td width="60px">室?</td>
                 <td width="60px">管理部</td>
-                <td width="60px">社长</td>
+                <td width="60px">社?</td>
             </tr>
             <tr>
                 <td height="60px"></td>
