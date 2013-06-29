@@ -105,10 +105,11 @@ try {
         value_packing = matrix.getRowData(0).getData(n++);        
     }
     
-    sql = "select ORDER_NO, order_no, brand, delivery_date, confirm_date, style, sizc_1, sizc_2, sizc_3, sizc_4, sizc_5, sizc_6, total_qty, inhouse_date  from purchase_order where order_no='"+ po_num +"';";
+    sql = "select order_no, brand, delivery_date, confirm_date, style, sizc_1, "
+            + "sizc_2, sizc_3, sizc_4, sizc_5, sizc_6, total_qty, inhouse_date  from purchase_order where order_no='"+ po_num +"';";
     iRet = dataProcess.RetrieveData(sql, matrix, conn);
 
-    int j = 1;
+    int j = 0;
     po_num1 = matrix.getRowData(0).getData(j++);
     brand = matrix.getRowData(0).getData(j++);
     delivery_date = matrix.getRowData(0).getData(j++);
